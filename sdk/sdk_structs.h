@@ -13347,7 +13347,7 @@ namespace SDK
 
     struct FYFeatureToggles : FYDataTableRowBase //ScriptStruct Prospect.YFeatureToggles
     {
-    //Children Prop Count (Fields): 114
+    //Children Prop Count (Fields): 115
     public:
 
         bool m_useFullTimeAsyncLoadingThread; // 0x10
@@ -13464,6 +13464,7 @@ namespace SDK
         bool m_autoFetchTitleData; // 0x8f
         struct TMap<struct FString, float> m_fetchingIntervals; // 0x90
         bool m_cheatingVictimCompensationEnabled; // 0xe0
+        bool m_playFabIdServerValidation; // 0xe1
 
     };
 
@@ -57670,13 +57671,48 @@ namespace SDK
 
     };
 
-    struct FFEvacWeightedRandomCover //UserDefinedStruct FEvacWeightedRandomCover.FEvacWeightedRandomCover
+    struct FAbility_Action_AudioDecoy //UserDefinedStruct Ability_Action_AudioDecoy.Ability_Action_AudioDecoy
+    {
+    //Children Prop Count (Fields): 3
+    public:
+
+        struct FDataTableRowHandle DecoyAudio_2_FABA0C5543E0FA95F7E37BA2306A398E; // 0x0
+        float Duration_5_8E352E014F8A0DC8A08A19B47534F3B3; // 0x10
+        float FadeOutDuration_7_D0758DD34263AD91F9AE839FCA0EFFED; // 0x14
+
+    };
+
+    struct FAbility_Action_GasGrenade //UserDefinedStruct Ability_Action_GasGrenade.Ability_Action_GasGrenade
+    {
+    //Children Prop Count (Fields): 7
+    public:
+
+        struct FDataTableRowHandle Audio_23_FABA0C5543E0FA95F7E37BA2306A398E; // 0x0
+        float DurationAudio_22_8E352E014F8A0DC8A08A19B47534F3B3; // 0x10
+        float FadeOutDuration_7_D0758DD34263AD91F9AE839FCA0EFFED; // 0x14
+        float Damage_15_58F19B994E4E771D4A6195BE9FA72B0E; // 0x18
+        float Radius_21_45B1D3B944793EB7D55B389C3F7ADC03; // 0x1c
+        float Interval_32_A6DABB044F11F6F78F09F7A340D2BA02; // 0x20
+        float Penetration_35_9ACEB69F42C354F52F33C293E4315192; // 0x24
+
+    };
+
+    struct FAbility_Action_RoadFlare //UserDefinedStruct Ability_Action_RoadFlare.Ability_Action_RoadFlare
+    {
+    //Children Prop Count (Fields): 1
+    public:
+
+        float Duration_2_C358A3414BA496CA903791A70A14995E; // 0x0
+
+    };
+
+    struct FEntityDistanceAndMovementComponent //UserDefinedStruct EntityDistanceAndMovementComponent.EntityDistanceAndMovementComponent
     {
     //Children Prop Count (Fields): 2
     public:
 
-        class UStaticMesh* Mesh_2_CE0C646A454AAC9DA330C28B6F8CC601; // 0x0
-        float Weight_5_7B28EB004A6DDF8045548DAC7B69BAF6; // 0x8
+        float Distance_4_0883B7A645B6339E19BDA09D82D06C33; // 0x0
+        class UYPlayerRenderTargetVfxMovementComponent_BP_C* RenderTargetMovementComponent_6_08E54D1B4963FEF770269899C40958C9; // 0x8
 
     };
 
@@ -57690,140 +57726,20 @@ namespace SDK
 
     };
 
-    struct FInventoryOnboarding_ST //UserDefinedStruct InventoryOnboarding_ST.InventoryOnboarding_ST
-    {
-    //Children Prop Count (Fields): 5
-    public:
-
-        struct TArray<enum class EYPlayerSetType> PlayerSetType_4_DF62AE37481D51ADBAD7E2AE9D8728E7; // 0x0
-        enum class EYItemType ItemType_6_DD97073647CFC11CC5BFE58D88DC1B6B; // 0x10
-        bool RequiresTools_8_9810ED0047891CB88D72EDA78EACE954; // 0x11
-        bool CheckSpecificEquippedType_14_CC1D35464840C5305204FEA5EB5AC3FE; // 0x12
-        bool HighlightPlayerBag_17_724F8303483E11F3316CA8B18F420501; // 0x13
-
-    };
-
-    struct FStructure_FilterCategoryBtnData //UserDefinedStruct Structure_FilterCategoryBtnData.Structure_FilterCategoryBtnData
-    {
-    //Children Prop Count (Fields): 2
-    public:
-
-        struct FText Label_4_C838AB6F45AE918909F746B08FDAD6CC; // 0x0
-        struct FYFilterCategoriesDataEntry FilterCategories_9_AA2554964217366855F3D0B6AE34A91C; // 0x20
-
-    };
-
-    struct FStucture_FilterData //UserDefinedStruct Stucture_FilterData.Stucture_FilterData
+    struct FLightningTuningDataInfo //UserDefinedStruct LightningTuningDataInfo.LightningTuningDataInfo
     {
     //Children Prop Count (Fields): 9
     public:
 
-        enum class En_FilterCategoryCollection GenericCollectionType_28_48E7D0BF4620B1D1AA9F50AA355DFAE6; // 0x0
-        bool UseIcon_7_1EBAB2534C0792B29A035696802C24FE; // 0x1
-        bool ShowNotification_10_3663EE804DFDF8C1D6D6D8BE6DE0C94A; // 0x2
-        struct FString ChildNavigationCategory_34_12AD8247457DC0F49294F0AB04F88084; // 0x8
-        struct FText OverridenLabel_30_B14FDBDF4B0CB0F16C92A0B658489894; // 0x18
-        struct TArray<enum class EYCustomizationCategory> AdditionalCustomizationCategories_31_94F7337740B74FDDFC233C9D0ED26C4B; // 0x38
-        struct TArray<enum class EYItemType> AdditionalItemTypes_32_B7F48F2F48A17C6862BBE9AF8344367F; // 0x48
-        struct FString HighlightId_37_ACC5F71B46F9CF03554A5F8CBB0D0AFF; // 0x58
-        struct FDataTableRowHandle HighlightRowId_41_5879BEA645573D576808E6AD8BEADAAC; // 0x68
-
-    };
-
-    struct FStucture_FilterCollection //UserDefinedStruct Stucture_FilterCollection.Stucture_FilterCollection
-    {
-    //Children Prop Count (Fields): 1
-    public:
-
-        struct TArray<struct FStucture_FilterData> Filters_20_B14FDBDF4B0CB0F16C92A0B658489894; // 0x0
-
-    };
-
-    struct FStucture_TabData //UserDefinedStruct Stucture_TabData.Stucture_TabData
-    {
-    //Children Prop Count (Fields): 8
-    public:
-
-        struct FText TabLabel_5_B14FDBDF4B0CB0F16C92A0B658489894; // 0x0
-        bool UseIcon_7_1EBAB2534C0792B29A035696802C24FE; // 0x20
-        bool ShowNotification_10_87374DDB4C3DA819C5C811B8950F8058; // 0x21
-        enum class EYCustomizationMode CustomizationMode_13_473749A24D62878D244B9383A1ACDB65; // 0x22
-        enum class EYCustomizationCategory CustomizationCategory_17_08D2C6984F40B5E55A7DCC8149351C35; // 0x23
-        bool ShowDecoration_19_982CD86E42C85676EDC9449045676187; // 0x24
-        bool ShowSorting_21_A8A81A4F436E95F33E7AE698C5351C55; // 0x25
-        struct FDataTableRowHandle HighlightID_24_DA9B988A49E198B3CCE26B88343FA3DE; // 0x28
-
-    };
-
-    struct FStucture_TabBIData //UserDefinedStruct Stucture_TabBIData.Stucture_TabBIData
-    {
-    //Children Prop Count (Fields): 2
-    public:
-
-        bool SendBI_34_1EBAB2534C0792B29A035696802C24FE; // 0x0
-        struct FString BIEventLocation_33_F27AF35F4EABA1C21F7DC2BF35FB8274; // 0x8
-
-    };
-
-    struct FStructure_HUD_ProgressBars //UserDefinedStruct Structure_HUD_ProgressBars.Structure_HUD_ProgressBars
-    {
-    //Children Prop Count (Fields): 8
-    public:
-
-        float StartValue_7_C4C15954450AAA4F616FDE8A91A5AC08; // 0x0
-        float DesiredValue_3_2C117D094E4B9F91267EFF82B906EAFE; // 0x4
-        float Alpha_5_D86EF2224E857BC7B927459986D8A1C8; // 0x8
-        class UProgressBar* ProgressBar_10_700A577046AAB0A82FA4BF9177426292; // 0x10
-        float Speed_13_7B8385DB490AC27EBC94CAB250DF4EC3; // 0x18
-        float Delay_15_34041B7E4CCFD62346ED32B285990076; // 0x1c
-        enum class EHorizonTweenLerpMode InterpolationMode_20_41F3AC9E428769FF838307B96C4C0791; // 0x20
-        bool IsDone_22_CABD3814486E24C2C224A4BA4916C019; // 0x21
-
-    };
-
-    struct FStructure_SelectorData //UserDefinedStruct Structure_SelectorData.Structure_SelectorData
-    {
-    //Children Prop Count (Fields): 3
-    public:
-
-        struct FText DisplayName_6_1D3030FF48F4B027C56D8885BC7ED0CF; // 0x0
-        float Value_9_AEB3506B4AFD9C32EA6843BA49965EFA; // 0x20
-        struct FName DataName_12_042E97B04C04EA391C7FDEA763642D53; // 0x24
-
-    };
-
-    struct FStructure_InputKeyNav //UserDefinedStruct Structure_InputKeyNav.Structure_InputKeyNav
-    {
-    //Children Prop Count (Fields): 5
-    public:
-
-        struct FText NavLabel_3_1D3030FF48F4B027C56D8885BC7ED0CF; // 0x0
-        struct FText PCLabel_6_CB42A76C49016385686DDBA2B3B9382A; // 0x20
-        struct FDataTableRowHandle InputBinding_10_56D77B2944E1FDD4F600E88178F6424B; // 0x40
-        bool InfoOnly_12_27D855974032CC7E1BB229ABA8E16CB0; // 0x50
-        struct FDataTableRowHandle HighlightID_15_9BF698024D40F7BC0089FF9BC645B114; // 0x58
-
-    };
-
-    struct FMS_HintMarkerReplicatedData_ST //UserDefinedStruct MS_HintMarkerReplicatedData_ST.MS_HintMarkerReplicatedData_ST
-    {
-    //Children Prop Count (Fields): 2
-    public:
-
-        struct FName ActiveMarkerId_9_7B44AE714CA2F178985EFB893A89AE89; // 0x0
-        struct TArray<struct FTransform> HintTransforms_17_4C1A67004B0583AF2B9C328BF93AF29A; // 0x8
-
-    };
-
-    struct FAutomationTestStartData //UserDefinedStruct AutomationTestStartData.AutomationTestStartData
-    {
-    //Children Prop Count (Fields): 4
-    public:
-
-        class AAutomationManager_Base_BP_C* AutomationManager_5_52137915453161A2BF98959371D9D9D9; // 0x0
-        class AYPlayerController* PlayerController_8_B01D6ABB485A0A1DC17637AE8BB6CE29; // 0x8
-        bool IsStation_11_62DDFEF34B4FDCD7F39EB58C46D7C2B7; // 0x10
-        struct FYPlayerAutomationData AutomationData_2_286D976D48B659DE00EB278117F04B33; // 0x18
+        float DistanceFromPlayerMin_3_F4D76B234A12E2778F754C91D3C00D5F; // 0x0
+        float DistanceFromPlayerMax_7_A19470F14CA0202A8DA8928C10300050; // 0x4
+        float CooldownMin_10_34238BE249F635E9D30E5D8984C934E5; // 0x8
+        float CooldownMax_11_5EB969F24B410BAE7E702BBEA5797E9E; // 0xc
+        float LightningWarningTime_17_E4FBC2B9497042C5251E7EAD754139EB; // 0x10
+        float ImpactVFXTimeToImpact_40_61B4F1C14C52C95E12BD9EBCC78DF14D; // 0x14
+        float Damage_27_5819B0B94E931BEF3EFC4C8C73DF31F3; // 0x18
+        float DamageRadius_29_3438EAD94CEF46EF4A0BC0A172A69988; // 0x1c
+        bool IsDebugForcedEnabled_34_0D770C7A476CD9B6A977AFB2D66EF13C; // 0x20
 
     };
 
@@ -57922,65 +57838,150 @@ namespace SDK
 
     };
 
-    struct FEntityDistanceAndMovementComponent //UserDefinedStruct EntityDistanceAndMovementComponent.EntityDistanceAndMovementComponent
+    struct FAutomationTestStartData //UserDefinedStruct AutomationTestStartData.AutomationTestStartData
+    {
+    //Children Prop Count (Fields): 4
+    public:
+
+        class AAutomationManager_Base_BP_C* AutomationManager_5_52137915453161A2BF98959371D9D9D9; // 0x0
+        class AYPlayerController* PlayerController_8_B01D6ABB485A0A1DC17637AE8BB6CE29; // 0x8
+        bool IsStation_11_62DDFEF34B4FDCD7F39EB58C46D7C2B7; // 0x10
+        struct FYPlayerAutomationData AutomationData_2_286D976D48B659DE00EB278117F04B33; // 0x18
+
+    };
+
+    struct FStructure_InputKeyNav //UserDefinedStruct Structure_InputKeyNav.Structure_InputKeyNav
+    {
+    //Children Prop Count (Fields): 5
+    public:
+
+        struct FText NavLabel_3_1D3030FF48F4B027C56D8885BC7ED0CF; // 0x0
+        struct FText PCLabel_6_CB42A76C49016385686DDBA2B3B9382A; // 0x20
+        struct FDataTableRowHandle InputBinding_10_56D77B2944E1FDD4F600E88178F6424B; // 0x40
+        bool InfoOnly_12_27D855974032CC7E1BB229ABA8E16CB0; // 0x50
+        struct FDataTableRowHandle HighlightID_15_9BF698024D40F7BC0089FF9BC645B114; // 0x58
+
+    };
+
+    struct FMS_HintMarkerReplicatedData_ST //UserDefinedStruct MS_HintMarkerReplicatedData_ST.MS_HintMarkerReplicatedData_ST
     {
     //Children Prop Count (Fields): 2
     public:
 
-        float Distance_4_0883B7A645B6339E19BDA09D82D06C33; // 0x0
-        class UYPlayerRenderTargetVfxMovementComponent_BP_C* RenderTargetMovementComponent_6_08E54D1B4963FEF770269899C40958C9; // 0x8
+        struct FName ActiveMarkerId_9_7B44AE714CA2F178985EFB893A89AE89; // 0x0
+        struct TArray<struct FTransform> HintTransforms_17_4C1A67004B0583AF2B9C328BF93AF29A; // 0x8
 
     };
 
-    struct FLightningTuningDataInfo //UserDefinedStruct LightningTuningDataInfo.LightningTuningDataInfo
+    struct FFEvacWeightedRandomCover //UserDefinedStruct FEvacWeightedRandomCover.FEvacWeightedRandomCover
     {
-    //Children Prop Count (Fields): 9
+    //Children Prop Count (Fields): 2
     public:
 
-        float DistanceFromPlayerMin_3_F4D76B234A12E2778F754C91D3C00D5F; // 0x0
-        float DistanceFromPlayerMax_7_A19470F14CA0202A8DA8928C10300050; // 0x4
-        float CooldownMin_10_34238BE249F635E9D30E5D8984C934E5; // 0x8
-        float CooldownMax_11_5EB969F24B410BAE7E702BBEA5797E9E; // 0xc
-        float LightningWarningTime_17_E4FBC2B9497042C5251E7EAD754139EB; // 0x10
-        float ImpactVFXTimeToImpact_40_61B4F1C14C52C95E12BD9EBCC78DF14D; // 0x14
-        float Damage_27_5819B0B94E931BEF3EFC4C8C73DF31F3; // 0x18
-        float DamageRadius_29_3438EAD94CEF46EF4A0BC0A172A69988; // 0x1c
-        bool IsDebugForcedEnabled_34_0D770C7A476CD9B6A977AFB2D66EF13C; // 0x20
+        class UStaticMesh* Mesh_2_CE0C646A454AAC9DA330C28B6F8CC601; // 0x0
+        float Weight_5_7B28EB004A6DDF8045548DAC7B69BAF6; // 0x8
 
     };
 
-    struct FAbility_Action_AudioDecoy //UserDefinedStruct Ability_Action_AudioDecoy.Ability_Action_AudioDecoy
+    struct FInventoryOnboarding_ST //UserDefinedStruct InventoryOnboarding_ST.InventoryOnboarding_ST
+    {
+    //Children Prop Count (Fields): 5
+    public:
+
+        struct TArray<enum class EYPlayerSetType> PlayerSetType_4_DF62AE37481D51ADBAD7E2AE9D8728E7; // 0x0
+        enum class EYItemType ItemType_6_DD97073647CFC11CC5BFE58D88DC1B6B; // 0x10
+        bool RequiresTools_8_9810ED0047891CB88D72EDA78EACE954; // 0x11
+        bool CheckSpecificEquippedType_14_CC1D35464840C5305204FEA5EB5AC3FE; // 0x12
+        bool HighlightPlayerBag_17_724F8303483E11F3316CA8B18F420501; // 0x13
+
+    };
+
+    struct FStructure_SelectorData //UserDefinedStruct Structure_SelectorData.Structure_SelectorData
     {
     //Children Prop Count (Fields): 3
     public:
 
-        struct FDataTableRowHandle DecoyAudio_2_FABA0C5543E0FA95F7E37BA2306A398E; // 0x0
-        float Duration_5_8E352E014F8A0DC8A08A19B47534F3B3; // 0x10
-        float FadeOutDuration_7_D0758DD34263AD91F9AE839FCA0EFFED; // 0x14
+        struct FText DisplayName_6_1D3030FF48F4B027C56D8885BC7ED0CF; // 0x0
+        float Value_9_AEB3506B4AFD9C32EA6843BA49965EFA; // 0x20
+        struct FName DataName_12_042E97B04C04EA391C7FDEA763642D53; // 0x24
 
     };
 
-    struct FAbility_Action_GasGrenade //UserDefinedStruct Ability_Action_GasGrenade.Ability_Action_GasGrenade
+    struct FStucture_FilterData //UserDefinedStruct Stucture_FilterData.Stucture_FilterData
     {
-    //Children Prop Count (Fields): 7
+    //Children Prop Count (Fields): 9
     public:
 
-        struct FDataTableRowHandle Audio_23_FABA0C5543E0FA95F7E37BA2306A398E; // 0x0
-        float DurationAudio_22_8E352E014F8A0DC8A08A19B47534F3B3; // 0x10
-        float FadeOutDuration_7_D0758DD34263AD91F9AE839FCA0EFFED; // 0x14
-        float Damage_15_58F19B994E4E771D4A6195BE9FA72B0E; // 0x18
-        float Radius_21_45B1D3B944793EB7D55B389C3F7ADC03; // 0x1c
-        float Interval_32_A6DABB044F11F6F78F09F7A340D2BA02; // 0x20
-        float Penetration_35_9ACEB69F42C354F52F33C293E4315192; // 0x24
+        enum class En_FilterCategoryCollection GenericCollectionType_28_48E7D0BF4620B1D1AA9F50AA355DFAE6; // 0x0
+        bool UseIcon_7_1EBAB2534C0792B29A035696802C24FE; // 0x1
+        bool ShowNotification_10_3663EE804DFDF8C1D6D6D8BE6DE0C94A; // 0x2
+        struct FString ChildNavigationCategory_34_12AD8247457DC0F49294F0AB04F88084; // 0x8
+        struct FText OverridenLabel_30_B14FDBDF4B0CB0F16C92A0B658489894; // 0x18
+        struct TArray<enum class EYCustomizationCategory> AdditionalCustomizationCategories_31_94F7337740B74FDDFC233C9D0ED26C4B; // 0x38
+        struct TArray<enum class EYItemType> AdditionalItemTypes_32_B7F48F2F48A17C6862BBE9AF8344367F; // 0x48
+        struct FString HighlightId_37_ACC5F71B46F9CF03554A5F8CBB0D0AFF; // 0x58
+        struct FDataTableRowHandle HighlightRowId_41_5879BEA645573D576808E6AD8BEADAAC; // 0x68
 
     };
 
-    struct FAbility_Action_RoadFlare //UserDefinedStruct Ability_Action_RoadFlare.Ability_Action_RoadFlare
+    struct FStucture_FilterCollection //UserDefinedStruct Stucture_FilterCollection.Stucture_FilterCollection
     {
     //Children Prop Count (Fields): 1
     public:
 
-        float Duration_2_C358A3414BA496CA903791A70A14995E; // 0x0
+        struct TArray<struct FStucture_FilterData> Filters_20_B14FDBDF4B0CB0F16C92A0B658489894; // 0x0
+
+    };
+
+    struct FStructure_HUD_ProgressBars //UserDefinedStruct Structure_HUD_ProgressBars.Structure_HUD_ProgressBars
+    {
+    //Children Prop Count (Fields): 8
+    public:
+
+        float StartValue_7_C4C15954450AAA4F616FDE8A91A5AC08; // 0x0
+        float DesiredValue_3_2C117D094E4B9F91267EFF82B906EAFE; // 0x4
+        float Alpha_5_D86EF2224E857BC7B927459986D8A1C8; // 0x8
+        class UProgressBar* ProgressBar_10_700A577046AAB0A82FA4BF9177426292; // 0x10
+        float Speed_13_7B8385DB490AC27EBC94CAB250DF4EC3; // 0x18
+        float Delay_15_34041B7E4CCFD62346ED32B285990076; // 0x1c
+        enum class EHorizonTweenLerpMode InterpolationMode_20_41F3AC9E428769FF838307B96C4C0791; // 0x20
+        bool IsDone_22_CABD3814486E24C2C224A4BA4916C019; // 0x21
+
+    };
+
+    struct FStucture_TabData //UserDefinedStruct Stucture_TabData.Stucture_TabData
+    {
+    //Children Prop Count (Fields): 8
+    public:
+
+        struct FText TabLabel_5_B14FDBDF4B0CB0F16C92A0B658489894; // 0x0
+        bool UseIcon_7_1EBAB2534C0792B29A035696802C24FE; // 0x20
+        bool ShowNotification_10_87374DDB4C3DA819C5C811B8950F8058; // 0x21
+        enum class EYCustomizationMode CustomizationMode_13_473749A24D62878D244B9383A1ACDB65; // 0x22
+        enum class EYCustomizationCategory CustomizationCategory_17_08D2C6984F40B5E55A7DCC8149351C35; // 0x23
+        bool ShowDecoration_19_982CD86E42C85676EDC9449045676187; // 0x24
+        bool ShowSorting_21_A8A81A4F436E95F33E7AE698C5351C55; // 0x25
+        struct FDataTableRowHandle HighlightID_24_DA9B988A49E198B3CCE26B88343FA3DE; // 0x28
+
+    };
+
+    struct FStucture_TabBIData //UserDefinedStruct Stucture_TabBIData.Stucture_TabBIData
+    {
+    //Children Prop Count (Fields): 2
+    public:
+
+        bool SendBI_34_1EBAB2534C0792B29A035696802C24FE; // 0x0
+        struct FString BIEventLocation_33_F27AF35F4EABA1C21F7DC2BF35FB8274; // 0x8
+
+    };
+
+    struct FStructure_FilterCategoryBtnData //UserDefinedStruct Structure_FilterCategoryBtnData.Structure_FilterCategoryBtnData
+    {
+    //Children Prop Count (Fields): 2
+    public:
+
+        struct FText Label_4_C838AB6F45AE918909F746B08FDAD6CC; // 0x0
+        struct FYFilterCategoriesDataEntry FilterCategories_9_AA2554964217366855F3D0B6AE34A91C; // 0x20
 
     };
 
@@ -58004,16 +58005,6 @@ namespace SDK
         struct FText Description_4_7250F03B40EC6EC1FDFED8A28716F5C4; // 0x20
         struct TArray<struct FDataTableRowHandle> List_8_14D813B944F31427CB452D9C511A4DB5; // 0x40
         struct TSoftObjectPtr<UTexture2D> Image_12_0D967B0C4ACCB9459C2CA38825A7BE3A; // 0x50
-
-    };
-
-    struct FLootSpawnVolume_Struct //UserDefinedStruct LootSpawnVolume_Struct.LootSpawnVolume_Struct
-    {
-    //Children Prop Count (Fields): 2
-    public:
-
-        struct FDataTableRowHandle LootItem_6_A19338914E4C3CB9AF91639FE74C0AF1; // 0x0
-        float SpawnWeight_5_3FB5E80140161AA700469E99EEE3E709; // 0x10
 
     };
 
@@ -58054,6 +58045,45 @@ namespace SDK
         struct FVector2D endscale_20_FA4D8C914E0C66C3F145159BC5B06F62; // 0x1c
         float endroll_26_AB315D0849CD2DD6F06836BF746E2DEF; // 0x24
         class UMaterialInterface* Material_18_AB90915240DF896019F38095C08DCDA4; // 0x28
+
+    };
+
+    struct FSplineHierarchicalData //UserDefinedStruct SplineHierarchicalData.SplineHierarchicalData
+    {
+    //Children Prop Count (Fields): 1
+    public:
+
+        struct TArray<class UHierarchicalInstancedStaticMeshComponent*> Meshes_3_02E79BBD473816B398679987541E5A86; // 0x0
+
+    };
+
+    struct FSplineMeshData //UserDefinedStruct SplineMeshData.SplineMeshData
+    {
+    //Children Prop Count (Fields): 9
+    public:
+
+        struct TArray<class UStaticMesh*> SplineMeshes_3_150A19D1427BB24DF5D37DA7D3993AE9; // 0x0
+        struct TArray<int32_t> SplineMeshSelectionProbability_23_2FD5150D4F57BFA6E97868A8805E21EC; // 0x10
+        float DistanceBetweenSplineMeshes_20_D7FF36BC40359B6ECFE616B44F255AE7; // 0x20
+        struct FTransform LocationOffset_22_1247D3D6436434C1658D6BAD00DDC454; // 0x30
+        bool VerticalOrientation_25_740772604CEA3CAD538323B8C2FA9252; // 0x60
+        bool PlaceOnGround_27_CEDD46264C4F47D99C480787F8579201; // 0x61
+        int32_t Seed_32_CF4698A94C2D3C2323C337B48A11C23E; // 0x64
+        struct TArray<struct FSplineOverwriteMesh> OverwriteMesh_37_CFC5ABAF49F3CCF5139A68AB6184261B; // 0x68
+        class UStaticMesh* EndMesh_41_FA92AFD642E57842A1358E81F7C5ABDA; // 0x78
+
+    };
+
+    struct FSplineOverwriteMesh //UserDefinedStruct SplineOverwriteMesh.SplineOverwriteMesh
+    {
+    //Children Prop Count (Fields): 5
+    public:
+
+        int32_t IndexToOverwrite_3_09C216C14349C48EE563D59065769EB9; // 0x0
+        class UStaticMesh* Mesh_6_2619AD8643A018A4B02E80B1B645E2B2; // 0x8
+        struct FTransform MeshTransform_12_7AE7335949849EF7CA42469C30E6A38B; // 0x10
+        float DistanceLeft_14_5087517C455845BCFA66FDA64F8A1DC9; // 0x40
+        float DistanceRight_17_BC78F8B44684992F056FBCB0F8A4AB34; // 0x44
 
     };
 
