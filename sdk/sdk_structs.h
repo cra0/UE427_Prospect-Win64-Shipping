@@ -13347,7 +13347,7 @@ namespace SDK
 
     struct FYFeatureToggles : FYDataTableRowBase //ScriptStruct Prospect.YFeatureToggles
     {
-    //Children Prop Count (Fields): 119
+    //Children Prop Count (Fields): 124
     public:
 
         bool m_useFullTimeAsyncLoadingThread; // 0x10
@@ -13450,25 +13450,30 @@ namespace SDK
         bool m_cheatFeatureToggle_49; // 0x80
         bool m_cheatFeatureToggle_50; // 0x81
         bool m_cheatFeatureToggle_51; // 0x82
-        bool m_isBattlEyeKickingActive; // 0x83
-        bool m_isBattlEyeActive; // 0x84
-        bool m_isBattlEyeKickReasonChecksActive; // 0x85
-        bool m_levelStreamingFailsafeEnabled; // 0x86
-        bool m_useCustomOcclusionAudioAsyncLimitation; // 0x87
-        bool m_useCustomOcclusionAudioSyncLimitation; // 0x88
-        bool m_isStationUsingNewMatchmaking; // 0x89
-        bool m_isMatchUsingNewMatchmaking; // 0x8a
-        bool m_isUsingSingleNvrBracket; // 0x8b
-        bool m_sampleBIEvents; // 0x8c
-        bool m_shutDownInstancesOfExistingConnections; // 0x8d
-        bool m_vivoxRejoinOnDisconnect; // 0x8e
-        bool m_cheatProtectionSession; // 0x8f
-        bool m_isMergingMeshComponentsDefaultStation; // 0x90
-        bool m_isMergingMeshComponentsDefaultMatch; // 0x91
-        bool m_autoFetchTitleData; // 0x92
+        bool m_cheatFeatureToggle_52; // 0x83
+        bool m_isBattlEyeKickingActive; // 0x84
+        bool m_isBattlEyeActive; // 0x85
+        bool m_isBattlEyeKickReasonChecksActive; // 0x86
+        bool m_levelStreamingFailsafeEnabled; // 0x87
+        bool m_useCustomOcclusionAudioAsyncLimitation; // 0x88
+        bool m_useCustomOcclusionAudioSyncLimitation; // 0x89
+        bool m_isStationUsingNewMatchmaking; // 0x8a
+        bool m_isMatchUsingNewMatchmaking; // 0x8b
+        bool m_isUsingSingleNvrBracket; // 0x8c
+        bool m_sampleBIEvents; // 0x8d
+        bool m_shutDownInstancesOfExistingConnections; // 0x8e
+        bool m_vivoxRejoinOnDisconnect; // 0x8f
+        bool m_cheatProtectionSession; // 0x90
+        bool m_isMergingMeshComponentsDefaultStation; // 0x91
+        bool m_isMergingMeshComponentsDefaultMatch; // 0x92
+        bool m_autoFetchTitleData; // 0x93
         struct TMap<struct FString, float> m_fetchingIntervals; // 0x98
         bool m_cheatingVictimCompensationEnabled; // 0xe8
-        bool m_playFabIdServerValidation; // 0xe9
+        bool m_cheatingVictimCompensationIgnoreItemsByWeightEnabled; // 0xe9
+        bool m_kickingStorageQueueEnabled; // 0xea
+        bool m_playFabIdServerValidation; // 0xeb
+        bool m_playFabNickNameServerValidation; // 0xec
+        bool m_battlEyeEndPointEnabled; // 0xed
 
     };
 
@@ -13982,7 +13987,7 @@ namespace SDK
 
     struct FYMiscSettings : FYDataTableRowBase //ScriptStruct Prospect.YMiscSettings
     {
-    //Children Prop Count (Fields): 53
+    //Children Prop Count (Fields): 54
     public:
 
         bool m_cheatSettingToggle_01; // 0x10
@@ -13992,52 +13997,53 @@ namespace SDK
         float m_cheatSetting_00; // 0x14
         float m_cheatSetting_01; // 0x18
         int32_t m_cheatSetting_02; // 0x1c
-        float m_cheatSettingBackend_01; // 0x20
-        float m_cheatSettingBackend_02; // 0x24
-        int32_t m_cheatSettingBackend_03; // 0x28
-        struct FYMiscSettingSubSection m_cheatSettingBackend_04; // 0x2c
-        struct FYMiscSettingsCombined m_cheatSettings_03; // 0x44
-        struct FYMiscSettingsCombined m_cheatSetting_04; // 0x50
-        struct FYMiscSettingsCombined m_cheatSetting_05; // 0x5c
-        struct FYMiscSettingsCombined m_cheatSetting_06; // 0x68
-        struct FYMiscSettingsCombined m_cheatSetting_07; // 0x74
-        struct FYMiscSettingsCombined m_cheatSetting_08; // 0x80
-        struct FYMiscSettingsCombined m_cheatSetting_09; // 0x8c
-        struct FYMiscSettingsCombined m_cheatSetting_12; // 0x98
-        struct FYMiscSettingsCombined m_cheatSetting_13; // 0xa4
-        struct FYMiscSettingsCombined m_cheatSetting_14; // 0xb0
-        struct FYMiscSettingsCombined m_cheatSetting_15; // 0xbc
-        struct FYMiscSettingsCombined m_cheatSetting_16; // 0xc8
-        struct FYMiscSettingsCombined m_cheatSetting_17; // 0xd4
-        struct FYMiscSettingsCombined m_cheatSetting_18; // 0xe0
-        struct FYMiscSettingsCombined m_cheatSetting_19; // 0xec
-        struct FYMiscSettingsCombined m_cheatSetting_20; // 0xf8
-        struct FYMiscSettingsCombined m_cheatSetting_21; // 0x104
-        struct FYMiscSettingsCombined m_cheatSetting_22; // 0x110
-        struct FYMiscSettingsCombined m_cheatSetting_23; // 0x11c
-        struct FYMiscSettingsCombined m_cheatSetting_24; // 0x128
-        struct FYMiscSettingsCombined m_cheatSetting_25; // 0x134
-        struct FYMiscSettingsCombined m_cheatSetting_26; // 0x140
-        struct FYMiscSettingsCombined m_cheatSetting_27; // 0x14c
-        struct FYMiscSettingsCombined m_cheatSetting_28; // 0x158
-        struct FYMiscSettingsCombined m_cheatSetting_29; // 0x164
-        struct TArray<struct FYTieredMiscSettings> m_cheatSettings_17; // 0x170
-        struct TArray<struct FYTieredMiscSettings> m_cheatSettings_18; // 0x180
-        struct TArray<struct FYTieredMiscSettings> m_cheatSettings_19; // 0x190
-        struct TArray<struct FYTieredMiscSettings> m_cheatSettings_20; // 0x1a0
-        struct TArray<struct FYTieredMiscSettings> m_cheatSettings_21; // 0x1b0
-        struct TArray<struct FYTieredMiscSettings> m_cheatSettings_22; // 0x1c0
-        struct TArray<struct FYTieredMiscSettings> m_cheatSettings_27; // 0x1d0
-        struct TArray<struct FYTieredMiscSettings> m_cheatSettings_28; // 0x1e0
-        struct TArray<struct FYTieredMiscSettings> m_cheatSettings_29; // 0x1f0
-        struct TArray<struct FYTieredMiscSettings> m_cheatSettings_30; // 0x200
-        struct TArray<struct FYTieredMiscSettings> m_cheatSettings_31; // 0x210
-        struct TArray<struct FYTieredMiscSettings> m_cheatSettings_32; // 0x220
-        struct TArray<struct FYTieredMiscSettings> m_cheatSettings_33; // 0x230
-        struct TArray<struct FYTieredMiscSettings> m_cheatSettings_34; // 0x240
-        struct TArray<struct FYTieredMiscSettings> m_cheatSettings_35; // 0x250
-        struct TArray<struct FYTieredMiscSettings> m_cheatSettings_38; // 0x260
-        struct TArray<struct FYTieredMiscSettings> m_cheatSettings_39; // 0x270
+        int32_t m_cheatSetting_03; // 0x20
+        float m_cheatSettingBackend_01; // 0x24
+        float m_cheatSettingBackend_02; // 0x28
+        int32_t m_cheatSettingBackend_03; // 0x2c
+        struct FYMiscSettingSubSection m_cheatSettingBackend_04; // 0x30
+        struct FYMiscSettingsCombined m_cheatSettings_03; // 0x4c
+        struct FYMiscSettingsCombined m_cheatSetting_04; // 0x58
+        struct FYMiscSettingsCombined m_cheatSetting_05; // 0x64
+        struct FYMiscSettingsCombined m_cheatSetting_06; // 0x70
+        struct FYMiscSettingsCombined m_cheatSetting_07; // 0x7c
+        struct FYMiscSettingsCombined m_cheatSetting_08; // 0x88
+        struct FYMiscSettingsCombined m_cheatSetting_09; // 0x94
+        struct FYMiscSettingsCombined m_cheatSetting_12; // 0xa0
+        struct FYMiscSettingsCombined m_cheatSetting_13; // 0xac
+        struct FYMiscSettingsCombined m_cheatSetting_14; // 0xb8
+        struct FYMiscSettingsCombined m_cheatSetting_15; // 0xc4
+        struct FYMiscSettingsCombined m_cheatSetting_16; // 0xd0
+        struct FYMiscSettingsCombined m_cheatSetting_17; // 0xdc
+        struct FYMiscSettingsCombined m_cheatSetting_18; // 0xe8
+        struct FYMiscSettingsCombined m_cheatSetting_19; // 0xf4
+        struct FYMiscSettingsCombined m_cheatSetting_20; // 0x100
+        struct FYMiscSettingsCombined m_cheatSetting_21; // 0x10c
+        struct FYMiscSettingsCombined m_cheatSetting_22; // 0x118
+        struct FYMiscSettingsCombined m_cheatSetting_23; // 0x124
+        struct FYMiscSettingsCombined m_cheatSetting_24; // 0x130
+        struct FYMiscSettingsCombined m_cheatSetting_25; // 0x13c
+        struct FYMiscSettingsCombined m_cheatSetting_26; // 0x148
+        struct FYMiscSettingsCombined m_cheatSetting_27; // 0x154
+        struct FYMiscSettingsCombined m_cheatSetting_28; // 0x160
+        struct FYMiscSettingsCombined m_cheatSetting_29; // 0x16c
+        struct TArray<struct FYTieredMiscSettings> m_cheatSettings_17; // 0x178
+        struct TArray<struct FYTieredMiscSettings> m_cheatSettings_18; // 0x188
+        struct TArray<struct FYTieredMiscSettings> m_cheatSettings_19; // 0x198
+        struct TArray<struct FYTieredMiscSettings> m_cheatSettings_20; // 0x1a8
+        struct TArray<struct FYTieredMiscSettings> m_cheatSettings_21; // 0x1b8
+        struct TArray<struct FYTieredMiscSettings> m_cheatSettings_22; // 0x1c8
+        struct TArray<struct FYTieredMiscSettings> m_cheatSettings_27; // 0x1d8
+        struct TArray<struct FYTieredMiscSettings> m_cheatSettings_28; // 0x1e8
+        struct TArray<struct FYTieredMiscSettings> m_cheatSettings_29; // 0x1f8
+        struct TArray<struct FYTieredMiscSettings> m_cheatSettings_30; // 0x208
+        struct TArray<struct FYTieredMiscSettings> m_cheatSettings_31; // 0x218
+        struct TArray<struct FYTieredMiscSettings> m_cheatSettings_32; // 0x228
+        struct TArray<struct FYTieredMiscSettings> m_cheatSettings_33; // 0x238
+        struct TArray<struct FYTieredMiscSettings> m_cheatSettings_34; // 0x248
+        struct TArray<struct FYTieredMiscSettings> m_cheatSettings_35; // 0x258
+        struct TArray<struct FYTieredMiscSettings> m_cheatSettings_38; // 0x268
+        struct TArray<struct FYTieredMiscSettings> m_cheatSettings_39; // 0x278
 
     };
 
@@ -14064,7 +14070,7 @@ namespace SDK
 
     struct FYMiscSettingSubSection //ScriptStruct Prospect.YMiscSettingSubSection
     {
-    //Children Prop Count (Fields): 6
+    //Children Prop Count (Fields): 7
     public:
 
         int32_t m_miscSetting_01; // 0x0
@@ -14073,6 +14079,7 @@ namespace SDK
         int32_t m_miscSetting_04; // 0xc
         int32_t m_miscSetting_05; // 0x10
         int32_t m_miscSetting_06; // 0x14
+        bool m_miscSetting_07; // 0x18
 
     };
 
@@ -57746,18 +57753,6 @@ namespace SDK
 
     };
 
-    struct FAutomationTestStartData //UserDefinedStruct AutomationTestStartData.AutomationTestStartData
-    {
-    //Children Prop Count (Fields): 4
-    public:
-
-        class AAutomationManager_Base_BP_C* AutomationManager_5_52137915453161A2BF98959371D9D9D9; // 0x0
-        class AYPlayerController* PlayerController_8_B01D6ABB485A0A1DC17637AE8BB6CE29; // 0x8
-        bool IsStation_11_62DDFEF34B4FDCD7F39EB58C46D7C2B7; // 0x10
-        struct FYPlayerAutomationData AutomationData_2_286D976D48B659DE00EB278117F04B33; // 0x18
-
-    };
-
     struct FSTR_MagnetismPresetDesc //UserDefinedStruct STR_MagnetismPresetDesc.STR_MagnetismPresetDesc
     {
     //Children Prop Count (Fields): 4
@@ -57795,6 +57790,18 @@ namespace SDK
 
     };
 
+    struct FAutomationTestStartData //UserDefinedStruct AutomationTestStartData.AutomationTestStartData
+    {
+    //Children Prop Count (Fields): 4
+    public:
+
+        class AAutomationManager_Base_BP_C* AutomationManager_5_52137915453161A2BF98959371D9D9D9; // 0x0
+        class AYPlayerController* PlayerController_8_B01D6ABB485A0A1DC17637AE8BB6CE29; // 0x8
+        bool IsStation_11_62DDFEF34B4FDCD7F39EB58C46D7C2B7; // 0x10
+        struct FYPlayerAutomationData AutomationData_2_286D976D48B659DE00EB278117F04B33; // 0x18
+
+    };
+
     struct FInventoryOnboarding_ST //UserDefinedStruct InventoryOnboarding_ST.InventoryOnboarding_ST
     {
     //Children Prop Count (Fields): 5
@@ -57805,6 +57812,42 @@ namespace SDK
         bool RequiresTools_8_9810ED0047891CB88D72EDA78EACE954; // 0x11
         bool CheckSpecificEquippedType_14_CC1D35464840C5305204FEA5EB5AC3FE; // 0x12
         bool HighlightPlayerBag_17_724F8303483E11F3316CA8B18F420501; // 0x13
+
+    };
+
+    struct FStructure_FilterCategoryBtnData //UserDefinedStruct Structure_FilterCategoryBtnData.Structure_FilterCategoryBtnData
+    {
+    //Children Prop Count (Fields): 2
+    public:
+
+        struct FText Label_4_C838AB6F45AE918909F746B08FDAD6CC; // 0x0
+        struct FYFilterCategoriesDataEntry FilterCategories_9_AA2554964217366855F3D0B6AE34A91C; // 0x20
+
+    };
+
+    struct FStucture_FilterData //UserDefinedStruct Stucture_FilterData.Stucture_FilterData
+    {
+    //Children Prop Count (Fields): 9
+    public:
+
+        enum class En_FilterCategoryCollection GenericCollectionType_28_48E7D0BF4620B1D1AA9F50AA355DFAE6; // 0x0
+        bool UseIcon_7_1EBAB2534C0792B29A035696802C24FE; // 0x1
+        bool ShowNotification_10_3663EE804DFDF8C1D6D6D8BE6DE0C94A; // 0x2
+        struct FString ChildNavigationCategory_34_12AD8247457DC0F49294F0AB04F88084; // 0x8
+        struct FText OverridenLabel_30_B14FDBDF4B0CB0F16C92A0B658489894; // 0x18
+        struct TArray<enum class EYCustomizationCategory> AdditionalCustomizationCategories_31_94F7337740B74FDDFC233C9D0ED26C4B; // 0x38
+        struct TArray<enum class EYItemType> AdditionalItemTypes_32_B7F48F2F48A17C6862BBE9AF8344367F; // 0x48
+        struct FString HighlightId_37_ACC5F71B46F9CF03554A5F8CBB0D0AFF; // 0x58
+        struct FDataTableRowHandle HighlightRowId_41_5879BEA645573D576808E6AD8BEADAAC; // 0x68
+
+    };
+
+    struct FStucture_FilterCollection //UserDefinedStruct Stucture_FilterCollection.Stucture_FilterCollection
+    {
+    //Children Prop Count (Fields): 1
+    public:
+
+        struct TArray<struct FStucture_FilterData> Filters_20_B14FDBDF4B0CB0F16C92A0B658489894; // 0x0
 
     };
 
@@ -57858,42 +57901,6 @@ namespace SDK
         struct FText DisplayName_6_1D3030FF48F4B027C56D8885BC7ED0CF; // 0x0
         float Value_9_AEB3506B4AFD9C32EA6843BA49965EFA; // 0x20
         struct FName DataName_12_042E97B04C04EA391C7FDEA763642D53; // 0x24
-
-    };
-
-    struct FStructure_FilterCategoryBtnData //UserDefinedStruct Structure_FilterCategoryBtnData.Structure_FilterCategoryBtnData
-    {
-    //Children Prop Count (Fields): 2
-    public:
-
-        struct FText Label_4_C838AB6F45AE918909F746B08FDAD6CC; // 0x0
-        struct FYFilterCategoriesDataEntry FilterCategories_9_AA2554964217366855F3D0B6AE34A91C; // 0x20
-
-    };
-
-    struct FStucture_FilterData //UserDefinedStruct Stucture_FilterData.Stucture_FilterData
-    {
-    //Children Prop Count (Fields): 9
-    public:
-
-        enum class En_FilterCategoryCollection GenericCollectionType_28_48E7D0BF4620B1D1AA9F50AA355DFAE6; // 0x0
-        bool UseIcon_7_1EBAB2534C0792B29A035696802C24FE; // 0x1
-        bool ShowNotification_10_3663EE804DFDF8C1D6D6D8BE6DE0C94A; // 0x2
-        struct FString ChildNavigationCategory_34_12AD8247457DC0F49294F0AB04F88084; // 0x8
-        struct FText OverridenLabel_30_B14FDBDF4B0CB0F16C92A0B658489894; // 0x18
-        struct TArray<enum class EYCustomizationCategory> AdditionalCustomizationCategories_31_94F7337740B74FDDFC233C9D0ED26C4B; // 0x38
-        struct TArray<enum class EYItemType> AdditionalItemTypes_32_B7F48F2F48A17C6862BBE9AF8344367F; // 0x48
-        struct FString HighlightId_37_ACC5F71B46F9CF03554A5F8CBB0D0AFF; // 0x58
-        struct FDataTableRowHandle HighlightRowId_41_5879BEA645573D576808E6AD8BEADAAC; // 0x68
-
-    };
-
-    struct FStucture_FilterCollection //UserDefinedStruct Stucture_FilterCollection.Stucture_FilterCollection
-    {
-    //Children Prop Count (Fields): 1
-    public:
-
-        struct TArray<struct FStucture_FilterData> Filters_20_B14FDBDF4B0CB0F16C92A0B658489894; // 0x0
 
     };
 
@@ -58074,35 +58081,6 @@ namespace SDK
 
     };
 
-    struct FLootSpawnVolume_Struct //UserDefinedStruct LootSpawnVolume_Struct.LootSpawnVolume_Struct
-    {
-    //Children Prop Count (Fields): 2
-    public:
-
-        struct FDataTableRowHandle LootItem_6_A19338914E4C3CB9AF91639FE74C0AF1; // 0x0
-        float SpawnWeight_5_3FB5E80140161AA700469E99EEE3E709; // 0x10
-
-    };
-
-    struct FAMB_Spawn_Cues_Data_Struct //UserDefinedStruct AMB_Spawn_Cues_Data_Struct.AMB_Spawn_Cues_Data_Struct
-    {
-    //Children Prop Count (Fields): 11
-    public:
-
-        struct FDataTableRowHandle Sound_2_11CC8B0D4E2DDC47875919AA2DD4579C; // 0x0
-        float MinSpawnTime_5_B4107DD04913B0509CF5DBA081BECF18; // 0x10
-        float MaxSpawnTime_7_98911C664C8D939837B5E99924EB7D8B; // 0x14
-        float MinDistance_12_658E32E04E41214A494767AB25D55300; // 0x18
-        float MaxDistance_11_0D69489440EFFB01B9C17DAFA1FDE148; // 0x1c
-        float Volume_15_7D81496D4D9A5FB5D6BBBF85F46CEA95; // 0x20
-        bool Day_20_16342EB540FDD2B4B262519D8A327BA7; // 0x24
-        bool Dusk_25_FDDBD18B408DAC125807DDADC6453C44; // 0x25
-        bool Storm_26_238F068540BE9E95D16FA2B6D9B6A954; // 0x26
-        bool Peak_27_3B37D5F1421AB7E278BDFC9AA68F6F25; // 0x27
-        bool Dawn_28_E7703CA94019E6A1BD6F10ABCCC9B87A; // 0x28
-
-    };
-
     struct FSplineHierarchicalData //UserDefinedStruct SplineHierarchicalData.SplineHierarchicalData
     {
     //Children Prop Count (Fields): 1
@@ -58139,6 +58117,25 @@ namespace SDK
         struct FTransform MeshTransform_12_7AE7335949849EF7CA42469C30E6A38B; // 0x10
         float DistanceLeft_14_5087517C455845BCFA66FDA64F8A1DC9; // 0x40
         float DistanceRight_17_BC78F8B44684992F056FBCB0F8A4AB34; // 0x44
+
+    };
+
+    struct FAMB_Spawn_Cues_Data_Struct //UserDefinedStruct AMB_Spawn_Cues_Data_Struct.AMB_Spawn_Cues_Data_Struct
+    {
+    //Children Prop Count (Fields): 11
+    public:
+
+        struct FDataTableRowHandle Sound_2_11CC8B0D4E2DDC47875919AA2DD4579C; // 0x0
+        float MinSpawnTime_5_B4107DD04913B0509CF5DBA081BECF18; // 0x10
+        float MaxSpawnTime_7_98911C664C8D939837B5E99924EB7D8B; // 0x14
+        float MinDistance_12_658E32E04E41214A494767AB25D55300; // 0x18
+        float MaxDistance_11_0D69489440EFFB01B9C17DAFA1FDE148; // 0x1c
+        float Volume_15_7D81496D4D9A5FB5D6BBBF85F46CEA95; // 0x20
+        bool Day_20_16342EB540FDD2B4B262519D8A327BA7; // 0x24
+        bool Dusk_25_FDDBD18B408DAC125807DDADC6453C44; // 0x25
+        bool Storm_26_238F068540BE9E95D16FA2B6D9B6A954; // 0x26
+        bool Peak_27_3B37D5F1421AB7E278BDFC9AA68F6F25; // 0x27
+        bool Dawn_28_E7703CA94019E6A1BD6F10ABCCC9B87A; // 0x28
 
     };
 
