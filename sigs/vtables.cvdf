@@ -1,5 +1,5 @@
 // Cra0 VTable Defintion File
-// vtables_7FF7AB6A0000
+// vtables_7FF7B8290000
 -c 2831
 0x47ca950,"vftable_Object","Object CoreUObject.Default__Object"
 0x47cb488,"vftable_NamedInterfaces","NamedInterfaces OnlineSubsystem.Default__NamedInterfaces"

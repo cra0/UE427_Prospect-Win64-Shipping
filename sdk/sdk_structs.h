@@ -57753,6 +57753,18 @@ namespace SDK
 
     };
 
+    struct FAutomationTestStartData //UserDefinedStruct AutomationTestStartData.AutomationTestStartData
+    {
+    //Children Prop Count (Fields): 4
+    public:
+
+        class AAutomationManager_Base_BP_C* AutomationManager_5_52137915453161A2BF98959371D9D9D9; // 0x0
+        class AYPlayerController* PlayerController_8_B01D6ABB485A0A1DC17637AE8BB6CE29; // 0x8
+        bool IsStation_11_62DDFEF34B4FDCD7F39EB58C46D7C2B7; // 0x10
+        struct FYPlayerAutomationData AutomationData_2_286D976D48B659DE00EB278117F04B33; // 0x18
+
+    };
+
     struct FSTR_MagnetismPresetDesc //UserDefinedStruct STR_MagnetismPresetDesc.STR_MagnetismPresetDesc
     {
     //Children Prop Count (Fields): 4
@@ -57790,15 +57802,32 @@ namespace SDK
 
     };
 
-    struct FAutomationTestStartData //UserDefinedStruct AutomationTestStartData.AutomationTestStartData
+    struct FMapAreaDifficulty_ST //UserDefinedStruct MapAreaDifficulty_ST.MapAreaDifficulty_ST
     {
-    //Children Prop Count (Fields): 4
+    //Children Prop Count (Fields): 2
     public:
 
-        class AAutomationManager_Base_BP_C* AutomationManager_5_52137915453161A2BF98959371D9D9D9; // 0x0
-        class AYPlayerController* PlayerController_8_B01D6ABB485A0A1DC17637AE8BB6CE29; // 0x8
-        bool IsStation_11_62DDFEF34B4FDCD7F39EB58C46D7C2B7; // 0x10
-        struct FYPlayerAutomationData AutomationData_2_286D976D48B659DE00EB278117F04B33; // 0x18
+        struct FText Text_6_D9146C924A469B0435C41F8E7DE66C83; // 0x0
+        struct FString StyleTag_5_FDD856DD46848DA297A2B0AD92C1EBA8; // 0x20
+
+    };
+
+    struct FST_EffortDataTableRow //UserDefinedStruct ST_EffortDataTableRow.ST_EffortDataTableRow
+    {
+    //Children Prop Count (Fields): 1
+    public:
+
+        struct TMap<enum class EN_EffortTypes, struct FST_EffortData> Efforts_8_70D960094B9CBF7FE719299E4CCEDE62; // 0x0
+
+    };
+
+    struct FST_EffortData //UserDefinedStruct ST_EffortData.ST_EffortData
+    {
+    //Children Prop Count (Fields): 2
+    public:
+
+        struct FDataTableRowHandle VO_2_DACCD7C64AEC65EC53F9B7952C5B9399; // 0x0
+        bool OnlyPlayOnAutonomousProxy_12_491168E947DFFD7794F07FBE4A0D03AD; // 0x10
 
     };
 
@@ -57904,26 +57933,6 @@ namespace SDK
 
     };
 
-    struct FMS_HintMarkerReplicatedData_ST //UserDefinedStruct MS_HintMarkerReplicatedData_ST.MS_HintMarkerReplicatedData_ST
-    {
-    //Children Prop Count (Fields): 2
-    public:
-
-        struct FName ActiveMarkerId_9_7B44AE714CA2F178985EFB893A89AE89; // 0x0
-        struct TArray<struct FTransform> HintTransforms_17_4C1A67004B0583AF2B9C328BF93AF29A; // 0x8
-
-    };
-
-    struct FMapAreaDifficulty_ST //UserDefinedStruct MapAreaDifficulty_ST.MapAreaDifficulty_ST
-    {
-    //Children Prop Count (Fields): 2
-    public:
-
-        struct FText Text_6_D9146C924A469B0435C41F8E7DE66C83; // 0x0
-        struct FString StyleTag_5_FDD856DD46848DA297A2B0AD92C1EBA8; // 0x20
-
-    };
-
     struct FStructure_InputKeyNav //UserDefinedStruct Structure_InputKeyNav.Structure_InputKeyNav
     {
     //Children Prop Count (Fields): 5
@@ -57937,22 +57946,13 @@ namespace SDK
 
     };
 
-    struct FST_EffortDataTableRow //UserDefinedStruct ST_EffortDataTableRow.ST_EffortDataTableRow
-    {
-    //Children Prop Count (Fields): 1
-    public:
-
-        struct TMap<enum class EN_EffortTypes, struct FST_EffortData> Efforts_8_70D960094B9CBF7FE719299E4CCEDE62; // 0x0
-
-    };
-
-    struct FST_EffortData //UserDefinedStruct ST_EffortData.ST_EffortData
+    struct FMS_HintMarkerReplicatedData_ST //UserDefinedStruct MS_HintMarkerReplicatedData_ST.MS_HintMarkerReplicatedData_ST
     {
     //Children Prop Count (Fields): 2
     public:
 
-        struct FDataTableRowHandle VO_2_DACCD7C64AEC65EC53F9B7952C5B9399; // 0x0
-        bool OnlyPlayOnAutonomousProxy_12_491168E947DFFD7794F07FBE4A0D03AD; // 0x10
+        struct FName ActiveMarkerId_9_7B44AE714CA2F178985EFB893A89AE89; // 0x0
+        struct TArray<struct FTransform> HintTransforms_17_4C1A67004B0583AF2B9C328BF93AF29A; // 0x8
 
     };
 
@@ -58038,104 +58038,6 @@ namespace SDK
         struct FText Description_4_7250F03B40EC6EC1FDFED8A28716F5C4; // 0x20
         struct TArray<struct FDataTableRowHandle> List_8_14D813B944F31427CB452D9C511A4DB5; // 0x40
         struct TSoftObjectPtr<UTexture2D> Image_12_0D967B0C4ACCB9459C2CA38825A7BE3A; // 0x50
-
-    };
-
-    struct FDecoMeshData //UserDefinedStruct DecoMeshData.DecoMeshData
-    {
-    //Children Prop Count (Fields): 17
-    public:
-
-        int32_t EverXSplineMesh_8_0E6889384BCC3F4500C0CF83E129E45E; // 0x0
-        struct TArray<class UStaticMesh*> DecoMeshArray_24_ED66898E4CC3C964AB4FA5B4C0FC11B4; // 0x8
-        int32_t MinSocketsUsed_60_47192A004D226707FE5876896F364444; // 0x18
-        int32_t MaxSocketsUsed_61_F224931E4B3BB2E2DF7805B2E7D3C52B; // 0x1c
-        struct FVector ScaleMin_40_5FEBCE544F0BBED029EF9AA6DA3A92D0; // 0x20
-        struct FVector ScaleMax_42_BDBA8D714E74F5C867B5BEB2666FB78E; // 0x2c
-        float RollMin_11_EC9F268C4EE6C7B5039D2D8F46B1F106; // 0x38
-        float RollMax_13_889FFD20424E3AB8D067E0BACB668FBE; // 0x3c
-        float PitchMin_15_E342E91648CB4B3F79A8DEB0E15BFB34; // 0x40
-        float PitchMax_17_9125B41249BC2C4D98DCABB91E63BDB1; // 0x44
-        float YawMin_29_5284492D49C04E99ADD7AAA2FF9F0EC5; // 0x48
-        float YawMax_30_C76E5E0F4A2C2642DED1E9B6797FE7C7; // 0x4c
-        struct FRandomStream RandomSeed_21_83FB461B4163DC2E9B897DBE758759BF; // 0x50
-        struct TArray<class UInstancedStaticMeshComponent*> DecoMesh_DO_NOT_TOUCH_49_227F006C4C41CC64B405B089BAEDC9AB; // 0x58
-        struct TMap<struct FName, bool> SocketNameFlags_54_2B7B5D3A402B1FFE7BAD82A55CA1B212; // 0x68
-        class AActor* Actor_67_D126AD46496D37E1AE008B99C209873E; // 0xb8
-        bool AllowCullDistanceVolume_69_5A7F466B4D0ED1CD68AA5A93A9462940; // 0xc0
-
-    };
-
-    struct FSplineMeshData //UserDefinedStruct SplineMeshData.SplineMeshData
-    {
-    //Children Prop Count (Fields): 7
-    public:
-
-        int32_t index_2_5FE4DEED40A6ADD8B4EB4FB0039B20E1; // 0x0
-        class UStaticMesh* mesh_5_617329714D2764DF1450F989B3A2E1ED; // 0x8
-        struct FVector2D startscale_19_0854F8904CB76909AE4B8D9A19DEDEC4; // 0x10
-        float startroll_25_6A06494442BC531F695F12B2B40EB85C; // 0x18
-        struct FVector2D endscale_20_FA4D8C914E0C66C3F145159BC5B06F62; // 0x1c
-        float endroll_26_AB315D0849CD2DD6F06836BF746E2DEF; // 0x24
-        class UMaterialInterface* Material_18_AB90915240DF896019F38095C08DCDA4; // 0x28
-
-    };
-
-    struct FSplineHierarchicalData //UserDefinedStruct SplineHierarchicalData.SplineHierarchicalData
-    {
-    //Children Prop Count (Fields): 1
-    public:
-
-        struct TArray<class UHierarchicalInstancedStaticMeshComponent*> Meshes_3_02E79BBD473816B398679987541E5A86; // 0x0
-
-    };
-
-    struct FSplineMeshData //UserDefinedStruct SplineMeshData.SplineMeshData
-    {
-    //Children Prop Count (Fields): 9
-    public:
-
-        struct TArray<class UStaticMesh*> SplineMeshes_3_150A19D1427BB24DF5D37DA7D3993AE9; // 0x0
-        struct TArray<int32_t> SplineMeshSelectionProbability_23_2FD5150D4F57BFA6E97868A8805E21EC; // 0x10
-        float DistanceBetweenSplineMeshes_20_D7FF36BC40359B6ECFE616B44F255AE7; // 0x20
-        struct FTransform LocationOffset_22_1247D3D6436434C1658D6BAD00DDC454; // 0x30
-        bool VerticalOrientation_25_740772604CEA3CAD538323B8C2FA9252; // 0x60
-        bool PlaceOnGround_27_CEDD46264C4F47D99C480787F8579201; // 0x61
-        int32_t Seed_32_CF4698A94C2D3C2323C337B48A11C23E; // 0x64
-        struct TArray<struct FSplineOverwriteMesh> OverwriteMesh_37_CFC5ABAF49F3CCF5139A68AB6184261B; // 0x68
-        class UStaticMesh* EndMesh_41_FA92AFD642E57842A1358E81F7C5ABDA; // 0x78
-
-    };
-
-    struct FSplineOverwriteMesh //UserDefinedStruct SplineOverwriteMesh.SplineOverwriteMesh
-    {
-    //Children Prop Count (Fields): 5
-    public:
-
-        int32_t IndexToOverwrite_3_09C216C14349C48EE563D59065769EB9; // 0x0
-        class UStaticMesh* Mesh_6_2619AD8643A018A4B02E80B1B645E2B2; // 0x8
-        struct FTransform MeshTransform_12_7AE7335949849EF7CA42469C30E6A38B; // 0x10
-        float DistanceLeft_14_5087517C455845BCFA66FDA64F8A1DC9; // 0x40
-        float DistanceRight_17_BC78F8B44684992F056FBCB0F8A4AB34; // 0x44
-
-    };
-
-    struct FAMB_Spawn_Cues_Data_Struct //UserDefinedStruct AMB_Spawn_Cues_Data_Struct.AMB_Spawn_Cues_Data_Struct
-    {
-    //Children Prop Count (Fields): 11
-    public:
-
-        struct FDataTableRowHandle Sound_2_11CC8B0D4E2DDC47875919AA2DD4579C; // 0x0
-        float MinSpawnTime_5_B4107DD04913B0509CF5DBA081BECF18; // 0x10
-        float MaxSpawnTime_7_98911C664C8D939837B5E99924EB7D8B; // 0x14
-        float MinDistance_12_658E32E04E41214A494767AB25D55300; // 0x18
-        float MaxDistance_11_0D69489440EFFB01B9C17DAFA1FDE148; // 0x1c
-        float Volume_15_7D81496D4D9A5FB5D6BBBF85F46CEA95; // 0x20
-        bool Day_20_16342EB540FDD2B4B262519D8A327BA7; // 0x24
-        bool Dusk_25_FDDBD18B408DAC125807DDADC6453C44; // 0x25
-        bool Storm_26_238F068540BE9E95D16FA2B6D9B6A954; // 0x26
-        bool Peak_27_3B37D5F1421AB7E278BDFC9AA68F6F25; // 0x27
-        bool Dawn_28_E7703CA94019E6A1BD6F10ABCCC9B87A; // 0x28
 
     };
 
