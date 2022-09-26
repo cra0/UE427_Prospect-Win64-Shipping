@@ -11904,14 +11904,15 @@ namespace SDK
 
     struct FYClaimableVictimCompensation //ScriptStruct Prospect.YClaimableVictimCompensation
     {
-    //Children Prop Count (Fields): 5
+    //Children Prop Count (Fields): 6
     public:
 
-        struct FDateTime m_timestamp; // 0x0
-        struct FString m_killerId; // 0x8
-        struct FString m_guid; // 0x18
-        int32_t m_softCurrency; // 0x28
-        struct TArray<struct FYInventoryItem> m_items; // 0x30
+        struct FDateTime m_snapshotTimestamp; // 0x0
+        struct FDateTime m_timestamp; // 0x8
+        struct FString m_killerId; // 0x10
+        struct FString m_guid; // 0x20
+        int32_t m_softCurrency; // 0x30
+        struct TArray<struct FYInventoryItem> m_items; // 0x38
 
     };
 
@@ -13347,7 +13348,7 @@ namespace SDK
 
     struct FYFeatureToggles : FYDataTableRowBase //ScriptStruct Prospect.YFeatureToggles
     {
-    //Children Prop Count (Fields): 124
+    //Children Prop Count (Fields): 127
     public:
 
         bool m_useFullTimeAsyncLoadingThread; // 0x10
@@ -13399,32 +13400,33 @@ namespace SDK
         bool m_isTOCDataMigrationEnabled; // 0x46
         bool m_isInventoryLimitEnabled; // 0x47
         bool m_checkClientVersionUpToDate; // 0x48
-        bool m_cheatFeatureToggle_01; // 0x49
-        bool m_cheatFeatureToggle_02; // 0x4a
-        bool m_cheatFeatureToggle_03; // 0x4b
-        bool m_cheatFeatureToggle_04; // 0x4c
-        bool m_cheatFeatureToggle_05; // 0x4d
-        bool m_cheatFeatureToggle_06; // 0x4e
-        bool m_cheatFeatureToggle_07; // 0x4f
-        bool m_cheatFeatureToggle_08; // 0x50
-        bool m_cheatFeatureToggle_09; // 0x51
-        bool m_cheatFeatureToggle_11; // 0x52
-        bool m_cheatFeatureToggle_12; // 0x53
-        bool m_cheatFeatureToggle_13; // 0x54
-        bool m_cheatFeatureToggle_14; // 0x55
-        bool m_cheatFeatureToggle_15; // 0x56
-        bool m_cheatFeatureToggle_16; // 0x57
-        bool m_cheatFeatureToggle_17; // 0x58
-        bool m_cheatFeatureToggle_18; // 0x59
-        bool m_cheatFeatureToggle_19; // 0x5a
-        bool m_cheatFeatureToggle_20; // 0x5b
-        bool m_cheatFeatureToggle_21; // 0x5c
-        bool m_cheatFeatureToggle_22; // 0x5d
-        bool m_cheatFeatureToggle_23; // 0x5e
-        bool m_cheatFeatureToggle_24; // 0x5f
-        bool m_cheatFeatureToggle_25; // 0x60
-        bool m_cheatFeatureToggle_26; // 0x61
-        bool m_cheatFeatureToggle_27; // 0x62
+        bool m_allowDebugShippingServerCrashes; // 0x49
+        bool m_cheatFeatureToggle_01; // 0x4a
+        bool m_cheatFeatureToggle_02; // 0x4b
+        bool m_cheatFeatureToggle_03; // 0x4c
+        bool m_cheatFeatureToggle_04; // 0x4d
+        bool m_cheatFeatureToggle_05; // 0x4e
+        bool m_cheatFeatureToggle_06; // 0x4f
+        bool m_cheatFeatureToggle_07; // 0x50
+        bool m_cheatFeatureToggle_08; // 0x51
+        bool m_cheatFeatureToggle_09; // 0x52
+        bool m_cheatFeatureToggle_11; // 0x53
+        bool m_cheatFeatureToggle_12; // 0x54
+        bool m_cheatFeatureToggle_13; // 0x55
+        bool m_cheatFeatureToggle_14; // 0x56
+        bool m_cheatFeatureToggle_15; // 0x57
+        bool m_cheatFeatureToggle_16; // 0x58
+        bool m_cheatFeatureToggle_17; // 0x59
+        bool m_cheatFeatureToggle_18; // 0x5a
+        bool m_cheatFeatureToggle_19; // 0x5b
+        bool m_cheatFeatureToggle_20; // 0x5c
+        bool m_cheatFeatureToggle_21; // 0x5d
+        bool m_cheatFeatureToggle_22; // 0x5e
+        bool m_cheatFeatureToggle_23; // 0x5f
+        bool m_cheatFeatureToggle_24; // 0x60
+        bool m_cheatFeatureToggle_25; // 0x61
+        bool m_cheatFeatureToggle_26; // 0x62
+        bool m_cheatFeatureToggle_27; // 0x63
         int32_t m_cheatConfig_27; // 0x64
         bool m_cheatFeatureToggle_28; // 0x68
         bool m_cheatFeatureToggle_29; // 0x69
@@ -13451,22 +13453,24 @@ namespace SDK
         bool m_cheatFeatureToggle_50; // 0x81
         bool m_cheatFeatureToggle_51; // 0x82
         bool m_cheatFeatureToggle_52; // 0x83
-        bool m_isBattlEyeKickingActive; // 0x84
-        bool m_isBattlEyeActive; // 0x85
-        bool m_isBattlEyeKickReasonChecksActive; // 0x86
-        bool m_levelStreamingFailsafeEnabled; // 0x87
-        bool m_useCustomOcclusionAudioAsyncLimitation; // 0x88
-        bool m_useCustomOcclusionAudioSyncLimitation; // 0x89
-        bool m_isStationUsingNewMatchmaking; // 0x8a
-        bool m_isMatchUsingNewMatchmaking; // 0x8b
-        bool m_isUsingSingleNvrBracket; // 0x8c
-        bool m_sampleBIEvents; // 0x8d
-        bool m_shutDownInstancesOfExistingConnections; // 0x8e
-        bool m_vivoxRejoinOnDisconnect; // 0x8f
-        bool m_cheatProtectionSession; // 0x90
-        bool m_isMergingMeshComponentsDefaultStation; // 0x91
-        bool m_isMergingMeshComponentsDefaultMatch; // 0x92
-        bool m_autoFetchTitleData; // 0x93
+        bool m_cheatFeatureToggle_53; // 0x84
+        bool m_cheatFeatureToggle_54; // 0x85
+        bool m_isBattlEyeKickingActive; // 0x86
+        bool m_isBattlEyeActive; // 0x87
+        bool m_isBattlEyeKickReasonChecksActive; // 0x88
+        bool m_levelStreamingFailsafeEnabled; // 0x89
+        bool m_useCustomOcclusionAudioAsyncLimitation; // 0x8a
+        bool m_useCustomOcclusionAudioSyncLimitation; // 0x8b
+        bool m_isStationUsingNewMatchmaking; // 0x8c
+        bool m_isMatchUsingNewMatchmaking; // 0x8d
+        bool m_isUsingSingleNvrBracket; // 0x8e
+        bool m_sampleBIEvents; // 0x8f
+        bool m_shutDownInstancesOfExistingConnections; // 0x90
+        bool m_vivoxRejoinOnDisconnect; // 0x91
+        bool m_cheatProtectionSession; // 0x92
+        bool m_isMergingMeshComponentsDefaultStation; // 0x93
+        bool m_isMergingMeshComponentsDefaultMatch; // 0x94
+        bool m_autoFetchTitleData; // 0x95
         struct TMap<struct FString, float> m_fetchingIntervals; // 0x98
         bool m_cheatingVictimCompensationEnabled; // 0xe8
         bool m_cheatingVictimCompensationIgnoreItemsByWeightEnabled; // 0xe9
@@ -14070,7 +14074,7 @@ namespace SDK
 
     struct FYMiscSettingSubSection //ScriptStruct Prospect.YMiscSettingSubSection
     {
-    //Children Prop Count (Fields): 7
+    //Children Prop Count (Fields): 8
     public:
 
         int32_t m_miscSetting_01; // 0x0
@@ -14080,6 +14084,7 @@ namespace SDK
         int32_t m_miscSetting_05; // 0x10
         int32_t m_miscSetting_06; // 0x14
         bool m_miscSetting_07; // 0x18
+        bool m_miscSetting_08; // 0x19
 
     };
 
@@ -15854,14 +15859,15 @@ namespace SDK
 
     struct FYBackendClaimableVictimCompensation //ScriptStruct BackendModels.YBackendClaimableVictimCompensation
     {
-    //Children Prop Count (Fields): 5
+    //Children Prop Count (Fields): 6
     public:
 
-        struct FDateTime Timestamp; // 0x0
-        struct FString killerId; // 0x8
-        struct FString Guid; // 0x18
-        int32_t softCurrency; // 0x28
-        struct TArray<struct FYCustomItemInfo> Items; // 0x30
+        struct FDateTime snapshotTimestamp; // 0x0
+        struct FDateTime Timestamp; // 0x8
+        struct FString killerId; // 0x10
+        struct FString Guid; // 0x20
+        int32_t softCurrency; // 0x30
+        struct TArray<struct FYCustomItemInfo> Items; // 0x38
 
     };
 
@@ -36936,6 +36942,20 @@ namespace SDK
 
     };
 
+    struct FYAIDesyncEvent : FYBaseAnalyticsEvent //ScriptStruct Prospect.YAIDesyncEvent
+    {
+    //Children Prop Count (Fields): 6
+    public:
+
+        struct FString ai_type; // 0xa8
+        struct FString Montage; // 0xb8
+        float Distance; // 0xc8
+        float Ping; // 0xcc
+        float packetloss_in; // 0xd0
+        float packetloss_out; // 0xd4
+
+    };
+
     struct FYBIHook_EscapeTriggered : FYBaseAnalyticsEvent //ScriptStruct Prospect.YBIHook_EscapeTriggered
     {
     //Children Prop Count (Fields): 12
@@ -38211,12 +38231,13 @@ namespace SDK
 
     struct FYPlayerInitialConnectEvent : FYBaseAnalyticsEvent //ScriptStruct Prospect.YPlayerInitialConnectEvent
     {
-    //Children Prop Count (Fields): 3
+    //Children Prop Count (Fields): 4
     public:
 
         int32_t time_loaded; // 0xa8
         struct FString country_code; // 0xb0
         struct FString client_version; // 0xc0
+        struct FString secure_boot; // 0xd0
 
     };
 
@@ -39628,6 +39649,25 @@ namespace SDK
         bool m_shouldHaveFxCategory; // 0x88
         struct FDataTableRowHandle m_aiSenseTriggerRowHandle; // 0x90
         bool m_useOwnerAsInstigatorForSenseTrigger; // 0xa0
+
+    };
+
+    struct FYDebugUpdateInsurancesResult //ScriptStruct Prospect.YDebugUpdateInsurancesResult
+    {
+    //Children Prop Count (Fields): 2
+    public:
+
+        struct FString Error; // 0x0
+        struct FString UserId; // 0x10
+
+    };
+
+    struct FYDebugUpdateInsurancesRequest //ScriptStruct Prospect.YDebugUpdateInsurancesRequest
+    {
+    //Children Prop Count (Fields): 1
+    public:
+
+        struct FYPurchaseInsuranceRequest Data; // 0x0
 
     };
 
@@ -57802,35 +57842,6 @@ namespace SDK
 
     };
 
-    struct FMapAreaDifficulty_ST //UserDefinedStruct MapAreaDifficulty_ST.MapAreaDifficulty_ST
-    {
-    //Children Prop Count (Fields): 2
-    public:
-
-        struct FText Text_6_D9146C924A469B0435C41F8E7DE66C83; // 0x0
-        struct FString StyleTag_5_FDD856DD46848DA297A2B0AD92C1EBA8; // 0x20
-
-    };
-
-    struct FST_EffortDataTableRow //UserDefinedStruct ST_EffortDataTableRow.ST_EffortDataTableRow
-    {
-    //Children Prop Count (Fields): 1
-    public:
-
-        struct TMap<enum class EN_EffortTypes, struct FST_EffortData> Efforts_8_70D960094B9CBF7FE719299E4CCEDE62; // 0x0
-
-    };
-
-    struct FST_EffortData //UserDefinedStruct ST_EffortData.ST_EffortData
-    {
-    //Children Prop Count (Fields): 2
-    public:
-
-        struct FDataTableRowHandle VO_2_DACCD7C64AEC65EC53F9B7952C5B9399; // 0x0
-        bool OnlyPlayOnAutonomousProxy_12_491168E947DFFD7794F07FBE4A0D03AD; // 0x10
-
-    };
-
     struct FInventoryOnboarding_ST //UserDefinedStruct InventoryOnboarding_ST.InventoryOnboarding_ST
     {
     //Children Prop Count (Fields): 5
@@ -57906,6 +57917,27 @@ namespace SDK
 
     };
 
+    struct FStructure_SelectorData //UserDefinedStruct Structure_SelectorData.Structure_SelectorData
+    {
+    //Children Prop Count (Fields): 3
+    public:
+
+        struct FText DisplayName_6_1D3030FF48F4B027C56D8885BC7ED0CF; // 0x0
+        float Value_9_AEB3506B4AFD9C32EA6843BA49965EFA; // 0x20
+        struct FName DataName_12_042E97B04C04EA391C7FDEA763642D53; // 0x24
+
+    };
+
+    struct FMS_HintMarkerReplicatedData_ST //UserDefinedStruct MS_HintMarkerReplicatedData_ST.MS_HintMarkerReplicatedData_ST
+    {
+    //Children Prop Count (Fields): 2
+    public:
+
+        struct FName ActiveMarkerId_9_7B44AE714CA2F178985EFB893A89AE89; // 0x0
+        struct TArray<struct FTransform> HintTransforms_17_4C1A67004B0583AF2B9C328BF93AF29A; // 0x8
+
+    };
+
     struct FStructure_HUD_ProgressBars //UserDefinedStruct Structure_HUD_ProgressBars.Structure_HUD_ProgressBars
     {
     //Children Prop Count (Fields): 8
@@ -57922,14 +57954,13 @@ namespace SDK
 
     };
 
-    struct FStructure_SelectorData //UserDefinedStruct Structure_SelectorData.Structure_SelectorData
+    struct FMapAreaDifficulty_ST //UserDefinedStruct MapAreaDifficulty_ST.MapAreaDifficulty_ST
     {
-    //Children Prop Count (Fields): 3
+    //Children Prop Count (Fields): 2
     public:
 
-        struct FText DisplayName_6_1D3030FF48F4B027C56D8885BC7ED0CF; // 0x0
-        float Value_9_AEB3506B4AFD9C32EA6843BA49965EFA; // 0x20
-        struct FName DataName_12_042E97B04C04EA391C7FDEA763642D53; // 0x24
+        struct FText Text_6_D9146C924A469B0435C41F8E7DE66C83; // 0x0
+        struct FString StyleTag_5_FDD856DD46848DA297A2B0AD92C1EBA8; // 0x20
 
     };
 
@@ -57946,13 +57977,22 @@ namespace SDK
 
     };
 
-    struct FMS_HintMarkerReplicatedData_ST //UserDefinedStruct MS_HintMarkerReplicatedData_ST.MS_HintMarkerReplicatedData_ST
+    struct FST_EffortDataTableRow //UserDefinedStruct ST_EffortDataTableRow.ST_EffortDataTableRow
+    {
+    //Children Prop Count (Fields): 1
+    public:
+
+        struct TMap<enum class EN_EffortTypes, struct FST_EffortData> Efforts_8_70D960094B9CBF7FE719299E4CCEDE62; // 0x0
+
+    };
+
+    struct FST_EffortData //UserDefinedStruct ST_EffortData.ST_EffortData
     {
     //Children Prop Count (Fields): 2
     public:
 
-        struct FName ActiveMarkerId_9_7B44AE714CA2F178985EFB893A89AE89; // 0x0
-        struct TArray<struct FTransform> HintTransforms_17_4C1A67004B0583AF2B9C328BF93AF29A; // 0x8
+        struct FDataTableRowHandle VO_2_DACCD7C64AEC65EC53F9B7952C5B9399; // 0x0
+        bool OnlyPlayOnAutonomousProxy_12_491168E947DFFD7794F07FBE4A0D03AD; // 0x10
 
     };
 
@@ -58051,18 +58091,22 @@ namespace SDK
 
     };
 
-    struct FSplineMeshData //UserDefinedStruct SplineMeshData.SplineMeshData
+    struct FAMB_Spawn_Cues_Data_Struct //UserDefinedStruct AMB_Spawn_Cues_Data_Struct.AMB_Spawn_Cues_Data_Struct
     {
-    //Children Prop Count (Fields): 7
+    //Children Prop Count (Fields): 11
     public:
 
-        int32_t index_2_5FE4DEED40A6ADD8B4EB4FB0039B20E1; // 0x0
-        class UStaticMesh* mesh_5_617329714D2764DF1450F989B3A2E1ED; // 0x8
-        struct FVector2D startscale_19_0854F8904CB76909AE4B8D9A19DEDEC4; // 0x10
-        float startroll_25_6A06494442BC531F695F12B2B40EB85C; // 0x18
-        struct FVector2D endscale_20_FA4D8C914E0C66C3F145159BC5B06F62; // 0x1c
-        float endroll_26_AB315D0849CD2DD6F06836BF746E2DEF; // 0x24
-        class UMaterialInterface* Material_18_AB90915240DF896019F38095C08DCDA4; // 0x28
+        struct FDataTableRowHandle Sound_2_11CC8B0D4E2DDC47875919AA2DD4579C; // 0x0
+        float MinSpawnTime_5_B4107DD04913B0509CF5DBA081BECF18; // 0x10
+        float MaxSpawnTime_7_98911C664C8D939837B5E99924EB7D8B; // 0x14
+        float MinDistance_12_658E32E04E41214A494767AB25D55300; // 0x18
+        float MaxDistance_11_0D69489440EFFB01B9C17DAFA1FDE148; // 0x1c
+        float Volume_15_7D81496D4D9A5FB5D6BBBF85F46CEA95; // 0x20
+        bool Day_20_16342EB540FDD2B4B262519D8A327BA7; // 0x24
+        bool Dusk_25_FDDBD18B408DAC125807DDADC6453C44; // 0x25
+        bool Storm_26_238F068540BE9E95D16FA2B6D9B6A954; // 0x26
+        bool Peak_27_3B37D5F1421AB7E278BDFC9AA68F6F25; // 0x27
+        bool Dawn_28_E7703CA94019E6A1BD6F10ABCCC9B87A; // 0x28
 
     };
 
@@ -58091,31 +58135,18 @@ namespace SDK
 
     };
 
-    struct FAMB_Spawn_Cues_Data_Struct //UserDefinedStruct AMB_Spawn_Cues_Data_Struct.AMB_Spawn_Cues_Data_Struct
+    struct FSplineMeshData //UserDefinedStruct SplineMeshData.SplineMeshData
     {
-    //Children Prop Count (Fields): 11
+    //Children Prop Count (Fields): 7
     public:
 
-        struct FDataTableRowHandle Sound_2_11CC8B0D4E2DDC47875919AA2DD4579C; // 0x0
-        float MinSpawnTime_5_B4107DD04913B0509CF5DBA081BECF18; // 0x10
-        float MaxSpawnTime_7_98911C664C8D939837B5E99924EB7D8B; // 0x14
-        float MinDistance_12_658E32E04E41214A494767AB25D55300; // 0x18
-        float MaxDistance_11_0D69489440EFFB01B9C17DAFA1FDE148; // 0x1c
-        float Volume_15_7D81496D4D9A5FB5D6BBBF85F46CEA95; // 0x20
-        bool Day_20_16342EB540FDD2B4B262519D8A327BA7; // 0x24
-        bool Dusk_25_FDDBD18B408DAC125807DDADC6453C44; // 0x25
-        bool Storm_26_238F068540BE9E95D16FA2B6D9B6A954; // 0x26
-        bool Peak_27_3B37D5F1421AB7E278BDFC9AA68F6F25; // 0x27
-        bool Dawn_28_E7703CA94019E6A1BD6F10ABCCC9B87A; // 0x28
-
-    };
-
-    struct FSplineHierarchicalData //UserDefinedStruct SplineHierarchicalData.SplineHierarchicalData
-    {
-    //Children Prop Count (Fields): 1
-    public:
-
-        struct TArray<class UHierarchicalInstancedStaticMeshComponent*> Meshes_3_02E79BBD473816B398679987541E5A86; // 0x0
+        int32_t index_2_5FE4DEED40A6ADD8B4EB4FB0039B20E1; // 0x0
+        class UStaticMesh* mesh_5_617329714D2764DF1450F989B3A2E1ED; // 0x8
+        struct FVector2D startscale_19_0854F8904CB76909AE4B8D9A19DEDEC4; // 0x10
+        float startroll_25_6A06494442BC531F695F12B2B40EB85C; // 0x18
+        struct FVector2D endscale_20_FA4D8C914E0C66C3F145159BC5B06F62; // 0x1c
+        float endroll_26_AB315D0849CD2DD6F06836BF746E2DEF; // 0x24
+        class UMaterialInterface* Material_18_AB90915240DF896019F38095C08DCDA4; // 0x28
 
     };
 
@@ -58146,6 +58177,15 @@ namespace SDK
         struct FTransform MeshTransform_12_7AE7335949849EF7CA42469C30E6A38B; // 0x10
         float DistanceLeft_14_5087517C455845BCFA66FDA64F8A1DC9; // 0x40
         float DistanceRight_17_BC78F8B44684992F056FBCB0F8A4AB34; // 0x44
+
+    };
+
+    struct FSplineHierarchicalData //UserDefinedStruct SplineHierarchicalData.SplineHierarchicalData
+    {
+    //Children Prop Count (Fields): 1
+    public:
+
+        struct TArray<class UHierarchicalInstancedStaticMeshComponent*> Meshes_3_02E79BBD473816B398679987541E5A86; // 0x0
 
     };
 

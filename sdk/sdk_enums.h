@@ -16186,38 +16186,6 @@ namespace SDK
         AnimArchetypeEnum_MAX = 21
     };
 
-    enum class MapAreaDifficulty_ENUM : uint8_t //UserDefinedEnum MapAreaDifficulty_ENUM.MapAreaDifficulty_ENUM
-    {
-        NewEnumerator5 = 0,
-        NewEnumerator0 = 1,
-        NewEnumerator1 = 2,
-        NewEnumerator2 = 3,
-        NewEnumerator3 = 4,
-        NewEnumerator4 = 5,
-        MapAreaDifficulty_MAX = 6
-    };
-
-    enum class EN_EffortTypes : uint8_t //UserDefinedEnum EN_EffortTypes.EN_EffortTypes
-    {
-        NewEnumerator11 = 0,
-        NewEnumerator0 = 1,
-        NewEnumerator1 = 2,
-        NewEnumerator2 = 3,
-        NewEnumerator3 = 4,
-        NewEnumerator4 = 5,
-        NewEnumerator5 = 6,
-        NewEnumerator12 = 7,
-        NewEnumerator6 = 8,
-        NewEnumerator7 = 9,
-        NewEnumerator8 = 10,
-        NewEnumerator9 = 11,
-        NewEnumerator10 = 12,
-        NewEnumerator13 = 13,
-        NewEnumerator14 = 14,
-        NewEnumerator15 = 15,
-        EN_MAX = 16
-    };
-
     enum class AC_EscapeShipTerminal_Actor_ENUM : uint8_t //UserDefinedEnum AC_EscapeShipTerminal_Actor_ENUM.AC_EscapeShipTerminal_Actor_ENUM
     {
         NewEnumerator0 = 0,
@@ -16287,6 +16255,38 @@ namespace SDK
         En_MAX = 40
     };
 
+    enum class MapAreaDifficulty_ENUM : uint8_t //UserDefinedEnum MapAreaDifficulty_ENUM.MapAreaDifficulty_ENUM
+    {
+        NewEnumerator5 = 0,
+        NewEnumerator0 = 1,
+        NewEnumerator1 = 2,
+        NewEnumerator2 = 3,
+        NewEnumerator3 = 4,
+        NewEnumerator4 = 5,
+        MapAreaDifficulty_MAX = 6
+    };
+
+    enum class EN_EffortTypes : uint8_t //UserDefinedEnum EN_EffortTypes.EN_EffortTypes
+    {
+        NewEnumerator11 = 0,
+        NewEnumerator0 = 1,
+        NewEnumerator1 = 2,
+        NewEnumerator2 = 3,
+        NewEnumerator3 = 4,
+        NewEnumerator4 = 5,
+        NewEnumerator5 = 6,
+        NewEnumerator12 = 7,
+        NewEnumerator6 = 8,
+        NewEnumerator7 = 9,
+        NewEnumerator8 = 10,
+        NewEnumerator9 = 11,
+        NewEnumerator10 = 12,
+        NewEnumerator13 = 13,
+        NewEnumerator14 = 14,
+        NewEnumerator15 = 15,
+        EN_MAX = 16
+    };
+
     enum class AC_EscapeShip_State : uint8_t //UserDefinedEnum AC_EscapeShip_State.AC_EscapeShip_State
     {
         NewEnumerator4 = 0,
@@ -16307,25 +16307,6 @@ namespace SDK
         NewEnumerator2 = 2,
         NewEnumerator3 = 3,
         ScannerInterfaceStates_MAX = 4
-    };
-
-    enum class BatteryStatus : uint8_t //UserDefinedEnum BatteryStatus.BatteryStatus
-    {
-        NewEnumerator3 = 0,
-        NewEnumerator2 = 1,
-        NewEnumerator1 = 2,
-        NewEnumerator4 = 3,
-        NewEnumerator5 = 4,
-        BatteryStatus_MAX = 5
-    };
-
-    enum class SplineBranching : uint8_t //UserDefinedEnum SplineBranching.SplineBranching
-    {
-        NewEnumerator0 = 0,
-        NewEnumerator1 = 1,
-        NewEnumerator2 = 2,
-        NewEnumerator3 = 3,
-        SplineBranching_MAX = 4
     };
 
     enum class YBIHookPowerUpStep : uint8_t //UserDefinedEnum YBIHookPowerUpStep.YBIHookPowerUpStep
@@ -16363,6 +16344,32 @@ namespace SDK
         BIEventDataUplink_MAX = 4
     };
 
+    enum class SplineBranching : uint8_t //UserDefinedEnum SplineBranching.SplineBranching
+    {
+        NewEnumerator0 = 0,
+        NewEnumerator1 = 1,
+        NewEnumerator2 = 2,
+        NewEnumerator3 = 3,
+        SplineBranching_MAX = 4
+    };
+
+    enum class LargeSign_BackDetail : uint8_t //UserDefinedEnum LargeSign_BackDetail.LargeSign_BackDetail
+    {
+        NewEnumerator0 = 0,
+        NewEnumerator1 = 1,
+        NewEnumerator2 = 2,
+        LargeSign_MAX = 3
+    };
+
+    enum class InteriorProps_ServerRacks : uint8_t //UserDefinedEnum InteriorProps_ServerRacks.InteriorProps_ServerRacks
+    {
+        NewEnumerator0 = 0,
+        NewEnumerator1 = 1,
+        NewEnumerator2 = 2,
+        NewEnumerator3 = 3,
+        InteriorProps_MAX = 4
+    };
+
     enum class EHealingPodStates : uint8_t //UserDefinedEnum EHealingPodStates.EHealingPodStates
     {
         NewEnumerator0 = 0,
@@ -16380,20 +16387,14 @@ namespace SDK
         DiggerVariations_MAX = 4
     };
 
-    enum class ContainerMesh_Enum : uint8_t //UserDefinedEnum ContainerMesh_Enum.ContainerMesh_Enum
-    {
-        NewEnumerator0 = 0,
-        NewEnumerator1 = 1,
-        NewEnumerator2 = 2,
-        ContainerMesh_MAX = 3
-    };
-
-    enum class DoorMesh_Enum : uint8_t //UserDefinedEnum DoorMesh_Enum.DoorMesh_Enum
+    enum class BatteryStatus : uint8_t //UserDefinedEnum BatteryStatus.BatteryStatus
     {
         NewEnumerator3 = 0,
-        NewEnumerator4 = 1,
-        NewEnumerator5 = 2,
-        DoorMesh_MAX = 3
+        NewEnumerator2 = 1,
+        NewEnumerator1 = 2,
+        NewEnumerator4 = 3,
+        NewEnumerator5 = 4,
+        BatteryStatus_MAX = 5
     };
 
 
