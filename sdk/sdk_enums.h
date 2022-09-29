@@ -663,18 +663,18 @@ namespace SDK
         Lore = 12,
         Vehicle = 13,
         Ammo = 14,
-        Upgrade = 15,
-        Collectible = 16,
-        QuestItem = 17,
-        Shield = 18,
-        ProspectorBadge = 19,
-        TechTreeNode = 20,
-        PlayerQuartersLevel = 21,
-        PassiveGenerator = 22,
-        Bag = 23,
-        Helmet = 24,
-        Key = 25,
-        MeleeWeapon = 26,
+        Collectible = 15,
+        QuestItem = 16,
+        Shield = 17,
+        ProspectorBadge = 18,
+        TechTreeNode = 19,
+        PlayerQuartersLevel = 20,
+        PassiveGenerator = 21,
+        Bag = 22,
+        Helmet = 23,
+        Key = 24,
+        MeleeWeapon = 25,
+        Map = 26,
         All = 27,
         MAX = 28
     };
@@ -682,43 +682,39 @@ namespace SDK
     enum class EYItemOriginType : uint8_t //Enum BackendModels.EYItemOriginType
     {
         Undefined = 0,
-        Contract = 1,
-        Craft = 2,
-        Creature = 3,
-        Debug = 4,
-        EntitlementsEGS = 5,
-        EntitlementsSteam = 6,
-        FortunaPass = 7,
+        CB1Migration = 1,
+        Contract = 2,
+        Craft = 3,
+        Creature = 4,
+        Debug = 5,
+        EntitlementsEGS = 6,
+        EntitlementsSteam = 7,
         FTUE = 8,
-        Generator = 9,
-        Insurance = 10,
-        MapContainerLoot = 11,
-        MapPickupLoot = 12,
-        MatchSplitStack = 13,
-        MatchUnknown = 14,
-        PlayFabDashboard = 15,
-        PremiumShop = 16,
-        PurchaseICA = 17,
-        PurchaseKorolev = 18,
-        PurchaseOsiris = 19,
-        PurchaseQuickShop = 20,
-        Retention = 21,
-        StationSplitStack = 22,
-        TocMigration = 23,
-        TwitchDrop = 24,
-        Uplink = 25,
-        WeaponAttachment = 26,
-        ManualScript = 27,
-        VictimCompensation = 28,
-        EYItemOriginType_MAX = 29
-    };
-
-    enum class EYMatchServerSocialAdmissionType : uint8_t //Enum BackendModels.EYMatchServerSocialAdmissionType
-    {
-        Mixed = 0,
-        Solo = 1,
-        Squad = 2,
-        EYMatchServerSocialAdmissionType_MAX = 3
+        FortunaPass = 9,
+        Generator = 10,
+        Insurance = 11,
+        ManualScript = 12,
+        MapContainerAlienForge = 13,
+        MapContainerLoot = 14,
+        MapPickupLoot = 15,
+        MatchSplitStack = 16,
+        MatchUnknown = 17,
+        PlayFabDashboard = 18,
+        PremiumShop = 19,
+        PurchaseICA = 20,
+        PurchaseKorolev = 21,
+        PurchaseOsiris = 22,
+        PurchaseQuickShop = 23,
+        Retention = 24,
+        SeasonWipe = 25,
+        StarterPack = 26,
+        StationSplitStack = 27,
+        TocMigration = 28,
+        TwitchDrop = 29,
+        Uplink = 30,
+        VictimCompensation = 31,
+        WeaponAttachment = 32,
+        EYItemOriginType_MAX = 33
     };
 
     enum class EYMatchmakingDebugOption : uint8_t //Enum BackendModels.EYMatchmakingDebugOption
@@ -759,7 +755,10 @@ namespace SDK
         None = 0,
         MaintenanceMode = 1,
         ClientOutdated = 2,
-        EYMatchmakingBlocker_MAX = 3
+        MapLocked = 3,
+        WrongSessionState = 4,
+        RegionBlocked = 5,
+        EYMatchmakingBlocker_MAX = 6
     };
 
     enum class EYMuteResult : uint8_t //Enum BackendModels.EYMuteResult
@@ -855,7 +854,7 @@ namespace SDK
         EYServerCommand_MAX = 3
     };
 
-    enum class EYUserStateChangeType : uint8_t //Enum BackendModels.EYUserStateChangeType
+    enum class EYUserSessionConnectionState : uint8_t //Enum BackendModels.EYUserSessionConnectionState
     {
         None = 0,
         Registered = 1,
@@ -1027,8 +1026,8 @@ namespace SDK
     {
         IN_STATION = 0,
         IN_MATCH = 1,
-        IN_EOM = 2,
-        IN_MAX = 3
+        Offline = 2,
+        EYUserState_MAX = 3
     };
 
     enum class EYSquadActionResult : uint8_t //Enum BackendModels.EYSquadActionResult
@@ -1080,8 +1079,9 @@ namespace SDK
         UnknownError = 0,
         ServerError = 1,
         StashFull = 2,
-        Ok = 3,
-        EYTwitchDropToastReponseType_MAX = 4
+        InvalidItemId = 3,
+        Ok = 4,
+        EYTwitchDropToastReponseType_MAX = 5
     };
 
     enum class EYPlayerSessionMatchState : uint8_t //Enum BackendModels.EYPlayerSessionMatchState
@@ -4939,6 +4939,184 @@ namespace SDK
         EDataRegistryAvailability_MAX = 6
     };
 
+    enum class EPathfindingResult : uint8_t //Enum FlyingNavSystem.EPathfindingResult
+    {
+        Invalid = 0,
+        Error = 1,
+        Fail = 2,
+        Success = 3,
+        RecastError = 4,
+        Null = 5,
+        EPathfindingResult_MAX = 6
+    };
+
+    enum class EThreadSubdivisions : uint8_t //Enum FlyingNavSystem.EThreadSubdivisions
+    {
+        Zero = 0,
+        One = 1,
+        Two = 2,
+        Three = 3,
+        Four = 4,
+        EThreadSubdivisions_MAX = 5
+    };
+
+    enum class EPathfindingAlgorithm : uint8_t //Enum FlyingNavSystem.EPathfindingAlgorithm
+    {
+        AStar = 0,
+        LazyThetaStar = 1,
+        ThetaStar = 2,
+        EPathfindingAlgorithm_MAX = 3
+    };
+
+    enum class EHairCardsSourceType : uint8_t //Enum HairStrandsCore.EHairCardsSourceType
+    {
+        Procedural = 0,
+        Imported = 1,
+        EHairCardsSourceType_MAX = 2
+    };
+
+    enum class EHairCardsGenerationType : uint8_t //Enum HairStrandsCore.EHairCardsGenerationType
+    {
+        CardsCount = 0,
+        UseGuides = 1,
+        EHairCardsGenerationType_MAX = 2
+    };
+
+    enum class EHairCardsClusterType : uint8_t //Enum HairStrandsCore.EHairCardsClusterType
+    {
+        Low = 0,
+        High = 1,
+        EHairCardsClusterType_MAX = 2
+    };
+
+    enum class EGroomGeometryType : uint8_t //Enum HairStrandsCore.EGroomGeometryType
+    {
+        Strands = 0,
+        Cards = 1,
+        Meshes = 2,
+        EGroomGeometryType_MAX = 3
+    };
+
+    enum class EHairLODSelectionType : uint8_t //Enum HairStrandsCore.EHairLODSelectionType
+    {
+        Cpu = 0,
+        Gpu = 1,
+        EHairLODSelectionType_MAX = 2
+    };
+
+    enum class EHairInterpolationWeight : uint8_t //Enum HairStrandsCore.EHairInterpolationWeight
+    {
+        Parametric = 0,
+        Root = 1,
+        Index = 2,
+        Unknown = 3,
+        EHairInterpolationWeight_MAX = 4
+    };
+
+    enum class EHairInterpolationQuality : uint8_t //Enum HairStrandsCore.EHairInterpolationQuality
+    {
+        Low = 0,
+        Medium = 1,
+        High = 2,
+        Unknown = 3,
+        EHairInterpolationQuality_MAX = 4
+    };
+
+    enum class EGroomInterpolationType : uint8_t //Enum HairStrandsCore.EGroomInterpolationType
+    {
+        None = 0,
+        RigidTransform = 2,
+        OffsetTransform = 4,
+        SmoothTransform = 8,
+        EGroomInterpolationType_MAX = 9
+    };
+
+    enum class EGroomStrandsSize : uint8_t //Enum HairStrandsCore.EGroomStrandsSize
+    {
+        None = 0,
+        Size2 = 2,
+        Size4 = 4,
+        Size8 = 8,
+        Size16 = 16,
+        Size32 = 32,
+        EGroomStrandsSize_MAX = 33
+    };
+
+    enum class EGroomNiagaraSolvers : uint8_t //Enum HairStrandsCore.EGroomNiagaraSolvers
+    {
+        None = 0,
+        CosseratRods = 2,
+        AngularSprings = 4,
+        CustomSolver = 8,
+        EGroomNiagaraSolvers_MAX = 9
+    };
+
+    enum class EGroomBindingMeshType : uint8_t //Enum HairStrandsCore.EGroomBindingMeshType
+    {
+        SkeletalMesh = 0,
+        GeometryCache = 1,
+        EGroomBindingMeshType_MAX = 2
+    };
+
+    enum class EGroomCacheType : uint8_t //Enum HairStrandsCore.EGroomCacheType
+    {
+        None = 0,
+        Strands = 1,
+        Guides = 2,
+        EGroomCacheType_MAX = 3
+    };
+
+    enum class EGroomCacheAttributes : uint8_t //Enum HairStrandsCore.EGroomCacheAttributes
+    {
+        None = 0,
+        Position = 1,
+        Width = 2,
+        Color = 4,
+        EGroomCacheAttributes_MAX = 5
+    };
+
+    enum class EFollicleMaskChannel : uint8_t //Enum HairStrandsCore.EFollicleMaskChannel
+    {
+        R = 0,
+        G = 1,
+        B = 2,
+        A = 3,
+        EFollicleMaskChannel_MAX = 4
+    };
+
+    enum class EStrandsTexturesMeshType : uint8_t //Enum HairStrandsCore.EStrandsTexturesMeshType
+    {
+        Static = 0,
+        Skeletal = 1,
+        EStrandsTexturesMeshType_MAX = 2
+    };
+
+    enum class EStrandsTexturesTraceType : uint8_t //Enum HairStrandsCore.EStrandsTexturesTraceType
+    {
+        TraceInside = 0,
+        TraceOuside = 1,
+        TraceBidirectional = 2,
+        EStrandsTexturesTraceType_MAX = 3
+    };
+
+    enum class EGroomInterpolationWeight : uint8_t //Enum HairStrandsCore.EGroomInterpolationWeight
+    {
+        Parametric = 0,
+        Root = 1,
+        Index = 2,
+        Unknown = 3,
+        EGroomInterpolationWeight_MAX = 4
+    };
+
+    enum class EGroomInterpolationQuality : uint8_t //Enum HairStrandsCore.EGroomInterpolationQuality
+    {
+        Low = 0,
+        Medium = 1,
+        High = 2,
+        Unknown = 3,
+        EGroomInterpolationQuality_MAX = 4
+    };
+
     enum class ESlateAccessibleBehavior : uint8_t //Enum UMG.ESlateAccessibleBehavior
     {
         NotAccessible = 0,
@@ -5318,6 +5496,14 @@ namespace SDK
         EYFriendsImportResultCode_MAX = 9
     };
 
+    enum class EYPlayerDataInitResult : uint8_t //Enum YPlatformUtils.EYPlayerDataInitResult
+    {
+        Invalid = 0,
+        PlayerDataInitCompleted = 1,
+        PlayerDataInitFailure = 2,
+        EYPlayerDataInitResult_MAX = 3
+    };
+
     enum class EYRollbackCheckResult : uint8_t //Enum YPlatformUtils.EYRollbackCheckResult
     {
         Invalid = 0,
@@ -5330,16 +5516,14 @@ namespace SDK
         EYRollbackCheckResult_MAX = 7
     };
 
-    enum class EYAuthenticationState : uint8_t //Enum YPlatformUtils.EYAuthenticationState
+    enum class EYSeasonWipeCheckResult : uint8_t //Enum YPlatformUtils.EYSeasonWipeCheckResult
     {
-        Init = 0,
-        LegalAgreementsNotAccepted = 1,
-        NotLoggedInToPlayFab = 2,
-        ServerNotLoggedInToPlayFab = 3,
-        DisconnectedFromBackend = 4,
-        MaintenanceMode = 5,
-        CompletelyLoggedIn = 6,
-        EYAuthenticationState_MAX = 7
+        Invalid = 0,
+        NoSeasonWipeNeeded = 1,
+        SeasonWipeCompleted = 2,
+        SeasonWipeInProgress = 3,
+        SeasonWipeCheckFailure = 4,
+        EYSeasonWipeCheckResult_MAX = 5
     };
 
     enum class EYGamePlatform : uint8_t //Enum YPlatformUtils.EYGamePlatform
@@ -5700,46 +5884,72 @@ namespace SDK
         EYAbilityState_MAX = 7
     };
 
+    enum class EYAlienForgeState : uint8_t //Enum Prospect.EYAlienForgeState
+    {
+        None = 0,
+        Inactive = 1,
+        Idle = 2,
+        Forging = 3,
+        ForgingCompleted = 4,
+        EYAlienForgeState_MAX = 5
+    };
+
+    enum class EYItemRarityType : uint8_t //Enum Prospect.EYItemRarityType
+    {
+        Invalid = 0,
+        Common = 1,
+        Uncommon = 2,
+        Rare = 3,
+        Epic = 4,
+        Exotic = 5,
+        Legendary = 6,
+        MAX = 7
+    };
+
     enum class EYActivityType : uint8_t //Enum Prospect.EYActivityType
     {
         None = 0,
         Area = 1,
-        AI_Guardians = 2,
-        AI_Spawning = 3,
-        BigDrill = 4,
-        BossHunt = 5,
-        DataRetrieval = 6,
-        Delivery = 7,
-        Deposit = 8,
-        Dungeon = 9,
-        Escape = 10,
-        Flora = 11,
-        Flora_WaterPlant = 12,
-        Flora_IvyPlant = 13,
-        Flora_DesertPlant = 14,
-        Hunt = 15,
-        Mineral_AlienCrystals = 16,
-        Mineral_BasicOres = 17,
-        Mineral_HeavyMetals = 18,
-        Mineral_Radioactive = 19,
-        Mineral_Veltecite = 20,
-        MonsterNest = 21,
-        NoiseTrap_Birds = 22,
-        OilPump_Tier0 = 23,
-        OilPump_Tier1 = 24,
-        OilPump_Tier2 = 25,
-        OilPump_Tier3 = 26,
-        OilPump_Tier4 = 27,
-        PowerUp = 28,
-        StormSurge = 29,
-        Tracking = 30,
-        Train = 31,
-        Meteor = 32,
-        Uplink = 33,
-        LootContainers = 34,
-        LootPoints = 35,
-        All = 36,
-        MAX = 37
+        AlienForge = 2,
+        AI_Guardians = 3,
+        AI_Spawning = 4,
+        BigDrill = 5,
+        BossHunt = 6,
+        DataRetrieval = 7,
+        Delivery = 8,
+        Deposit = 9,
+        Dungeon = 10,
+        Escape = 11,
+        Flora = 12,
+        Flora_WaterPlant = 13,
+        Flora_IvyPlant = 14,
+        Flora_DesertPlant = 15,
+        Flora_BonePlant = 16,
+        Hunt = 17,
+        Mineral_AlienCrystals = 18,
+        Mineral_BasicOres = 19,
+        Mineral_HeavyMetals = 20,
+        Mineral_Radioactive = 21,
+        Mineral_Veltecite = 22,
+        Mineral_GlowingCrystal = 23,
+        Mineral_AlienIron = 24,
+        MonsterNest = 25,
+        NoiseTrap_Birds = 26,
+        OilPump_Tier0 = 27,
+        OilPump_Tier1 = 28,
+        OilPump_Tier2 = 29,
+        OilPump_Tier3 = 30,
+        OilPump_Tier4 = 31,
+        PowerUp = 32,
+        StormSurge = 33,
+        Tracking = 34,
+        Train = 35,
+        Meteor = 36,
+        Uplink = 37,
+        LootContainers = 38,
+        LootPoints = 39,
+        All = 40,
+        MAX = 41
     };
 
     enum class EYMeshViewState : uint8_t //Enum Prospect.EYMeshViewState
@@ -5982,60 +6192,6 @@ namespace SDK
         MAX = 12
     };
 
-    enum class EYFriendOnlineStatus : uint8_t //Enum Prospect.EYFriendOnlineStatus
-    {
-        None = 0,
-        PlayingThisGame = 1,
-        Online = 2,
-        PlayingOtherGame = 3,
-        EYFriendOnlineStatus_MAX = 4
-    };
-
-    enum class EYMatchState : uint8_t //Enum Prospect.EYMatchState
-    {
-        EnteringMap = 0,
-        WaitingToStart = 1,
-        PreMatch = 2,
-        LaunchingMatch = 3,
-        SeamlessTravel = 4,
-        MatchIntro = 5,
-        MatchInProgress = 6,
-        MatchEnding = 7,
-        MatchOver = 8,
-        DisconnectedPlayers = 9,
-        LeavingMap = 10,
-        None = 11,
-        EYMatchState_MAX = 12
-    };
-
-    enum class EYPlayerMatchState : uint8_t //Enum Prospect.EYPlayerMatchState
-    {
-        MatchLevelsLoaded = 0,
-        ReadiedUp = 1,
-        InMatch = 2,
-        FinishedMatch = 3,
-        InEndOfMatch = 4,
-        EYPlayerMatchState_MAX = 5
-    };
-
-    enum class EYNotificationPlacement : uint8_t //Enum Prospect.EYNotificationPlacement
-    {
-        Center = 0,
-        RightMiddle = 1,
-        RightTop = 2,
-        LeftMiddle = 3,
-        EYNotificationPlacement_MAX = 4
-    };
-
-    enum class EYNotificationType : uint8_t //Enum Prospect.EYNotificationType
-    {
-        Invalid = 0,
-        SimpleText = 1,
-        ImportantText = 2,
-        ImmidateText = 3,
-        EYNotificationType_MAX = 4
-    };
-
     enum class EYAIState : uint8_t //Enum Prospect.EYAIState
     {
         None = 0,
@@ -6077,7 +6233,8 @@ namespace SDK
         Rattler = 22,
         Weremole = 23,
         Crusher = 24,
-        EYEnemyType_MAX = 25
+        Howler = 25,
+        EYEnemyType_MAX = 26
     };
 
     enum class EYSpawnRequestStatus : uint8_t //Enum Prospect.EYSpawnRequestStatus
@@ -6120,6 +6277,33 @@ namespace SDK
         Dead = 1,
         Escaped = 2,
         EYPlayerMatchFinishedResult_MAX = 3
+    };
+
+    enum class EYPlayerMatchState : uint8_t //Enum Prospect.EYPlayerMatchState
+    {
+        MatchLevelsLoaded = 0,
+        ReadiedUp = 1,
+        InMatch = 2,
+        FinishedMatch = 3,
+        InEndOfMatch = 4,
+        EYPlayerMatchState_MAX = 5
+    };
+
+    enum class EYMatchState : uint8_t //Enum Prospect.EYMatchState
+    {
+        EnteringMap = 0,
+        WaitingToStart = 1,
+        PreMatch = 2,
+        LaunchingMatch = 3,
+        SeamlessTravel = 4,
+        MatchIntro = 5,
+        MatchInProgress = 6,
+        MatchEnding = 7,
+        MatchOver = 8,
+        DisconnectedPlayers = 9,
+        LeavingMap = 10,
+        None = 11,
+        EYMatchState_MAX = 12
     };
 
     enum class EYTeam : uint32_t //Enum Prospect.EYTeam
@@ -6267,18 +6451,6 @@ namespace SDK
         Category = 1,
         Customization = 2,
         EYCharacterVanityResetRequest_MAX = 3
-    };
-
-    enum class EYItemRarityType : uint8_t //Enum Prospect.EYItemRarityType
-    {
-        Invalid = 0,
-        Common = 1,
-        Uncommon = 2,
-        Rare = 3,
-        Epic = 4,
-        Exotic = 5,
-        Legendary = 6,
-        MAX = 7
     };
 
     enum class EYCharacterCustomizationColorType : uint8_t //Enum Prospect.EYCharacterCustomizationColorType
@@ -6434,7 +6606,7 @@ namespace SDK
     {
         Station = 0,
         Matchmaking = 1,
-        EYServicePingTypes_MAX = 2
+        MAX = 2
     };
 
     enum class EYGPAModifierType : uint8_t //Enum Prospect.EYGPAModifierType
@@ -6454,121 +6626,146 @@ namespace SDK
         AbilityCooldownTime = 1,
         AIAmountAttackPhaseCount = 2,
         AIAmountOfShots = 3,
-        AIRefireTime = 4,
-        AIStabilityDamageReceived = 5,
-        BombardmentDamage = 6,
-        CurrentHealth = 7,
-        CurrentShield = 8,
-        DamageEnemyMultiplier = 9,
-        DamageEnemyWeakAreaMultiplier = 10,
-        DamageOverTimeEnabled = 11,
-        DamagePlayerMultiplier = 12,
-        DamageRadius = 13,
-        DamageScalingDealt = 14,
-        DamageScalingDealtAgainstAI = 15,
-        DamageScalingDealtAgainstPlayers = 16,
-        DamageScalingReceived = 17,
-        DamageScalingReceivedFromAI = 18,
-        DamageScalingReceivedFromPlayers = 19,
-        DamageSelf = 20,
-        DamageSelfInvincibility = 21,
-        FallingDamageReduction = 22,
-        FallingVelocityReduction = 23,
-        GravityScaling = 24,
-        HardLandingDistance = 25,
-        HealingWardPower = 26,
-        HealthDegenerationRate = 27,
-        HealthPlateSightAngle = 28,
-        HealthRegenerationDelay = 29,
-        HealthRegenerationRate = 30,
-        InteractionInteruptTime = 31,
-        HelmetNV = 32,
-        HelmetThermal = 33,
-        KineticShieldHealth = 34,
-        MaxHealth = 35,
-        MaxShield = 36,
-        MaxSlideSpeed = 37,
-        MaxSpeed = 38,
-        MaxSprintSpeed = 39,
-        OverallMovementSpeed = 40,
-        Piercing = 41,
-        ProjectileAcceleration = 42,
-        ProjectileAccelerationDelay = 43,
-        ProjectileAccelerationMovementSpeed = 44,
-        ProjectileArmingTime = 45,
-        ProjectileGravityScale = 46,
-        ProjectileInitialSpeed = 47,
-        ProjectileLifeSpan = 48,
-        ProjectileMaxSpeed = 49,
-        RadialFalloffMultiplier = 50,
-        RadialStartFalloffRange = 51,
-        SpinupDuration = 52,
-        SprintWhileReloading = 53,
-        StaminaConsumptionPerWeaponFire = 54,
-        SuperJumpCooldown = 55,
-        SuperJumpSpeed = 56,
-        TargetingFOVSpeed = 57,
-        TargetingTime = 58,
-        TargetingTimeFOV = 59,
-        VehicleBoostCooldown = 60,
-        VehicleBoostDuration = 61,
-        VehicleHealth = 62,
-        VehicleMovementSpeed = 63,
-        WeakAreaDamageScaling = 64,
-        WeaponAmmoOnSwitch = 65,
-        WeaponAmmoConsumptionOnShot = 66,
-        WeaponAmountOfShots = 67,
-        WeaponBurstCount = 68,
-        WeaponBurstInterval = 69,
-        WeaponClipSize = 70,
-        WeaponCrouchingRecoil = 71,
-        WeaponDamageDirect = 72,
-        WeaponDamageFalloffMultiplier = 73,
-        WeaponDamageRadial = 74,
-        WeaponDamageRange = 75,
-        WeaponDotDamage = 76,
-        WeaponDotDuration = 77,
-        WeaponDotInterval = 78,
-        WeaponEquipTime = 79,
-        WeaponHideFullScreenWidget = 80,
-        WeaponIsLooping = 81,
-        WeaponMaxTraceRange = 82,
-        WeaponPenetration = 83,
-        WeaponRecoilCompenstationAmountX = 84,
-        WeaponRecoilCompenstationAmountY = 85,
-        WeaponRecoilCompenstationSpeedX = 86,
-        WeaponRecoilCompenstationSpeedY = 87,
-        WeaponRecoilCompenstationStartTime = 88,
-        WeaponRecoilHorizontal = 89,
-        WeaponRecoilVertical = 90,
-        WeaponRecoilIncreaseRate = 91,
-        WeaponRefireAnimationRateScaleMultiplier = 92,
-        WeaponRefireTime = 93,
-        WeaponReloadTime = 94,
-        WeaponScaleOffset = 95,
-        WeaponSpreadDecreaseRate = 96,
-        WeaponSpreadIncreaseRate = 97,
-        WeaponSpreadMax = 98,
-        WeaponSpreadUnaimed = 99,
-        WeaponSprintBufferTime = 100,
-        WeaponTargetingFOV = 101,
-        WeaponTargetingInterp = 102,
-        WeaponTargetingRecoil = 103,
-        WeaponTargetingSpreadMultiplier = 104,
-        WeaponTargetingMaxSpreadMultiplier = 105,
-        WeaponTargetingSpreadIncreaseMultiplier = 106,
-        WeaponUnequipTime = 107,
-        WeaponRadialDamageImpulse = 108,
-        WeaponRadialDamageSelfImpulseMultiplier = 109,
-        WeaponIsSilenced = 110,
-        WorldTargetingFOV = 111,
-        ScopeThermal = 112,
-        ScopeNV = 113,
-        XPIncrease = 114,
-        StaminaConsumptionRate = 115,
-        MaxStamina = 116,
-        GPA_HAS_BEEN_REMOVED = 117,
-        EYGameplayAttribute_MAX = 118
+        AIDetectionHearingModifier = 4,
+        AIDetectionSightModifier = 5,
+        AIRefireTime = 6,
+        AIStabilityDamageReceived = 7,
+        BagSizeIncrease = 8,
+        BombardmentDamage = 9,
+        CarriedWeightReduction = 10,
+        CarriedWeightReductionAmmo = 11,
+        CarriedWeightReductionConsumables = 12,
+        CarriedWeightReductionHelmet = 13,
+        CarriedWeightReductionFauna = 14,
+        CarriedWeightReductionMinerals = 15,
+        CarriedWeightReductionShield = 16,
+        CarriedWeightReductionWeapons = 17,
+        CurrentHealth = 18,
+        CurrentShield = 19,
+        DamageEnemyMultiplier = 20,
+        DamageEnemyWeakAreaMultiplier = 21,
+        DamageOverTimeEnabled = 22,
+        DamagePlayerMultiplier = 23,
+        DamageRadius = 24,
+        DamageScalingDealt = 25,
+        DamageScalingDealtAgainstAI = 26,
+        DamageScalingDealtAgainstPlayers = 27,
+        DamageScalingReceived = 28,
+        DamageScalingReceivedFromAI = 29,
+        DamageScalingReceivedFromPlayers = 30,
+        DamageScalingReceivedFromStorm = 31,
+        DamageSelf = 32,
+        DamageSelfInvincibility = 33,
+        FallingDamageReduction = 34,
+        FallingVelocityReduction = 35,
+        GravityScaling = 36,
+        HardLandingDistance = 37,
+        HealingApplicationTimeScaling = 38,
+        HealingAmountScaling = 39,
+        HealingWardPower = 40,
+        HealthDegenerationRate = 41,
+        HealthPlateSightAngle = 42,
+        HealthRegenerationDelay = 43,
+        HealthRegenerationRate = 44,
+        InteractionInteruptTime = 45,
+        ItemWeightReduction = 46,
+        HelmetNV = 47,
+        HelmetThermal = 48,
+        HelmetThermalStaminaConsumptionPerSecond = 49,
+        KineticShieldHealth = 50,
+        MaxHealth = 51,
+        MaxShield = 52,
+        MaxSlideSpeed = 53,
+        MaxSpeed = 54,
+        MaxSprintSpeed = 55,
+        MaxWalkSpeedScaling = 56,
+        MaxWalkSpeedCrouchedScaling = 57,
+        MaxWalkSpeedTargetingScaling = 58,
+        OverallMovementSpeed = 59,
+        Piercing = 60,
+        ProjectileAcceleration = 61,
+        ProjectileAccelerationDelay = 62,
+        ProjectileAccelerationMovementSpeed = 63,
+        ProjectileArmingTime = 64,
+        ProjectileGravityScale = 65,
+        ProjectileInitialSpeed = 66,
+        ProjectileLifeSpan = 67,
+        ProjectileMaxSpeed = 68,
+        RadialDamageScaling = 69,
+        RadialFalloffMultiplier = 70,
+        RadialStartFalloffRange = 71,
+        HelmetArmorScaling = 72,
+        ShieldArmorScaling = 73,
+        SpinupDuration = 74,
+        SprintWhileReloading = 75,
+        StaminaConsumptionPerWeaponFire = 76,
+        StaminaRegenerationScaling = 77,
+        SuperJumpCooldown = 78,
+        SuperJumpSpeed = 79,
+        TargetingFOVSpeed = 80,
+        TargetingTime = 81,
+        TargetingTimeFOV = 82,
+        VehicleBoostCooldown = 83,
+        VehicleBoostDuration = 84,
+        VehicleHealth = 85,
+        VehicleMovementSpeed = 86,
+        WeakAreaDamageScaling = 87,
+        WeaponAmmoOnSwitch = 88,
+        WeaponAmmoConsumptionOnShot = 89,
+        WeaponAmountOfShots = 90,
+        WeaponBurstCount = 91,
+        WeaponBurstInterval = 92,
+        WeaponClipSize = 93,
+        WeaponCrouchingRecoil = 94,
+        WeaponDamageDirect = 95,
+        WeaponDamageFalloffMultiplier = 96,
+        WeaponDamageRadial = 97,
+        WeaponDamageRange = 98,
+        WeaponDotDamage = 99,
+        WeaponDotDuration = 100,
+        WeaponDotInterval = 101,
+        WeaponEquipTime = 102,
+        WeaponHideFullScreenWidget = 103,
+        WeaponIsLooping = 104,
+        WeaponMaxTraceRange = 105,
+        WeaponPenetration = 106,
+        WeaponRecoilCompenstationAmountX = 107,
+        WeaponRecoilCompenstationAmountY = 108,
+        WeaponRecoilCompenstationSpeedX = 109,
+        WeaponRecoilCompenstationSpeedY = 110,
+        WeaponRecoilCompenstationStartTime = 111,
+        WeaponRecoilHorizontal = 112,
+        WeaponRecoilVertical = 113,
+        WeaponRecoilIncreaseRate = 114,
+        WeaponRefireAnimationRateScaleMultiplier = 115,
+        WeaponRefireTime = 116,
+        WeaponReloadTime = 117,
+        WeaponScaleOffset = 118,
+        WeaponSpreadDecreaseRate = 119,
+        WeaponSpreadIncreaseRate = 120,
+        WeaponSpreadMax = 121,
+        WeaponSpreadUnaimed = 122,
+        WeaponSprintBufferTime = 123,
+        WeaponTargetingFOV = 124,
+        WeaponTargetingInterp = 125,
+        WeaponTargetingRecoil = 126,
+        WeaponTargetingSpreadMultiplier = 127,
+        WeaponTargetingMaxSpreadMultiplier = 128,
+        WeaponTargetingSpreadIncreaseMultiplier = 129,
+        WeaponUnequipTime = 130,
+        WeaponRadialDamageImpulse = 131,
+        WeaponRadialDamageSelfImpulseMultiplier = 132,
+        WeaponIsSilenced = 133,
+        WorldTargetingFOV = 134,
+        ScopeThermal = 135,
+        ScopeNV = 136,
+        XPIncrease = 137,
+        StaminaConsumptionRate = 138,
+        StaminaConsumptionScaling = 139,
+        StaminaRegenerationDelayScaling = 140,
+        MaxStamina = 141,
+        GPA_HAS_BEEN_REMOVED = 142,
+        EYGameplayAttribute_MAX = 143
     };
 
     enum class EYKeybindingInputDeviceType : uint8_t //Enum Prospect.EYKeybindingInputDeviceType
@@ -6624,52 +6821,6 @@ namespace SDK
         LootCrate = 7,
         StationSocial = 8,
         MAX = 9
-    };
-
-    enum class EYWeaponSlotType : uint8_t //Enum Prospect.EYWeaponSlotType
-    {
-        Starter = 0,
-        Primary = 1,
-        Invalid = 2,
-        EYWeaponSlotType_MAX = 3
-    };
-
-    enum class EYPerkTarget : uint8_t //Enum Prospect.EYPerkTarget
-    {
-        Source = 0,
-        Target = 1,
-        EYPerkTarget_MAX = 2
-    };
-
-    enum class EYPerkBool : uint8_t //Enum Prospect.EYPerkBool
-    {
-        None = 0,
-        LessThan = 1,
-        LessThanOrEqualTo = 2,
-        EqualTo = 3,
-        GreaterThanOrEqualTo = 4,
-        GreaterThan = 5,
-        EYPerkBool_MAX = 6
-    };
-
-    enum class EYPerkTrigger : uint8_t //Enum Prospect.EYPerkTrigger
-    {
-        GameplayAttribute = 0,
-        AlwaysOn = 1,
-        OnHit = 2,
-        OnKill = 3,
-        OnBeingHit = 4,
-        OnTargeting = 5,
-        OnWeaponSwitch = 6,
-        OnSprinting = 7,
-        OnFalling = 8,
-        OnDealingDamageModification = 9,
-        OnHealthChanged = 10,
-        OnTargetingAndFalling = 11,
-        OnSpinUp = 12,
-        OnMeleeLight = 13,
-        OnMeleeHeavy = 14,
-        EYPerkTrigger_MAX = 15
     };
 
     enum class EYStatValueComparison : uint8_t //Enum Prospect.EYStatValueComparison
@@ -6795,24 +6946,26 @@ namespace SDK
         NotLoggedInToPlayFab = 5,
         ServerNotLoggedInToPlayFab = 6,
         DisconnectedFromBackendRetry = 7,
-        ClientUpdateCheck = 8,
-        ClientOutdated = 9,
-        MaintenanceModeCheck = 10,
-        MaintenanceModeRetry = 11,
-        AllowCommunicationWithBackend = 12,
-        NewLegalAgreementsCheck = 13,
-        NewLegalAgreementsNotAccepted = 14,
-        AccountBanned = 15,
-        RollbackCheck = 16,
-        RollbackRetry = 17,
-        StationPingCheck = 18,
-        StationPingRetry = 19,
-        LoginQueueCheck = 20,
-        LoginQueueRetry = 21,
-        IsPlayerStillOnBattleServerCheck = 22,
-        IsPlayerStillOnBattleServerRetry = 23,
-        CompletelyLoggedIn = 24,
-        EYAuthorizationState_MAX = 25
+        OnLoginCall = 8,
+        OnLoginRetry = 9,
+        NewLegalAgreementsCheck = 10,
+        NewLegalAgreementsNotAccepted = 11,
+        ClientUpdateCheck = 12,
+        ClientOutdated = 13,
+        MaintenanceModeCheck = 14,
+        MaintenanceModeRetry = 15,
+        AllowCommunicationWithBackend = 16,
+        AccountBanned = 17,
+        SeasonWipeCheck = 18,
+        SeasonWipeRetry = 19,
+        RollbackCheck = 20,
+        RollbackRetry = 21,
+        StationPingCheck = 22,
+        StationPingRetry = 23,
+        LoginQueueCheck = 24,
+        LoginQueueRetry = 25,
+        CompletelyAuthorized = 26,
+        EYAuthorizationState_MAX = 27
     };
 
     enum class EYInterruptionCause : uint8_t //Enum Prospect.EYInterruptionCause
@@ -6821,7 +6974,7 @@ namespace SDK
         ServerCrash = 1,
         BackendDown = 2,
         SignalRDown = 4,
-        NoInternet = 7,
+        NoInternet = 8,
         MAX = 16
     };
 
@@ -6833,6 +6986,15 @@ namespace SDK
         FULLYLOAD_Always = 3,
         FULLYLOAD_Mutator = 4,
         FULLYLOAD_MAX = 5
+    };
+
+    enum class EYFriendOnlineStatus : uint8_t //Enum Prospect.EYFriendOnlineStatus
+    {
+        None = 0,
+        PlayingThisGame = 1,
+        Online = 2,
+        PlayingOtherGame = 3,
+        EYFriendOnlineStatus_MAX = 4
     };
 
     enum class EYCustomizationMode : uint8_t //Enum Prospect.EYCustomizationMode
@@ -6947,6 +7109,24 @@ namespace SDK
         MAX = 60
     };
 
+    enum class EYNotificationPlacement : uint8_t //Enum Prospect.EYNotificationPlacement
+    {
+        Center = 0,
+        RightMiddle = 1,
+        RightTop = 2,
+        LeftMiddle = 3,
+        EYNotificationPlacement_MAX = 4
+    };
+
+    enum class EYNotificationType : uint8_t //Enum Prospect.EYNotificationType
+    {
+        Invalid = 0,
+        SimpleText = 1,
+        ImportantText = 2,
+        ImmidateText = 3,
+        EYNotificationType_MAX = 4
+    };
+
     enum class EYMissionResultType : uint8_t //Enum Prospect.EYMissionResultType
     {
         Active = 0,
@@ -6955,6 +7135,53 @@ namespace SDK
         MissionCompleted = 3,
         Succeeded = 4,
         EYMissionResultType_MAX = 5
+    };
+
+    enum class EYWeaponSlotType : uint8_t //Enum Prospect.EYWeaponSlotType
+    {
+        Starter = 0,
+        Primary = 1,
+        Invalid = 2,
+        EYWeaponSlotType_MAX = 3
+    };
+
+    enum class EYPerkTarget : uint8_t //Enum Prospect.EYPerkTarget
+    {
+        Source = 0,
+        Target = 1,
+        EYPerkTarget_MAX = 2
+    };
+
+    enum class EYPerkBool : uint8_t //Enum Prospect.EYPerkBool
+    {
+        None = 0,
+        LessThan = 1,
+        LessThanOrEqualTo = 2,
+        EqualTo = 3,
+        GreaterThanOrEqualTo = 4,
+        GreaterThan = 5,
+        EYPerkBool_MAX = 6
+    };
+
+    enum class EYPerkTrigger : uint8_t //Enum Prospect.EYPerkTrigger
+    {
+        GameplayAttribute = 0,
+        AlwaysOn = 1,
+        OnHit = 2,
+        OnKill = 3,
+        OnBeingHit = 4,
+        OnTargeting = 5,
+        OnWeaponSwitch = 6,
+        OnSprinting = 7,
+        OnFalling = 8,
+        OnDealingDamageModification = 9,
+        OnHealthChanged = 10,
+        OnTargetingAndFalling = 11,
+        OnSpinUp = 12,
+        OnMeleeLight = 13,
+        OnMeleeHeavy = 14,
+        OnStormActive = 15,
+        EYPerkTrigger_MAX = 16
     };
 
     enum class EYTechtreeCategoryType : uint8_t //Enum Prospect.EYTechtreeCategoryType
@@ -7055,6 +7282,20 @@ namespace SDK
         Epic = 3,
         Custom = 4,
         EYGfxQualityPreset_MAX = 5
+    };
+
+    enum class EFSRUpscalingMode : uint8_t //Enum Prospect.EFSRUpscalingMode
+    {
+        Off = 0,
+        UltraQuality = 1,
+        Quality = 2,
+        Balanced = 3,
+        Performance = 4,
+        HybridUltraQuality = 5,
+        HybridQuality = 6,
+        HybridBalanced = 7,
+        HybridPerformance = 8,
+        EFSRUpscalingMode_MAX = 9
     };
 
     enum class EYSquadID : uint8_t //Enum Prospect.EYSquadID
@@ -7494,6 +7735,35 @@ namespace SDK
         EYAggroUpdateState_MAX = 7
     };
 
+    enum class EYAlienForgeCanItemBeForgedState : uint8_t //Enum Prospect.EYAlienForgeCanItemBeForgedState
+    {
+        Invalid = 0,
+        NoForgingPossible = 1,
+        LotteryTicket = 2,
+        BaseItemAndCatalyst = 3,
+        IngotCrafting = 4,
+        MAX = 5
+    };
+
+    enum class EYAlienForgeBIType : uint8_t //Enum Prospect.EYAlienForgeBIType
+    {
+        invalid = 0,
+        ingots = 1,
+        ingredients = 2,
+        lottery_ticket = 3,
+        MAX = 4
+    };
+
+    enum class EYAlienForgeBIAction : uint8_t //Enum Prospect.EYAlienForgeBIAction
+    {
+        none = 0,
+        opened = 1,
+        closed = 2,
+        forging_started = 3,
+        forging_ended = 4,
+        EYAlienForgeBIAction_MAX = 5
+    };
+
     enum class EYBrightcapDropReason : uint8_t //Enum Prospect.EYBrightcapDropReason
     {
         player_damage = 0,
@@ -7774,9 +8044,10 @@ namespace SDK
     {
         None = 0,
         SpecialOffers = 1,
-        StarterPacks = 2,
-        Aurum = 3,
-        EYPlayFabStoreCategory_MAX = 4
+        SeasonalOffers = 2,
+        StarterPacks = 3,
+        Aurum = 4,
+        EYPlayFabStoreCategory_MAX = 5
     };
 
     enum class EYBlueprintCraftingPriceType : uint8_t //Enum Prospect.EYBlueprintCraftingPriceType
@@ -8129,7 +8400,8 @@ namespace SDK
         Bag = 1,
         Corpse = 2,
         DeadDrop = 3,
-        EYLootContainerWidgetType_MAX = 4
+        AlienForge = 4,
+        EYLootContainerWidgetType_MAX = 5
     };
 
     enum class EYLootTier : uint8_t //Enum Prospect.EYLootTier
@@ -8182,44 +8454,6 @@ namespace SDK
         MAX = 5
     };
 
-    enum class EYMatchmakingCountryOverrideOptions : uint8_t //Enum Prospect.EYMatchmakingCountryOverrideOptions
-    {
-        Allow = 0,
-        ForceRedirect = 1,
-        MAX = 2
-    };
-
-    enum class EYMatchmakingRegionOverrideOptions : uint8_t //Enum Prospect.EYMatchmakingRegionOverrideOptions
-    {
-        Allow = 0,
-        Redirect = 1,
-        Default = 2,
-        MAX = 3
-    };
-
-    enum class EYMatchmakingUsersSplitOptions : uint8_t //Enum Prospect.EYMatchmakingUsersSplitOptions
-    {
-        None = 0,
-        SplitNewUsers = 1,
-        MAX = 2
-    };
-
-    enum class EYMatchmakingUsersAmountOptions : uint8_t //Enum Prospect.EYMatchmakingUsersAmountOptions
-    {
-        None = 0,
-        FullestFirst = 1,
-        EmptiestFirst = 2,
-        MAX = 3
-    };
-
-    enum class EYMatchmakingMapOptions : uint8_t //Enum Prospect.EYMatchmakingMapOptions
-    {
-        None = 0,
-        Strict = 1,
-        Flexible = 2,
-        MAX = 3
-    };
-
     enum class EYEndOfMatchWidgetType : uint8_t //Enum Prospect.EYEndOfMatchWidgetType
     {
         EvacFailed = 0,
@@ -8239,14 +8473,6 @@ namespace SDK
         Medium = 1,
         High = 2,
         EYMineralTier_MAX = 3
-    };
-
-    enum class EYUnlockedTypes : uint8_t //Enum Prospect.EYUnlockedTypes
-    {
-        None = 0,
-        Attachment = 1,
-        Upgrade = 2,
-        MAX = 3
     };
 
     enum class EYOverrideShowWeapon : uint8_t //Enum Prospect.EYOverrideShowWeapon
@@ -16129,19 +16355,19 @@ namespace SDK
     {
     };
 
+    enum class ENUM_CharacterAimState : uint8_t //UserDefinedEnum ENUM_CharacterAimState.ENUM_CharacterAimState
+    {
+        NewEnumerator0 = 0,
+        NewEnumerator1 = 1,
+        ENUM_MAX = 2
+    };
+
     enum class AutomationResultCode : uint8_t //UserDefinedEnum AutomationResultCode.AutomationResultCode
     {
         NewEnumerator0 = 0,
         NewEnumerator1 = 1,
         NewEnumerator2 = 2,
         AutomationResultCode_MAX = 3
-    };
-
-    enum class ENUM_CharacterAimState : uint8_t //UserDefinedEnum ENUM_CharacterAimState.ENUM_CharacterAimState
-    {
-        NewEnumerator0 = 0,
-        NewEnumerator1 = 1,
-        ENUM_MAX = 2
     };
 
     enum class LightType : uint8_t //UserDefinedEnum LightType.LightType
@@ -16183,7 +16409,42 @@ namespace SDK
         NewEnumerator18 = 18,
         NewEnumerator19 = 19,
         NewEnumerator20 = 20,
-        AnimArchetypeEnum_MAX = 21
+        NewEnumerator21 = 21,
+        NewEnumerator22 = 22,
+        NewEnumerator23 = 23,
+        AnimArchetypeEnum_MAX = 24
+    };
+
+    enum class MapAreaDifficulty_ENUM : uint8_t //UserDefinedEnum MapAreaDifficulty_ENUM.MapAreaDifficulty_ENUM
+    {
+        NewEnumerator5 = 0,
+        NewEnumerator0 = 1,
+        NewEnumerator1 = 2,
+        NewEnumerator2 = 3,
+        NewEnumerator3 = 4,
+        NewEnumerator4 = 5,
+        MapAreaDifficulty_MAX = 6
+    };
+
+    enum class EN_EffortTypes : uint8_t //UserDefinedEnum EN_EffortTypes.EN_EffortTypes
+    {
+        NewEnumerator11 = 0,
+        NewEnumerator0 = 1,
+        NewEnumerator1 = 2,
+        NewEnumerator2 = 3,
+        NewEnumerator3 = 4,
+        NewEnumerator4 = 5,
+        NewEnumerator5 = 6,
+        NewEnumerator12 = 7,
+        NewEnumerator6 = 8,
+        NewEnumerator7 = 9,
+        NewEnumerator8 = 10,
+        NewEnumerator9 = 11,
+        NewEnumerator10 = 12,
+        NewEnumerator13 = 13,
+        NewEnumerator14 = 14,
+        NewEnumerator15 = 15,
+        EN_MAX = 16
     };
 
     enum class AC_EscapeShipTerminal_Actor_ENUM : uint8_t //UserDefinedEnum AC_EscapeShipTerminal_Actor_ENUM.AC_EscapeShipTerminal_Actor_ENUM
@@ -16255,38 +16516,6 @@ namespace SDK
         En_MAX = 40
     };
 
-    enum class MapAreaDifficulty_ENUM : uint8_t //UserDefinedEnum MapAreaDifficulty_ENUM.MapAreaDifficulty_ENUM
-    {
-        NewEnumerator5 = 0,
-        NewEnumerator0 = 1,
-        NewEnumerator1 = 2,
-        NewEnumerator2 = 3,
-        NewEnumerator3 = 4,
-        NewEnumerator4 = 5,
-        MapAreaDifficulty_MAX = 6
-    };
-
-    enum class EN_EffortTypes : uint8_t //UserDefinedEnum EN_EffortTypes.EN_EffortTypes
-    {
-        NewEnumerator11 = 0,
-        NewEnumerator0 = 1,
-        NewEnumerator1 = 2,
-        NewEnumerator2 = 3,
-        NewEnumerator3 = 4,
-        NewEnumerator4 = 5,
-        NewEnumerator5 = 6,
-        NewEnumerator12 = 7,
-        NewEnumerator6 = 8,
-        NewEnumerator7 = 9,
-        NewEnumerator8 = 10,
-        NewEnumerator9 = 11,
-        NewEnumerator10 = 12,
-        NewEnumerator13 = 13,
-        NewEnumerator14 = 14,
-        NewEnumerator15 = 15,
-        EN_MAX = 16
-    };
-
     enum class AC_EscapeShip_State : uint8_t //UserDefinedEnum AC_EscapeShip_State.AC_EscapeShip_State
     {
         NewEnumerator4 = 0,
@@ -16309,41 +16538,6 @@ namespace SDK
         ScannerInterfaceStates_MAX = 4
     };
 
-    enum class YBIHookPowerUpStep : uint8_t //UserDefinedEnum YBIHookPowerUpStep.YBIHookPowerUpStep
-    {
-        NewEnumerator0 = 0,
-        NewEnumerator1 = 1,
-        NewEnumerator2 = 2,
-        NewEnumerator3 = 3,
-        YBIHookPowerUpStep_MAX = 4
-    };
-
-    enum class InteractableDoor_BehavEnum : uint8_t //UserDefinedEnum InteractableDoor_BehavEnum.InteractableDoor_BehavEnum
-    {
-        NewEnumerator2 = 0,
-        NewEnumerator1 = 1,
-        NewEnumerator0 = 2,
-        InteractableDoor_MAX = 3
-    };
-
-    enum class UplinkState_Enum : uint8_t //UserDefinedEnum UplinkState_Enum.UplinkState_Enum
-    {
-        NewEnumerator0 = 0,
-        NewEnumerator5 = 1,
-        NewEnumerator1 = 2,
-        NewEnumerator6 = 3,
-        UplinkState_MAX = 4
-    };
-
-    enum class BIEventDataUplink_Enum : uint8_t //UserDefinedEnum BIEventDataUplink_Enum.BIEventDataUplink_Enum
-    {
-        NewEnumerator3 = 0,
-        NewEnumerator0 = 1,
-        NewEnumerator1 = 2,
-        NewEnumerator2 = 3,
-        BIEventDataUplink_MAX = 4
-    };
-
     enum class SplineBranching : uint8_t //UserDefinedEnum SplineBranching.SplineBranching
     {
         NewEnumerator0 = 0,
@@ -16351,31 +16545,6 @@ namespace SDK
         NewEnumerator2 = 2,
         NewEnumerator3 = 3,
         SplineBranching_MAX = 4
-    };
-
-    enum class LargeSign_BackDetail : uint8_t //UserDefinedEnum LargeSign_BackDetail.LargeSign_BackDetail
-    {
-        NewEnumerator0 = 0,
-        NewEnumerator1 = 1,
-        NewEnumerator2 = 2,
-        LargeSign_MAX = 3
-    };
-
-    enum class InteriorProps_ServerRacks : uint8_t //UserDefinedEnum InteriorProps_ServerRacks.InteriorProps_ServerRacks
-    {
-        NewEnumerator0 = 0,
-        NewEnumerator1 = 1,
-        NewEnumerator2 = 2,
-        NewEnumerator3 = 3,
-        InteriorProps_MAX = 4
-    };
-
-    enum class EHealingPodStates : uint8_t //UserDefinedEnum EHealingPodStates.EHealingPodStates
-    {
-        NewEnumerator0 = 0,
-        NewEnumerator1 = 1,
-        NewEnumerator2 = 2,
-        EHealingPodStates_MAX = 3
     };
 
     enum class DiggerVariations : uint8_t //UserDefinedEnum DiggerVariations.DiggerVariations
@@ -16387,14 +16556,28 @@ namespace SDK
         DiggerVariations_MAX = 4
     };
 
-    enum class BatteryStatus : uint8_t //UserDefinedEnum BatteryStatus.BatteryStatus
+    enum class En_VanityMenuStates : uint8_t //UserDefinedEnum En_VanityMenuStates.En_VanityMenuStates
     {
-        NewEnumerator3 = 0,
-        NewEnumerator2 = 1,
+        NewEnumerator6 = 0,
+        NewEnumerator0 = 1,
         NewEnumerator1 = 2,
-        NewEnumerator4 = 3,
-        NewEnumerator5 = 4,
-        BatteryStatus_MAX = 5
+        NewEnumerator2 = 3,
+        NewEnumerator3 = 4,
+        NewEnumerator4 = 5,
+        NewEnumerator5 = 6,
+        NewEnumerator7 = 7,
+        En_MAX = 8
+    };
+
+    enum class En_BI_PurchaseFlow_Action : uint8_t //UserDefinedEnum En_BI_PurchaseFlow_Action.En_BI_PurchaseFlow_Action
+    {
+        NewEnumerator5 = 0,
+        NewEnumerator0 = 1,
+        NewEnumerator1 = 2,
+        NewEnumerator2 = 3,
+        NewEnumerator3 = 4,
+        NewEnumerator4 = 5,
+        En_BI_PurchaseFlow_MAX = 6
     };
 
 
