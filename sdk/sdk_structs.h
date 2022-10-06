@@ -11944,6 +11944,156 @@ namespace SDK
 
     };
 
+    struct FYFeatureToggles : FYDataTableRowBase //ScriptStruct Prospect.YFeatureToggles
+    {
+    //Children Prop Count (Fields): 142
+    public:
+
+        bool m_isMapUnlockEnabled; // 0x10
+        bool m_useFullTimeAsyncLoadingThread; // 0x11
+        bool m_playerReplicatingClientSpawnDependency; // 0x12
+        bool m_voiceChatEnabled; // 0x13
+        bool m_autoRequeueingEnabled; // 0x14
+        bool m_useIdleDetection; // 0x15
+        bool m_enableColorBlindOptions; // 0x16
+        bool m_automaticImportPlatformFriends; // 0x17
+        bool m_eosStatsEnabled; // 0x18
+        bool m_canCraftWeapons; // 0x19
+        bool m_isModFunctionalityEnabled; // 0x1a
+        bool m_enableBugReporterInShipping; // 0x1b
+        bool m_enableBugReporter; // 0x1c
+        bool m_isProneEnabled; // 0x1d
+        bool m_isLeaningEnabled; // 0x1e
+        bool m_isAccountLinkingEnabled; // 0x1f
+        bool m_isFriendsImportEnabled; // 0x20
+        bool m_showMatchMapsSelector; // 0x21
+        bool m_newMeleeSystemEnabled; // 0x22
+        bool m_enableEffortsComponent; // 0x23
+        bool m_squadsEnabled; // 0x24
+        bool m_socialEnabled; // 0x25
+        bool m_sessionServerShutdownEnabled; // 0x26
+        bool m_multiplayerStationEnabled; // 0x27
+        bool m_replicationGraphEnabled; // 0x28
+        bool m_lootCollisionTraceEnabled; // 0x29
+        bool m_isOnboardingEnabled; // 0x2a
+        bool m_isPremiumShopEnabled; // 0x2b
+        bool m_areRealMoneyPurchasesEnabled; // 0x2c
+        bool m_isFortunaPassEnabled; // 0x2d
+        bool m_isTutorialEnabled; // 0x2e
+        bool m_isCharacterSelectionEnabled; // 0x2f
+        bool m_showSeasonDateInfoOnRetentionPopup; // 0x30
+        bool m_enableBIEventsServer; // 0x31
+        float m_BIEventsServerRatio; // 0x34
+        float m_BIEventsUserSamplingRatio; // 0x38
+        bool m_enableBIEventsClient; // 0x3c
+        bool m_playfabCouponsEnabled; // 0x3d
+        bool m_AlienForgeEnabled; // 0x3e
+        bool m_enableInteractionAmountLimit; // 0x3f
+        bool m_safeTeleportWhenStuck; // 0x40
+        bool m_safeTeleportFallingThroughWorld; // 0x41
+        bool m_basicInsuranceEnabled; // 0x42
+        bool m_premiumInsuranceEnabled; // 0x43
+        bool m_relevantPlayerControllerCachingEnabled; // 0x44
+        bool m_interruptionManagerTravelEnabled; // 0x45
+        bool m_enableBulletPooling; // 0x46
+        bool m_isTOCDataMigrationEnabled; // 0x47
+        bool m_isInventoryLimitEnabled; // 0x48
+        bool m_checkClientVersionUpToDate; // 0x49
+        bool m_allowDebugShippingServerCrashes; // 0x4a
+        bool m_disableTargetingInAir; // 0x4b
+        bool m_cheatFeatureToggle_01; // 0x4c
+        bool m_cheatFeatureToggle_02; // 0x4d
+        bool m_cheatFeatureToggle_03; // 0x4e
+        bool m_cheatFeatureToggle_04; // 0x4f
+        bool m_cheatFeatureToggle_05; // 0x50
+        bool m_cheatFeatureToggle_06; // 0x51
+        bool m_cheatFeatureToggle_07; // 0x52
+        bool m_cheatFeatureToggle_08; // 0x53
+        bool m_cheatFeatureToggle_09; // 0x54
+        bool m_cheatFeatureToggle_11; // 0x55
+        bool m_cheatFeatureToggle_12; // 0x56
+        bool m_cheatFeatureToggle_13; // 0x57
+        bool m_cheatFeatureToggle_14; // 0x58
+        bool m_cheatFeatureToggle_15; // 0x59
+        bool m_cheatFeatureToggle_16; // 0x5a
+        bool m_cheatFeatureToggle_17; // 0x5b
+        bool m_cheatFeatureToggle_18; // 0x5c
+        bool m_cheatFeatureToggle_19; // 0x5d
+        bool m_cheatFeatureToggle_20; // 0x5e
+        bool m_cheatFeatureToggle_21; // 0x5f
+        bool m_cheatFeatureToggle_22; // 0x60
+        bool m_cheatFeatureToggle_23; // 0x61
+        bool m_cheatFeatureToggle_24; // 0x62
+        bool m_cheatFeatureToggle_25; // 0x63
+        bool m_cheatFeatureToggle_26; // 0x64
+        bool m_cheatFeatureToggle_27; // 0x65
+        int32_t m_cheatConfig_27; // 0x68
+        bool m_cheatFeatureToggle_28; // 0x6c
+        bool m_cheatFeatureToggle_29; // 0x6d
+        bool m_cheatFeatureToggle_30; // 0x6e
+        bool m_cheatFeatureToggle_31; // 0x6f
+        int32_t m_cheatConfig_31; // 0x70
+        bool m_cheatFeatureToggle_33; // 0x74
+        bool m_cheatFeatureToggle_34; // 0x75
+        bool m_cheatFeatureToggle_35; // 0x76
+        bool m_cheatFeatureToggle_36; // 0x77
+        bool m_cheatFeatureToggle_37; // 0x78
+        bool m_cheatFeatureToggle_38; // 0x79
+        bool m_cheatFeatureToggle_39; // 0x7a
+        bool m_cheatFeatureToggle_40; // 0x7b
+        bool m_cheatFeatureToggle_41; // 0x7c
+        bool m_cheatFeatureToggle_42; // 0x7d
+        bool m_cheatFeatureToggle_43; // 0x7e
+        bool m_cheatFeatureToggle_44; // 0x7f
+        bool m_cheatFeatureToggle_45; // 0x80
+        bool m_cheatFeatureToggle_46; // 0x81
+        bool m_cheatFeatureToggle_47; // 0x82
+        bool m_cheatFeatureToggle_48; // 0x83
+        bool m_cheatFeatureToggle_49; // 0x84
+        bool m_cheatFeatureToggle_50; // 0x85
+        bool m_cheatFeatureToggle_51; // 0x86
+        bool m_cheatFeatureToggle_52; // 0x87
+        bool m_cheatFeatureToggle_53; // 0x88
+        bool m_cheatFeatureToggle_54; // 0x89
+        bool m_cheatFeatureToggle_55; // 0x8a
+        bool m_isBattlEyeKickingActive; // 0x8b
+        bool m_isBattlEyeActive; // 0x8c
+        bool m_isBattlEyeKickReasonChecksActive; // 0x8d
+        bool m_levelStreamingFailsafeEnabled; // 0x8e
+        bool m_useCustomOcclusionAudioAsyncLimitation; // 0x8f
+        bool m_useCustomOcclusionAudioSyncLimitation; // 0x90
+        bool m_isUsingSingleNvrBracket; // 0x91
+        bool m_sampleBIEvents; // 0x92
+        bool m_shutDownInstancesOfExistingConnections; // 0x93
+        bool m_vivoxRejoinOnDisconnect; // 0x94
+        bool m_cheatProtectionSession; // 0x95
+        bool m_isMergingMeshComponentsDefaultStation; // 0x96
+        bool m_isMergingMeshComponentsDefaultMatch; // 0x97
+        bool m_submixByPassEnabled; // 0x98
+        bool m_reconnectFeatureEnabled; // 0x99
+        bool m_autoFetchTitleData; // 0x9a
+        struct TMap<struct FString, float> m_fetchingIntervals; // 0xa0
+        bool m_cheatingVictimCompensationEnabled; // 0xf0
+        bool m_cheatingVictimCompensationIgnoreItemsByWeightEnabled; // 0xf1
+        bool m_kickingStorageQueueEnabled; // 0xf2
+        bool m_playFabIdServerValidation; // 0xf3
+        bool m_playFabNickNameServerValidation; // 0xf4
+        bool m_battlEyeEndPointEnabled; // 0xf5
+        bool m_enableShieldedMatchmaking; // 0xf6
+        bool m_enableUsingSpentMoneyThreshold; // 0xf7
+        bool m_enableUsingSteamAccountStatus; // 0xf8
+        bool m_enableUsingVeteranPoints; // 0xf9
+        bool m_enableBackendOptimalPingCheck; // 0xfa
+        bool m_enableBackendRegionBoundaryCheck; // 0xfb
+        bool m_enableProjectileSimulatedDamagePropagation; // 0xfc
+        bool m_enableResponsivenessCheck; // 0xfd
+        struct TArray<struct FName> m_deactivatedItems; // 0x100
+        bool m_rolledPerkActivated; // 0x110
+        bool m_VPNDetectionEnabled; // 0x111
+        bool m_enableLedgeClimbServerValidation; // 0x112
+
+    };
+
     struct FYClaimableVictimCompensation //ScriptStruct Prospect.YClaimableVictimCompensation
     {
     //Children Prop Count (Fields): 6
@@ -13347,152 +13497,6 @@ namespace SDK
         struct FText m_translateStatName; // 0x10
         enum class EYStatValueDisplayMethod m_displayMethod; // 0x30
         enum class EYStatValueComparison m_comparisonMethod; // 0x31
-
-    };
-
-    struct FYFeatureToggles : FYDataTableRowBase //ScriptStruct Prospect.YFeatureToggles
-    {
-    //Children Prop Count (Fields): 138
-    public:
-
-        bool m_isMapUnlockEnabled; // 0x10
-        bool m_useFullTimeAsyncLoadingThread; // 0x11
-        bool m_playerReplicatingClientSpawnDependency; // 0x12
-        bool m_voiceChatEnabled; // 0x13
-        bool m_autoRequeueingEnabled; // 0x14
-        bool m_useIdleDetection; // 0x15
-        bool m_enableColorBlindOptions; // 0x16
-        bool m_automaticImportPlatformFriends; // 0x17
-        bool m_eosStatsEnabled; // 0x18
-        bool m_canCraftWeapons; // 0x19
-        bool m_isModFunctionalityEnabled; // 0x1a
-        bool m_enableBugReporterInShipping; // 0x1b
-        bool m_enableBugReporter; // 0x1c
-        bool m_isProneEnabled; // 0x1d
-        bool m_isLeaningEnabled; // 0x1e
-        bool m_isAccountLinkingEnabled; // 0x1f
-        bool m_isFriendsImportEnabled; // 0x20
-        bool m_showMatchMapsSelector; // 0x21
-        bool m_newMeleeSystemEnabled; // 0x22
-        bool m_enableEffortsComponent; // 0x23
-        bool m_squadsEnabled; // 0x24
-        bool m_socialEnabled; // 0x25
-        bool m_sessionServerShutdownEnabled; // 0x26
-        bool m_multiplayerStationEnabled; // 0x27
-        bool m_replicationGraphEnabled; // 0x28
-        bool m_lootCollisionTraceEnabled; // 0x29
-        bool m_isOnboardingEnabled; // 0x2a
-        bool m_isPremiumShopEnabled; // 0x2b
-        bool m_areRealMoneyPurchasesEnabled; // 0x2c
-        bool m_isFortunaPassEnabled; // 0x2d
-        bool m_isTutorialEnabled; // 0x2e
-        bool m_isCharacterSelectionEnabled; // 0x2f
-        bool m_showSeasonDateInfoOnRetentionPopup; // 0x30
-        bool m_enableBIEventsServer; // 0x31
-        float m_BIEventsServerRatio; // 0x34
-        float m_BIEventsUserSamplingRatio; // 0x38
-        bool m_enableBIEventsClient; // 0x3c
-        bool m_playfabCouponsEnabled; // 0x3d
-        bool m_AlienForgeEnabled; // 0x3e
-        bool m_enableInteractionAmountLimit; // 0x3f
-        bool m_safeTeleportWhenStuck; // 0x40
-        bool m_safeTeleportFallingThroughWorld; // 0x41
-        bool m_basicInsuranceEnabled; // 0x42
-        bool m_premiumInsuranceEnabled; // 0x43
-        bool m_relevantPlayerControllerCachingEnabled; // 0x44
-        bool m_interruptionManagerTravelEnabled; // 0x45
-        bool m_enableBulletPooling; // 0x46
-        bool m_isTOCDataMigrationEnabled; // 0x47
-        bool m_isInventoryLimitEnabled; // 0x48
-        bool m_checkClientVersionUpToDate; // 0x49
-        bool m_allowDebugShippingServerCrashes; // 0x4a
-        bool m_disableTargetingInAir; // 0x4b
-        bool m_cheatFeatureToggle_01; // 0x4c
-        bool m_cheatFeatureToggle_02; // 0x4d
-        bool m_cheatFeatureToggle_03; // 0x4e
-        bool m_cheatFeatureToggle_04; // 0x4f
-        bool m_cheatFeatureToggle_05; // 0x50
-        bool m_cheatFeatureToggle_06; // 0x51
-        bool m_cheatFeatureToggle_07; // 0x52
-        bool m_cheatFeatureToggle_08; // 0x53
-        bool m_cheatFeatureToggle_09; // 0x54
-        bool m_cheatFeatureToggle_11; // 0x55
-        bool m_cheatFeatureToggle_12; // 0x56
-        bool m_cheatFeatureToggle_13; // 0x57
-        bool m_cheatFeatureToggle_14; // 0x58
-        bool m_cheatFeatureToggle_15; // 0x59
-        bool m_cheatFeatureToggle_16; // 0x5a
-        bool m_cheatFeatureToggle_17; // 0x5b
-        bool m_cheatFeatureToggle_18; // 0x5c
-        bool m_cheatFeatureToggle_19; // 0x5d
-        bool m_cheatFeatureToggle_20; // 0x5e
-        bool m_cheatFeatureToggle_21; // 0x5f
-        bool m_cheatFeatureToggle_22; // 0x60
-        bool m_cheatFeatureToggle_23; // 0x61
-        bool m_cheatFeatureToggle_24; // 0x62
-        bool m_cheatFeatureToggle_25; // 0x63
-        bool m_cheatFeatureToggle_26; // 0x64
-        bool m_cheatFeatureToggle_27; // 0x65
-        int32_t m_cheatConfig_27; // 0x68
-        bool m_cheatFeatureToggle_28; // 0x6c
-        bool m_cheatFeatureToggle_29; // 0x6d
-        bool m_cheatFeatureToggle_30; // 0x6e
-        bool m_cheatFeatureToggle_31; // 0x6f
-        int32_t m_cheatConfig_31; // 0x70
-        bool m_cheatFeatureToggle_33; // 0x74
-        bool m_cheatFeatureToggle_34; // 0x75
-        bool m_cheatFeatureToggle_35; // 0x76
-        bool m_cheatFeatureToggle_36; // 0x77
-        bool m_cheatFeatureToggle_37; // 0x78
-        bool m_cheatFeatureToggle_38; // 0x79
-        bool m_cheatFeatureToggle_39; // 0x7a
-        bool m_cheatFeatureToggle_40; // 0x7b
-        bool m_cheatFeatureToggle_41; // 0x7c
-        bool m_cheatFeatureToggle_42; // 0x7d
-        bool m_cheatFeatureToggle_43; // 0x7e
-        bool m_cheatFeatureToggle_44; // 0x7f
-        bool m_cheatFeatureToggle_45; // 0x80
-        bool m_cheatFeatureToggle_46; // 0x81
-        bool m_cheatFeatureToggle_47; // 0x82
-        bool m_cheatFeatureToggle_48; // 0x83
-        bool m_cheatFeatureToggle_49; // 0x84
-        bool m_cheatFeatureToggle_50; // 0x85
-        bool m_cheatFeatureToggle_51; // 0x86
-        bool m_cheatFeatureToggle_52; // 0x87
-        bool m_cheatFeatureToggle_53; // 0x88
-        bool m_cheatFeatureToggle_54; // 0x89
-        bool m_cheatFeatureToggle_55; // 0x8a
-        bool m_isBattlEyeKickingActive; // 0x8b
-        bool m_isBattlEyeActive; // 0x8c
-        bool m_isBattlEyeKickReasonChecksActive; // 0x8d
-        bool m_levelStreamingFailsafeEnabled; // 0x8e
-        bool m_useCustomOcclusionAudioAsyncLimitation; // 0x8f
-        bool m_useCustomOcclusionAudioSyncLimitation; // 0x90
-        bool m_isUsingSingleNvrBracket; // 0x91
-        bool m_sampleBIEvents; // 0x92
-        bool m_shutDownInstancesOfExistingConnections; // 0x93
-        bool m_vivoxRejoinOnDisconnect; // 0x94
-        bool m_cheatProtectionSession; // 0x95
-        bool m_isMergingMeshComponentsDefaultStation; // 0x96
-        bool m_isMergingMeshComponentsDefaultMatch; // 0x97
-        bool m_submixByPassEnabled; // 0x98
-        bool m_reconnectFeatureEnabled; // 0x99
-        bool m_autoFetchTitleData; // 0x9a
-        struct TMap<struct FString, float> m_fetchingIntervals; // 0xa0
-        bool m_cheatingVictimCompensationEnabled; // 0xf0
-        bool m_cheatingVictimCompensationIgnoreItemsByWeightEnabled; // 0xf1
-        bool m_kickingStorageQueueEnabled; // 0xf2
-        bool m_playFabIdServerValidation; // 0xf3
-        bool m_playFabNickNameServerValidation; // 0xf4
-        bool m_battlEyeEndPointEnabled; // 0xf5
-        bool m_enableShieldedMatchmaking; // 0xf6
-        bool m_enableUsingSpentMoneyThreshold; // 0xf7
-        bool m_enableUsingSteamAccountStatus; // 0xf8
-        bool m_enableUsingVeteranPoints; // 0xf9
-        bool m_enableBackendOptimalPingCheck; // 0xfa
-        bool m_enableBackendRegionBoundaryCheck; // 0xfb
-        bool m_enableProjectileSimulatedDamagePropagation; // 0xfc
-        bool m_enableResponsivenessCheck; // 0xfd
 
     };
 
@@ -16137,6 +16141,16 @@ namespace SDK
 
     };
 
+    struct FYTryDetectVpnUsageRequest : FYGameServerRequest //ScriptStruct BackendModels.YTryDetectVpnUsageRequest
+    {
+    //Children Prop Count (Fields): 2
+    public:
+
+        struct FString UserId; // 0x10
+        struct FString ipAddress; // 0x20
+
+    };
+
     struct FYDebugModifyUserSkills //ScriptStruct BackendModels.YDebugModifyUserSkills
     {
     //Children Prop Count (Fields): 3
@@ -18508,10 +18522,11 @@ namespace SDK
 
     struct FYOnRegisterUserPingRequest //ScriptStruct BackendModels.YOnRegisterUserPingRequest
     {
-    //Children Prop Count (Fields): 1
+    //Children Prop Count (Fields): 2
     public:
 
         struct TArray<struct FYPingEntry> pings; // 0x0
+        struct FString countryCode; // 0x10
 
     };
 
@@ -18806,7 +18821,7 @@ namespace SDK
 
     struct FYMatchmakingListDebugUserInfoResult //ScriptStruct BackendModels.YMatchmakingListDebugUserInfoResult
     {
-    //Children Prop Count (Fields): 11
+    //Children Prop Count (Fields): 12
     public:
 
         struct FString UserId; // 0x0
@@ -18814,12 +18829,13 @@ namespace SDK
         struct TArray<struct FYUserStatisticsEntry> Statistics; // 0x18
         bool isBeginner; // 0x28
         bool canGoToShieldedMatch; // 0x29
-        struct TArray<struct FYMatchmakingDebugSessionUserInfo> matchmakingSessionsUserInfo; // 0x30
-        bool dataTableBeginnerFlagEnabled; // 0x40
-        bool featureToggleShieldedMatchmakingEnabled; // 0x41
-        bool featureToggleSpentMoneyThresholdEnabled; // 0x42
-        bool featureToggleSteamAccountStatusEnabled; // 0x43
-        bool featureToggleVeteranPointsEnabled; // 0x44
+        struct FString canGoToShieldedMatchReason; // 0x30
+        struct TArray<struct FYMatchmakingDebugSessionUserInfo> matchmakingSessionsUserInfo; // 0x40
+        bool dataTableBeginnerFlagEnabled; // 0x50
+        bool featureToggleShieldedMatchmakingEnabled; // 0x51
+        bool featureToggleSpentMoneyThresholdEnabled; // 0x52
+        bool featureToggleSteamAccountStatusEnabled; // 0x53
+        bool featureToggleVeteranPointsEnabled; // 0x54
 
     };
 
@@ -35890,149 +35906,6 @@ namespace SDK
 
     };
 
-    struct FAnimNode_LiveLinkPose : FAnimNode_Base //ScriptStruct LiveLink.AnimNode_LiveLinkPose
-    {
-    //Children Prop Count (Fields): 4
-    public:
-
-        struct FPoseLink InputPose; // 0x10
-        struct FLiveLinkSubjectName LiveLinkSubjectName; // 0x20
-        class ULiveLinkRetargetAsset* RetargetAsset; // 0x28
-        class ULiveLinkRetargetAsset* CurrentRetargetAsset; // 0x30
-
-    };
-
-    struct FLiveLinkSubjectName //ScriptStruct LiveLinkInterface.LiveLinkSubjectName
-    {
-    //Children Prop Count (Fields): 1
-    public:
-
-        struct FName Name; // 0x0
-
-    };
-
-    struct FLiveLinkInstanceProxy : FAnimInstanceProxy //ScriptStruct LiveLink.LiveLinkInstanceProxy
-    {
-    //Children Prop Count (Fields): 1
-    public:
-
-        struct FAnimNode_LiveLinkPose PoseNode; // 0x770
-
-    };
-
-    struct FProviderPollResult //ScriptStruct LiveLink.ProviderPollResult
-    {
-    //Children Prop Count (Fields): 3
-    public:
-
-        struct FString Name; // 0x10
-        struct FString MachineName; // 0x20
-        double MachineTimeOffset; // 0x30
-
-    };
-
-    struct FLiveLinkRetargetAssetReference //ScriptStruct LiveLink.LiveLinkRetargetAssetReference
-    {
-    public:
-
-
-    };
-
-    struct FLiveLinkRoleProjectSetting //ScriptStruct LiveLink.LiveLinkRoleProjectSetting
-    {
-    //Children Prop Count (Fields): 4
-    public:
-
-        class ULiveLinkRole* Role; // 0x0
-        class ULiveLinkSubjectSettings* SettingClass; // 0x8
-        class ULiveLinkFrameInterpolationProcessor* FrameInterpolationProcessor; // 0x10
-        struct TArray<class ULiveLinkFramePreProcessor*> FramePreProcessors; // 0x18
-
-    };
-
-    struct FLiveLinkTransformControllerData //ScriptStruct LiveLinkComponents.LiveLinkTransformControllerData
-    {
-    //Children Prop Count (Fields): 6
-    public:
-
-        bool bWorldTransform; // 0x0
-        bool bUseLocation; // 0x1
-        bool bUseRotation; // 0x2
-        bool bUseScale; // 0x3
-        bool bSweep; // 0x4
-        bool bTeleport; // 0x5
-
-    };
-
-    struct FMovieSceneLiveLinkSectionTemplate : FMovieScenePropertySectionTemplate //ScriptStruct LiveLinkMovieScene.MovieSceneLiveLinkSectionTemplate
-    {
-    //Children Prop Count (Fields): 3
-    public:
-
-        struct FLiveLinkSubjectPreset SubjectPreset; // 0x38
-        struct TArray<bool> ChannelMask; // 0x70
-        struct TArray<struct FLiveLinkSubSectionData> SubSectionsData; // 0x80
-
-    };
-
-    struct FLiveLinkSubSectionData //ScriptStruct LiveLinkMovieScene.LiveLinkSubSectionData
-    {
-    //Children Prop Count (Fields): 1
-    public:
-
-        struct TArray<struct FLiveLinkPropertyData> Properties; // 0x0
-
-    };
-
-    struct FLiveLinkPropertyData //ScriptStruct LiveLinkMovieScene.LiveLinkPropertyData
-    {
-    //Children Prop Count (Fields): 6
-    public:
-
-        struct FName PropertyName; // 0x0
-        struct TArray<struct FMovieSceneFloatChannel> FloatChannel; // 0x8
-        struct TArray<struct FMovieSceneStringChannel> StringChannel; // 0x18
-        struct TArray<struct FMovieSceneIntegerChannel> IntegerChannel; // 0x28
-        struct TArray<struct FMovieSceneBoolChannel> BoolChannel; // 0x38
-        struct TArray<struct FMovieSceneByteChannel> ByteChannel; // 0x48
-
-    };
-
-    struct FMovieSceneStringChannel : FMovieSceneChannel //ScriptStruct MovieSceneTracks.MovieSceneStringChannel
-    {
-    //Children Prop Count (Fields): 4
-    public:
-
-        struct TArray<struct FFrameNumber> Times; // 0x8
-        struct TArray<struct FString> Values; // 0x18
-        struct FString DefaultValue; // 0x28
-        bool bHasDefaultValue; // 0x38
-
-    };
-
-    struct FLiveLinkSubjectPreset //ScriptStruct LiveLinkInterface.LiveLinkSubjectPreset
-    {
-    //Children Prop Count (Fields): 5
-    public:
-
-        struct FLiveLinkSubjectKey Key; // 0x0
-        class ULiveLinkRole* Role; // 0x18
-        class ULiveLinkSubjectSettings* Settings; // 0x20
-        class ULiveLinkVirtualSubject* VirtualSubject; // 0x28
-        bool bEnabled; // 0x30
-
-    };
-
-    struct FLiveLinkSubjectKey //ScriptStruct LiveLinkInterface.LiveLinkSubjectKey
-    {
-    //Children Prop Count (Fields): 2
-    public:
-
-        struct FGuid Source; // 0x0
-        struct FLiveLinkSubjectName SubjectName; // 0x10
-
-    };
-
     struct FAnimNode_WheelHandler : FAnimNode_SkeletalControlBase //ScriptStruct PhysXVehicles.AnimNode_WheelHandler
     {
     public:
@@ -37508,6 +37381,16 @@ namespace SDK
 
     };
 
+    struct FYIngredientAndAmount //ScriptStruct Prospect.YIngredientAndAmount
+    {
+    //Children Prop Count (Fields): 2
+    public:
+
+        struct FDataTableRowHandle m_ingredient; // 0x0
+        int32_t m_amount; // 0x10
+
+    };
+
     struct FYAlienForgeSettingsRow : FYDataTableRowBase //ScriptStruct Prospect.YAlienForgeSettingsRow
     {
     //Children Prop Count (Fields): 10
@@ -37528,12 +37411,11 @@ namespace SDK
 
     struct FYAlienForgeIronIngotRecipeRow : FYDataTableRowBase //ScriptStruct Prospect.YAlienForgeIronIngotRecipeRow
     {
-    //Children Prop Count (Fields): 4
+    //Children Prop Count (Fields): 3
     public:
 
-        struct FDataTableRowHandle m_requiredMaterial; // 0x10
-        int32_t m_requiredAmount; // 0x20
-        int32_t m_amountOfRewards; // 0x24
+        struct TArray<struct FYIngredientAndAmount> m_requiredMaterials; // 0x10
+        int32_t m_amountOfRewards; // 0x20
         struct TArray<struct FYWeightedReward> m_possibleRewardsAndWeights; // 0x28
 
     };
@@ -41521,29 +41403,28 @@ namespace SDK
 
         struct TArray<struct FYMapUnlockInfo> mapUnlocks; // 0x8
         struct FYMatchmakingSetupEntry stationSetup; // 0x18
-        struct TArray<struct FYMatchmakingSetupMatchEntry> matchSetups; // 0x48
-        struct FYMatchmakingBeginnerFlagSetup beginnerFlagRules; // 0x58
-        int32_t maxPlayersPerStationShard; // 0x64
-        int32_t maxServersToCreatePerUpdate; // 0x68
-        int32_t pendingMatchmakingRequestTimeoutTime; // 0x6c
-        bool removeSessionsNotInPlayfab; // 0x70
-        struct TArray<struct FString> playFabErrorCodesCausingSessionRemoval; // 0x78
-        struct FYMatchmakingNVRSetup nvrSetup; // 0x88
+        struct TArray<struct FYMatchmakingSetupMatchEntry> matchSetups; // 0x58
+        struct FYMatchmakingBeginnerFlagSetup beginnerFlagRules; // 0x68
+        int32_t maxPlayersPerStationShard; // 0x74
+        int32_t maxServersToCreatePerUpdate; // 0x78
+        int32_t pendingMatchmakingRequestTimeoutTime; // 0x7c
+        bool removeSessionsNotInPlayfab; // 0x80
+        struct TArray<struct FString> playFabErrorCodesCausingSessionRemoval; // 0x88
+        struct FYMatchmakingNVRSetup nvrSetup; // 0x98
 
     };
 
     struct FYMatchmakingNVRSetup //ScriptStruct Prospect.YMatchmakingNVRSetup
     {
-    //Children Prop Count (Fields): 7
+    //Children Prop Count (Fields): 6
     public:
 
         int32_t userNVRSamples; // 0x0
         struct TArray<float> nvrSquadMultipliers; // 0x8
-        struct TArray<float> nvrBrackets; // 0x18
-        struct TArray<int32_t> minSquadNVRs; // 0x28
-        int32_t decayIntervalDays; // 0x38
-        float decayEffectPerInterval; // 0x3c
-        struct TArray<float> postMatchNvrInflationMultipliers; // 0x40
+        struct TArray<int32_t> minSquadNVRs; // 0x18
+        int32_t decayIntervalDays; // 0x28
+        float decayEffectPerInterval; // 0x2c
+        struct TArray<float> postMatchNvrInflationMultipliers; // 0x30
 
     };
 
@@ -41560,16 +41441,17 @@ namespace SDK
 
     struct FYMatchmakingSetupEntry //ScriptStruct Prospect.YMatchmakingSetupEntry
     {
-    //Children Prop Count (Fields): 7
+    //Children Prop Count (Fields): 8
     public:
 
         int32_t maxAmountOfPlayers; // 0x0
         int32_t maxAmountOfPlayersBeginner; // 0x4
         bool hasBeginnerBracket; // 0x8
-        int32_t m_sessionTotalLengthUntilShutdown; // 0xc
-        int32_t m_sessionUntilNoMatchmaking; // 0x10
-        struct TArray<struct FYSessionClientWarningStep> m_sessionClientWarningSteps; // 0x18
-        int32_t m_sessionNoPlayerConnectServerShutdown; // 0x28
+        struct TArray<float> nvrBrackets; // 0x10
+        int32_t m_sessionTotalLengthUntilShutdown; // 0x20
+        int32_t m_sessionUntilNoMatchmaking; // 0x24
+        struct TArray<struct FYSessionClientWarningStep> m_sessionClientWarningSteps; // 0x28
+        int32_t m_sessionNoPlayerConnectServerShutdown; // 0x38
 
     };
 
@@ -41588,8 +41470,8 @@ namespace SDK
     //Children Prop Count (Fields): 2
     public:
 
-        bool Enabled; // 0x30
-        struct FString fullMapName; // 0x38
+        bool Enabled; // 0x40
+        struct FString fullMapName; // 0x48
 
     };
 
@@ -48904,6 +48786,18 @@ namespace SDK
     public:
 
         struct FMovieSceneStringChannel StringCurve; // 0x38
+
+    };
+
+    struct FMovieSceneStringChannel : FMovieSceneChannel //ScriptStruct MovieSceneTracks.MovieSceneStringChannel
+    {
+    //Children Prop Count (Fields): 4
+    public:
+
+        struct TArray<struct FFrameNumber> Times; // 0x8
+        struct TArray<struct FString> Values; // 0x18
+        struct FString DefaultValue; // 0x28
+        bool bHasDefaultValue; // 0x38
 
     };
 
@@ -58495,457 +58389,6 @@ namespace SDK
 
     };
 
-    struct FLiveLinkSourceHandle //ScriptStruct LiveLinkInterface.LiveLinkSourceHandle
-    {
-    public:
-
-
-    };
-
-    struct FLiveLinkBaseBlueprintData //ScriptStruct LiveLinkInterface.LiveLinkBaseBlueprintData
-    {
-    public:
-
-
-    };
-
-    struct FSubjectFrameHandle : FLiveLinkBaseBlueprintData //ScriptStruct LiveLinkInterface.SubjectFrameHandle
-    {
-    public:
-
-
-    };
-
-    struct FLiveLinkTransform //ScriptStruct LiveLinkInterface.LiveLinkTransform
-    {
-    public:
-
-
-    };
-
-    struct FCachedSubjectFrame //ScriptStruct LiveLinkInterface.CachedSubjectFrame
-    {
-    public:
-
-
-    };
-
-    struct FSubjectMetadata //ScriptStruct LiveLinkInterface.SubjectMetadata
-    {
-    //Children Prop Count (Fields): 3
-    public:
-
-        struct TMap<struct FName, struct FString> StringMetadata; // 0x0
-        struct FTimecode SceneTimecode; // 0x50
-        struct FFrameRate SceneFramerate; // 0x64
-
-    };
-
-    struct FLiveLinkBaseFrameData //ScriptStruct LiveLinkInterface.LiveLinkBaseFrameData
-    {
-    //Children Prop Count (Fields): 3
-    public:
-
-        struct FLiveLinkWorldTime WorldTime; // 0x0
-        struct FLiveLinkMetaData MetaData; // 0x10
-        struct TArray<float> PropertyValues; // 0x70
-
-    };
-
-    struct FLiveLinkMetaData //ScriptStruct LiveLinkInterface.LiveLinkMetaData
-    {
-    //Children Prop Count (Fields): 2
-    public:
-
-        struct TMap<struct FName, struct FString> StringMetadata; // 0x0
-        struct FQualifiedFrameTime SceneTime; // 0x50
-
-    };
-
-    struct FLiveLinkWorldTime //ScriptStruct LiveLinkInterface.LiveLinkWorldTime
-    {
-    //Children Prop Count (Fields): 2
-    public:
-
-        double Time; // 0x0
-        double Offset; // 0x8
-
-    };
-
-    struct FLiveLinkAnimationFrameData : FLiveLinkBaseFrameData //ScriptStruct LiveLinkInterface.LiveLinkAnimationFrameData
-    {
-    //Children Prop Count (Fields): 1
-    public:
-
-        struct TArray<struct FTransform> Transforms; // 0xa0
-
-    };
-
-    struct FLiveLinkBaseStaticData //ScriptStruct LiveLinkInterface.LiveLinkBaseStaticData
-    {
-    //Children Prop Count (Fields): 1
-    public:
-
-        struct TArray<struct FName> PropertyNames; // 0x0
-
-    };
-
-    struct FLiveLinkSkeletonStaticData : FLiveLinkBaseStaticData //ScriptStruct LiveLinkInterface.LiveLinkSkeletonStaticData
-    {
-    //Children Prop Count (Fields): 2
-    public:
-
-        struct TArray<struct FName> BoneNames; // 0x10
-        struct TArray<int32_t> BoneParents; // 0x20
-
-    };
-
-    struct FLiveLinkBasicBlueprintData : FLiveLinkBaseBlueprintData //ScriptStruct LiveLinkInterface.LiveLinkBasicBlueprintData
-    {
-    //Children Prop Count (Fields): 2
-    public:
-
-        struct FLiveLinkBaseStaticData StaticData; // 0x8
-        struct FLiveLinkBaseFrameData FrameData; // 0x18
-
-    };
-
-    struct FLiveLinkCameraBlueprintData : FLiveLinkBaseBlueprintData //ScriptStruct LiveLinkInterface.LiveLinkCameraBlueprintData
-    {
-    //Children Prop Count (Fields): 2
-    public:
-
-        struct FLiveLinkCameraStaticData StaticData; // 0x8
-        struct FLiveLinkCameraFrameData FrameData; // 0x30
-
-    };
-
-    struct FLiveLinkTransformFrameData : FLiveLinkBaseFrameData //ScriptStruct LiveLinkInterface.LiveLinkTransformFrameData
-    {
-    //Children Prop Count (Fields): 1
-    public:
-
-        struct FTransform Transform; // 0xa0
-
-    };
-
-    struct FLiveLinkCameraFrameData : FLiveLinkTransformFrameData //ScriptStruct LiveLinkInterface.LiveLinkCameraFrameData
-    {
-    //Children Prop Count (Fields): 6
-    public:
-
-        float FieldOfView; // 0xd0
-        float AspectRatio; // 0xd4
-        float FocalLength; // 0xd8
-        float Aperture; // 0xdc
-        float FocusDistance; // 0xe0
-        enum class ELiveLinkCameraProjectionMode ProjectionMode; // 0xe4
-
-    };
-
-    struct FLiveLinkTransformStaticData : FLiveLinkBaseStaticData //ScriptStruct LiveLinkInterface.LiveLinkTransformStaticData
-    {
-    //Children Prop Count (Fields): 3
-    public:
-
-        bool bIsLocationSupported; // 0x10
-        bool bIsRotationSupported; // 0x11
-        bool bIsScaleSupported; // 0x12
-
-    };
-
-    struct FLiveLinkCameraStaticData : FLiveLinkTransformStaticData //ScriptStruct LiveLinkInterface.LiveLinkCameraStaticData
-    {
-    //Children Prop Count (Fields): 8
-    public:
-
-        bool bIsFieldOfViewSupported; // 0x18
-        bool bIsAspectRatioSupported; // 0x19
-        bool bIsFocalLengthSupported; // 0x1a
-        bool bIsProjectionModeSupported; // 0x1b
-        float FilmBackWidth; // 0x1c
-        float FilmBackHeight; // 0x20
-        bool bIsApertureSupported; // 0x24
-        bool bIsFocusDistanceSupported; // 0x25
-
-    };
-
-    struct FLiveLinkCurveConversionSettings //ScriptStruct LiveLinkInterface.LiveLinkCurveConversionSettings
-    {
-    //Children Prop Count (Fields): 1
-    public:
-
-        struct TMap<struct FString, struct FSoftObjectPath> CurveConversionAssetMap; // 0x0
-
-    };
-
-    struct FLiveLinkLightBlueprintData : FLiveLinkBaseBlueprintData //ScriptStruct LiveLinkInterface.LiveLinkLightBlueprintData
-    {
-    //Children Prop Count (Fields): 2
-    public:
-
-        struct FLiveLinkLightStaticData StaticData; // 0x8
-        struct FLiveLinkLightFrameData FrameData; // 0x30
-
-    };
-
-    struct FLiveLinkLightFrameData : FLiveLinkTransformFrameData //ScriptStruct LiveLinkInterface.LiveLinkLightFrameData
-    {
-    //Children Prop Count (Fields): 9
-    public:
-
-        float Temperature; // 0xd0
-        float Intensity; // 0xd4
-        struct FColor LightColor; // 0xd8
-        float InnerConeAngle; // 0xdc
-        float OuterConeAngle; // 0xe0
-        float AttenuationRadius; // 0xe4
-        float SourceRadius; // 0xe8
-        float SoftSourceRadius; // 0xec
-        float SourceLength; // 0xf0
-
-    };
-
-    struct FLiveLinkLightStaticData : FLiveLinkTransformStaticData //ScriptStruct LiveLinkInterface.LiveLinkLightStaticData
-    {
-    //Children Prop Count (Fields): 9
-    public:
-
-        bool bIsTemperatureSupported; // 0x18
-        bool bIsIntensitySupported; // 0x19
-        bool bIsLightColorSupported; // 0x1a
-        bool bIsInnerConeAngleSupported; // 0x1b
-        bool bIsOuterConeAngleSupported; // 0x1c
-        bool bIsAttenuationRadiusSupported; // 0x1d
-        bool bIsSourceLenghtSupported; // 0x1e
-        bool bIsSourceRadiusSupported; // 0x1f
-        bool bIsSoftSourceRadiusSupported; // 0x20
-
-    };
-
-    struct FLiveLinkSourcePreset //ScriptStruct LiveLinkInterface.LiveLinkSourcePreset
-    {
-    //Children Prop Count (Fields): 3
-    public:
-
-        struct FGuid Guid; // 0x0
-        class ULiveLinkSourceSettings* Settings; // 0x10
-        struct FText SourceType; // 0x18
-
-    };
-
-    struct FLiveLinkRefSkeleton //ScriptStruct LiveLinkInterface.LiveLinkRefSkeleton
-    {
-    //Children Prop Count (Fields): 2
-    public:
-
-        struct TArray<struct FName> BoneNames; // 0x0
-        struct TArray<int32_t> BoneParents; // 0x10
-
-    };
-
-    struct FLiveLinkSubjectRepresentation //ScriptStruct LiveLinkInterface.LiveLinkSubjectRepresentation
-    {
-    //Children Prop Count (Fields): 2
-    public:
-
-        struct FLiveLinkSubjectName Subject; // 0x0
-        class ULiveLinkRole* Role; // 0x8
-
-    };
-
-    struct FLiveLinkInterpolationSettings //ScriptStruct LiveLinkInterface.LiveLinkInterpolationSettings
-    {
-    //Children Prop Count (Fields): 2
-    public:
-
-        bool bUseInterpolation; // 0x0
-        float InterpolationOffset; // 0x4
-
-    };
-
-    struct FLiveLinkTimeSynchronizationSettings //ScriptStruct LiveLinkInterface.LiveLinkTimeSynchronizationSettings
-    {
-    //Children Prop Count (Fields): 2
-    public:
-
-        struct FFrameRate FrameRate; // 0x0
-        struct FFrameNumber FrameOffset; // 0x8
-
-    };
-
-    struct FLiveLinkSourceDebugInfo //ScriptStruct LiveLinkInterface.LiveLinkSourceDebugInfo
-    {
-    //Children Prop Count (Fields): 3
-    public:
-
-        struct FLiveLinkSubjectName SubjectName; // 0x0
-        int32_t SnapshotIndex; // 0x8
-        int32_t NumberOfBufferAtSnapshot; // 0xc
-
-    };
-
-    struct FLiveLinkSourceBufferManagementSettings //ScriptStruct LiveLinkInterface.LiveLinkSourceBufferManagementSettings
-    {
-    //Children Prop Count (Fields): 15
-    public:
-
-        bool bValidEngineTimeEnabled; // 0x0
-        float ValidEngineTime; // 0x4
-        float EngineTimeOffset; // 0x8
-        double EngineTimeClockOffset; // 0x10
-        bool bGenerateSubFrame; // 0x18
-        struct FFrameRate DetectedFrameRate; // 0x1c
-        bool bUseTimecodeSmoothLatest; // 0x24
-        struct FFrameRate SourceTimecodeFrameRate; // 0x28
-        bool bValidTimecodeFrameEnabled; // 0x30
-        int32_t ValidTimecodeFrame; // 0x34
-        float TimecodeFrameOffset; // 0x38
-        double TimecodeClockOffset; // 0x40
-        int32_t LatestOffset; // 0x48
-        int32_t MaxNumberOfFrameToBuffered; // 0x4c
-        bool bKeepAtLeastOneFrame; // 0x50
-
-    };
-
-    struct FLiveLinkTransformBlueprintData : FLiveLinkBaseBlueprintData //ScriptStruct LiveLinkInterface.LiveLinkTransformBlueprintData
-    {
-    //Children Prop Count (Fields): 2
-    public:
-
-        struct FLiveLinkTransformStaticData StaticData; // 0x8
-        struct FLiveLinkTransformFrameData FrameData; // 0x20
-
-    };
-
-    struct FLiveLinkFrameData //ScriptStruct LiveLinkInterface.LiveLinkFrameData
-    {
-    //Children Prop Count (Fields): 4
-    public:
-
-        struct TArray<struct FTransform> Transforms; // 0x0
-        struct TArray<struct FLiveLinkCurveElement> CurveElements; // 0x10
-        struct FLiveLinkWorldTime WorldTime; // 0x20
-        struct FLiveLinkMetaData MetaData; // 0x30
-
-    };
-
-    struct FLiveLinkCurveElement //ScriptStruct LiveLinkInterface.LiveLinkCurveElement
-    {
-    //Children Prop Count (Fields): 2
-    public:
-
-        struct FName CurveName; // 0x0
-        float CurveValue; // 0x8
-
-    };
-
-    struct FLiveLinkTimeCode_Base_DEPRECATED //ScriptStruct LiveLinkInterface.LiveLinkTimeCode_Base_DEPRECATED
-    {
-    //Children Prop Count (Fields): 3
-    public:
-
-        int32_t Seconds; // 0x0
-        int32_t Frames; // 0x4
-        struct FLiveLinkFrameRate FrameRate; // 0x8
-
-    };
-
-    struct FLiveLinkFrameRate : FFrameRate //ScriptStruct LiveLinkInterface.LiveLinkFrameRate
-    {
-    public:
-
-
-    };
-
-    struct FLiveLinkTimeCode : FLiveLinkTimeCode_Base_DEPRECATED //ScriptStruct LiveLinkInterface.LiveLinkTimeCode
-    {
-    public:
-
-
-    };
-
-    struct FLiveLinkTime //ScriptStruct LiveLinkInterface.LiveLinkTime
-    {
-    //Children Prop Count (Fields): 2
-    public:
-
-        double WorldTime; // 0x0
-        struct FQualifiedFrameTime SceneTime; // 0x8
-
-    };
-
-    struct FLiveLinkSubjectFrameMessage //ScriptStruct LiveLinkMessageBusFramework.LiveLinkSubjectFrameMessage
-    {
-    //Children Prop Count (Fields): 5
-    public:
-
-        struct FName SubjectName; // 0x0
-        struct TArray<struct FTransform> Transforms; // 0x8
-        struct TArray<struct FLiveLinkCurveElement> Curves; // 0x18
-        struct FLiveLinkMetaData MetaData; // 0x28
-        double Time; // 0x88
-
-    };
-
-    struct FLiveLinkSubjectDataMessage //ScriptStruct LiveLinkMessageBusFramework.LiveLinkSubjectDataMessage
-    {
-    //Children Prop Count (Fields): 2
-    public:
-
-        struct FLiveLinkRefSkeleton RefSkeleton; // 0x0
-        struct FName SubjectName; // 0x20
-
-    };
-
-    struct FLiveLinkClearSubject //ScriptStruct LiveLinkMessageBusFramework.LiveLinkClearSubject
-    {
-    //Children Prop Count (Fields): 1
-    public:
-
-        struct FName SubjectName; // 0x0
-
-    };
-
-    struct FLiveLinkHeartbeatMessage //ScriptStruct LiveLinkMessageBusFramework.LiveLinkHeartbeatMessage
-    {
-    public:
-
-
-    };
-
-    struct FLiveLinkConnectMessage //ScriptStruct LiveLinkMessageBusFramework.LiveLinkConnectMessage
-    {
-    //Children Prop Count (Fields): 1
-    public:
-
-        int32_t LiveLinkVersion; // 0x0
-
-    };
-
-    struct FLiveLinkPongMessage //ScriptStruct LiveLinkMessageBusFramework.LiveLinkPongMessage
-    {
-    //Children Prop Count (Fields): 5
-    public:
-
-        struct FString ProviderName; // 0x0
-        struct FString MachineName; // 0x10
-        struct FGuid PollRequest; // 0x20
-        int32_t LiveLinkVersion; // 0x30
-        double CreationPlatformTime; // 0x38
-
-    };
-
-    struct FLiveLinkPingMessage //ScriptStruct LiveLinkMessageBusFramework.LiveLinkPingMessage
-    {
-    //Children Prop Count (Fields): 2
-    public:
-
-        struct FGuid PollRequest; // 0x0
-        int32_t LiveLinkVersion; // 0x10
-
-    };
-
     struct FDefault__UserDefinedStruct //UserDefinedStruct Engine.Default__UserDefinedStruct
     {
     public:
@@ -58960,13 +58403,87 @@ namespace SDK
 
     };
 
-    struct FFEvacWeightedRandomCover //UserDefinedStruct FEvacWeightedRandomCover.FEvacWeightedRandomCover
+    struct FMS_HintMarkerReplicatedData_ST //UserDefinedStruct MS_HintMarkerReplicatedData_ST.MS_HintMarkerReplicatedData_ST
     {
     //Children Prop Count (Fields): 2
     public:
 
-        class UStaticMesh* Mesh_2_CE0C646A454AAC9DA330C28B6F8CC601; // 0x0
-        float Weight_5_7B28EB004A6DDF8045548DAC7B69BAF6; // 0x8
+        struct FName ActiveMarkerId_9_7B44AE714CA2F178985EFB893A89AE89; // 0x0
+        struct TArray<struct FTransform> HintTransforms_17_4C1A67004B0583AF2B9C328BF93AF29A; // 0x8
+
+    };
+
+    struct FST_EffortDataTableRow //UserDefinedStruct ST_EffortDataTableRow.ST_EffortDataTableRow
+    {
+    //Children Prop Count (Fields): 1
+    public:
+
+        struct TMap<enum class EN_EffortTypes, struct FST_EffortData> Efforts_8_70D960094B9CBF7FE719299E4CCEDE62; // 0x0
+
+    };
+
+    struct FST_EffortData //UserDefinedStruct ST_EffortData.ST_EffortData
+    {
+    //Children Prop Count (Fields): 2
+    public:
+
+        struct FDataTableRowHandle VO_2_DACCD7C64AEC65EC53F9B7952C5B9399; // 0x0
+        bool OnlyPlayOnAutonomousProxy_12_491168E947DFFD7794F07FBE4A0D03AD; // 0x10
+
+    };
+
+    struct FAutomationTestStartData //UserDefinedStruct AutomationTestStartData.AutomationTestStartData
+    {
+    //Children Prop Count (Fields): 4
+    public:
+
+        class AAutomationManager_Base_BP_C* AutomationManager_5_52137915453161A2BF98959371D9D9D9; // 0x0
+        class AYPlayerController* PlayerController_8_B01D6ABB485A0A1DC17637AE8BB6CE29; // 0x8
+        bool IsStation_11_62DDFEF34B4FDCD7F39EB58C46D7C2B7; // 0x10
+        struct FYPlayerAutomationData AutomationData_2_286D976D48B659DE00EB278117F04B33; // 0x18
+
+    };
+
+    struct FMapAreaDifficulty_ST //UserDefinedStruct MapAreaDifficulty_ST.MapAreaDifficulty_ST
+    {
+    //Children Prop Count (Fields): 2
+    public:
+
+        struct FText Text_6_D9146C924A469B0435C41F8E7DE66C83; // 0x0
+        struct FString StyleTag_5_FDD856DD46848DA297A2B0AD92C1EBA8; // 0x20
+
+    };
+
+    struct FInventoryOnboarding_ST //UserDefinedStruct InventoryOnboarding_ST.InventoryOnboarding_ST
+    {
+    //Children Prop Count (Fields): 5
+    public:
+
+        struct TArray<enum class EYPlayerSetType> PlayerSetType_4_DF62AE37481D51ADBAD7E2AE9D8728E7; // 0x0
+        enum class EYItemType ItemType_6_DD97073647CFC11CC5BFE58D88DC1B6B; // 0x10
+        bool RequiresTools_8_9810ED0047891CB88D72EDA78EACE954; // 0x11
+        bool CheckSpecificEquippedType_14_CC1D35464840C5305204FEA5EB5AC3FE; // 0x12
+        bool HighlightPlayerBag_17_724F8303483E11F3316CA8B18F420501; // 0x13
+
+    };
+
+    struct FAbility_Action_AudioDecoy //UserDefinedStruct Ability_Action_AudioDecoy.Ability_Action_AudioDecoy
+    {
+    //Children Prop Count (Fields): 3
+    public:
+
+        struct FDataTableRowHandle DecoyAudio_2_FABA0C5543E0FA95F7E37BA2306A398E; // 0x0
+        float Duration_5_8E352E014F8A0DC8A08A19B47534F3B3; // 0x10
+        float FadeOutDuration_7_D0758DD34263AD91F9AE839FCA0EFFED; // 0x14
+
+    };
+
+    struct FAbility_Action_RoadFlare //UserDefinedStruct Ability_Action_RoadFlare.Ability_Action_RoadFlare
+    {
+    //Children Prop Count (Fields): 1
+    public:
+
+        float Duration_2_C358A3414BA496CA903791A70A14995E; // 0x0
 
     };
 
@@ -59046,67 +58563,55 @@ namespace SDK
 
     };
 
-    struct FAutomationTestStartData //UserDefinedStruct AutomationTestStartData.AutomationTestStartData
+    struct FLightningTuningDataInfo //UserDefinedStruct LightningTuningDataInfo.LightningTuningDataInfo
     {
-    //Children Prop Count (Fields): 4
+    //Children Prop Count (Fields): 9
     public:
 
-        class AAutomationManager_Base_BP_C* AutomationManager_5_52137915453161A2BF98959371D9D9D9; // 0x0
-        class AYPlayerController* PlayerController_8_B01D6ABB485A0A1DC17637AE8BB6CE29; // 0x8
-        bool IsStation_11_62DDFEF34B4FDCD7F39EB58C46D7C2B7; // 0x10
-        struct FYPlayerAutomationData AutomationData_2_286D976D48B659DE00EB278117F04B33; // 0x18
+        float DistanceFromPlayerMin_3_F4D76B234A12E2778F754C91D3C00D5F; // 0x0
+        float DistanceFromPlayerMax_7_A19470F14CA0202A8DA8928C10300050; // 0x4
+        float CooldownMin_10_34238BE249F635E9D30E5D8984C934E5; // 0x8
+        float CooldownMax_11_5EB969F24B410BAE7E702BBEA5797E9E; // 0xc
+        float LightningWarningTime_17_E4FBC2B9497042C5251E7EAD754139EB; // 0x10
+        float ImpactVFXTimeToImpact_40_61B4F1C14C52C95E12BD9EBCC78DF14D; // 0x14
+        float Damage_27_5819B0B94E931BEF3EFC4C8C73DF31F3; // 0x18
+        float DamageRadius_29_3438EAD94CEF46EF4A0BC0A172A69988; // 0x1c
+        bool IsDebugForcedEnabled_34_0D770C7A476CD9B6A977AFB2D66EF13C; // 0x20
 
     };
 
-    struct FMapAreaDifficulty_ST //UserDefinedStruct MapAreaDifficulty_ST.MapAreaDifficulty_ST
+    struct FFEvacWeightedRandomCover //UserDefinedStruct FEvacWeightedRandomCover.FEvacWeightedRandomCover
     {
     //Children Prop Count (Fields): 2
     public:
 
-        struct FText Text_6_D9146C924A469B0435C41F8E7DE66C83; // 0x0
-        struct FString StyleTag_5_FDD856DD46848DA297A2B0AD92C1EBA8; // 0x20
+        class UStaticMesh* Mesh_2_CE0C646A454AAC9DA330C28B6F8CC601; // 0x0
+        float Weight_5_7B28EB004A6DDF8045548DAC7B69BAF6; // 0x8
 
     };
 
-    struct FST_EffortDataTableRow //UserDefinedStruct ST_EffortDataTableRow.ST_EffortDataTableRow
+    struct FAbility_Action_GasGrenade //UserDefinedStruct Ability_Action_GasGrenade.Ability_Action_GasGrenade
     {
-    //Children Prop Count (Fields): 1
+    //Children Prop Count (Fields): 7
     public:
 
-        struct TMap<enum class EN_EffortTypes, struct FST_EffortData> Efforts_8_70D960094B9CBF7FE719299E4CCEDE62; // 0x0
+        struct FDataTableRowHandle Audio_23_FABA0C5543E0FA95F7E37BA2306A398E; // 0x0
+        float DurationAudio_22_8E352E014F8A0DC8A08A19B47534F3B3; // 0x10
+        float FadeOutDuration_7_D0758DD34263AD91F9AE839FCA0EFFED; // 0x14
+        float Damage_15_58F19B994E4E771D4A6195BE9FA72B0E; // 0x18
+        float Radius_21_45B1D3B944793EB7D55B389C3F7ADC03; // 0x1c
+        float Interval_32_A6DABB044F11F6F78F09F7A340D2BA02; // 0x20
+        float Penetration_35_9ACEB69F42C354F52F33C293E4315192; // 0x24
 
     };
 
-    struct FST_EffortData //UserDefinedStruct ST_EffortData.ST_EffortData
-    {
-    //Children Prop Count (Fields): 2
-    public:
-
-        struct FDataTableRowHandle VO_2_DACCD7C64AEC65EC53F9B7952C5B9399; // 0x0
-        bool OnlyPlayOnAutonomousProxy_12_491168E947DFFD7794F07FBE4A0D03AD; // 0x10
-
-    };
-
-    struct FInventoryOnboarding_ST //UserDefinedStruct InventoryOnboarding_ST.InventoryOnboarding_ST
-    {
-    //Children Prop Count (Fields): 5
-    public:
-
-        struct TArray<enum class EYPlayerSetType> PlayerSetType_4_DF62AE37481D51ADBAD7E2AE9D8728E7; // 0x0
-        enum class EYItemType ItemType_6_DD97073647CFC11CC5BFE58D88DC1B6B; // 0x10
-        bool RequiresTools_8_9810ED0047891CB88D72EDA78EACE954; // 0x11
-        bool CheckSpecificEquippedType_14_CC1D35464840C5305204FEA5EB5AC3FE; // 0x12
-        bool HighlightPlayerBag_17_724F8303483E11F3316CA8B18F420501; // 0x13
-
-    };
-
-    struct FStructure_FilterCategoryBtnData //UserDefinedStruct Structure_FilterCategoryBtnData.Structure_FilterCategoryBtnData
+    struct FEntityDistanceAndMovementComponent //UserDefinedStruct EntityDistanceAndMovementComponent.EntityDistanceAndMovementComponent
     {
     //Children Prop Count (Fields): 2
     public:
 
-        struct FText Label_4_C838AB6F45AE918909F746B08FDAD6CC; // 0x0
-        struct FYFilterCategoriesDataEntry FilterCategories_9_AA2554964217366855F3D0B6AE34A91C; // 0x20
+        float Distance_4_0883B7A645B6339E19BDA09D82D06C33; // 0x0
+        class UYPlayerRenderTargetVfxMovementComponent_BP_C* RenderTargetMovementComponent_6_08E54D1B4963FEF770269899C40958C9; // 0x8
 
     };
 
@@ -59162,22 +58667,6 @@ namespace SDK
 
     };
 
-    struct FStructure_HUD_ProgressBars //UserDefinedStruct Structure_HUD_ProgressBars.Structure_HUD_ProgressBars
-    {
-    //Children Prop Count (Fields): 8
-    public:
-
-        float StartValue_7_C4C15954450AAA4F616FDE8A91A5AC08; // 0x0
-        float DesiredValue_3_2C117D094E4B9F91267EFF82B906EAFE; // 0x4
-        float Alpha_5_D86EF2224E857BC7B927459986D8A1C8; // 0x8
-        class UProgressBar* ProgressBar_10_700A577046AAB0A82FA4BF9177426292; // 0x10
-        float Speed_13_7B8385DB490AC27EBC94CAB250DF4EC3; // 0x18
-        float Delay_15_34041B7E4CCFD62346ED32B285990076; // 0x1c
-        enum class EHorizonTweenLerpMode InterpolationMode_20_41F3AC9E428769FF838307B96C4C0791; // 0x20
-        bool IsDone_22_CABD3814486E24C2C224A4BA4916C019; // 0x21
-
-    };
-
     struct FStructure_SelectorData //UserDefinedStruct Structure_SelectorData.Structure_SelectorData
     {
     //Children Prop Count (Fields): 3
@@ -59202,75 +58691,29 @@ namespace SDK
 
     };
 
-    struct FMS_HintMarkerReplicatedData_ST //UserDefinedStruct MS_HintMarkerReplicatedData_ST.MS_HintMarkerReplicatedData_ST
+    struct FStructure_FilterCategoryBtnData //UserDefinedStruct Structure_FilterCategoryBtnData.Structure_FilterCategoryBtnData
     {
     //Children Prop Count (Fields): 2
     public:
 
-        struct FName ActiveMarkerId_9_7B44AE714CA2F178985EFB893A89AE89; // 0x0
-        struct TArray<struct FTransform> HintTransforms_17_4C1A67004B0583AF2B9C328BF93AF29A; // 0x8
+        struct FText Label_4_C838AB6F45AE918909F746B08FDAD6CC; // 0x0
+        struct FYFilterCategoriesDataEntry FilterCategories_9_AA2554964217366855F3D0B6AE34A91C; // 0x20
 
     };
 
-    struct FEntityDistanceAndMovementComponent //UserDefinedStruct EntityDistanceAndMovementComponent.EntityDistanceAndMovementComponent
+    struct FStructure_HUD_ProgressBars //UserDefinedStruct Structure_HUD_ProgressBars.Structure_HUD_ProgressBars
     {
-    //Children Prop Count (Fields): 2
+    //Children Prop Count (Fields): 8
     public:
 
-        float Distance_4_0883B7A645B6339E19BDA09D82D06C33; // 0x0
-        class UYPlayerRenderTargetVfxMovementComponent_BP_C* RenderTargetMovementComponent_6_08E54D1B4963FEF770269899C40958C9; // 0x8
-
-    };
-
-    struct FLightningTuningDataInfo //UserDefinedStruct LightningTuningDataInfo.LightningTuningDataInfo
-    {
-    //Children Prop Count (Fields): 9
-    public:
-
-        float DistanceFromPlayerMin_3_F4D76B234A12E2778F754C91D3C00D5F; // 0x0
-        float DistanceFromPlayerMax_7_A19470F14CA0202A8DA8928C10300050; // 0x4
-        float CooldownMin_10_34238BE249F635E9D30E5D8984C934E5; // 0x8
-        float CooldownMax_11_5EB969F24B410BAE7E702BBEA5797E9E; // 0xc
-        float LightningWarningTime_17_E4FBC2B9497042C5251E7EAD754139EB; // 0x10
-        float ImpactVFXTimeToImpact_40_61B4F1C14C52C95E12BD9EBCC78DF14D; // 0x14
-        float Damage_27_5819B0B94E931BEF3EFC4C8C73DF31F3; // 0x18
-        float DamageRadius_29_3438EAD94CEF46EF4A0BC0A172A69988; // 0x1c
-        bool IsDebugForcedEnabled_34_0D770C7A476CD9B6A977AFB2D66EF13C; // 0x20
-
-    };
-
-    struct FAbility_Action_AudioDecoy //UserDefinedStruct Ability_Action_AudioDecoy.Ability_Action_AudioDecoy
-    {
-    //Children Prop Count (Fields): 3
-    public:
-
-        struct FDataTableRowHandle DecoyAudio_2_FABA0C5543E0FA95F7E37BA2306A398E; // 0x0
-        float Duration_5_8E352E014F8A0DC8A08A19B47534F3B3; // 0x10
-        float FadeOutDuration_7_D0758DD34263AD91F9AE839FCA0EFFED; // 0x14
-
-    };
-
-    struct FAbility_Action_GasGrenade //UserDefinedStruct Ability_Action_GasGrenade.Ability_Action_GasGrenade
-    {
-    //Children Prop Count (Fields): 7
-    public:
-
-        struct FDataTableRowHandle Audio_23_FABA0C5543E0FA95F7E37BA2306A398E; // 0x0
-        float DurationAudio_22_8E352E014F8A0DC8A08A19B47534F3B3; // 0x10
-        float FadeOutDuration_7_D0758DD34263AD91F9AE839FCA0EFFED; // 0x14
-        float Damage_15_58F19B994E4E771D4A6195BE9FA72B0E; // 0x18
-        float Radius_21_45B1D3B944793EB7D55B389C3F7ADC03; // 0x1c
-        float Interval_32_A6DABB044F11F6F78F09F7A340D2BA02; // 0x20
-        float Penetration_35_9ACEB69F42C354F52F33C293E4315192; // 0x24
-
-    };
-
-    struct FAbility_Action_RoadFlare //UserDefinedStruct Ability_Action_RoadFlare.Ability_Action_RoadFlare
-    {
-    //Children Prop Count (Fields): 1
-    public:
-
-        float Duration_2_C358A3414BA496CA903791A70A14995E; // 0x0
+        float StartValue_7_C4C15954450AAA4F616FDE8A91A5AC08; // 0x0
+        float DesiredValue_3_2C117D094E4B9F91267EFF82B906EAFE; // 0x4
+        float Alpha_5_D86EF2224E857BC7B927459986D8A1C8; // 0x8
+        class UProgressBar* ProgressBar_10_700A577046AAB0A82FA4BF9177426292; // 0x10
+        float Speed_13_7B8385DB490AC27EBC94CAB250DF4EC3; // 0x18
+        float Delay_15_34041B7E4CCFD62346ED32B285990076; // 0x1c
+        enum class EHorizonTweenLerpMode InterpolationMode_20_41F3AC9E428769FF838307B96C4C0791; // 0x20
+        bool IsDone_22_CABD3814486E24C2C224A4BA4916C019; // 0x21
 
     };
 
@@ -59337,24 +58780,71 @@ namespace SDK
 
     };
 
-    struct FStructure_VanityMenuStateEntry //UserDefinedStruct Structure_VanityMenuStateEntry.Structure_VanityMenuStateEntry
+    struct FSplineMeshData //UserDefinedStruct SplineMeshData.SplineMeshData
     {
-    //Children Prop Count (Fields): 3
+    //Children Prop Count (Fields): 9
     public:
 
-        struct FText ButtonLabel_4_4E5E68224F1BD105BC7B2FAB1E253742; // 0x0
-        struct FString FilterSetting_6_13CCA11A4003AB55827D2BB5666FDCAF; // 0x20
-        bool CancelButtonActive_9_E18A680348B09B950F88A690372B75AF; // 0x30
+        struct TArray<class UStaticMesh*> SplineMeshes_3_150A19D1427BB24DF5D37DA7D3993AE9; // 0x0
+        struct TArray<int32_t> SplineMeshSelectionProbability_23_2FD5150D4F57BFA6E97868A8805E21EC; // 0x10
+        float DistanceBetweenSplineMeshes_20_D7FF36BC40359B6ECFE616B44F255AE7; // 0x20
+        struct FTransform LocationOffset_22_1247D3D6436434C1658D6BAD00DDC454; // 0x30
+        bool VerticalOrientation_25_740772604CEA3CAD538323B8C2FA9252; // 0x60
+        bool PlaceOnGround_27_CEDD46264C4F47D99C480787F8579201; // 0x61
+        int32_t Seed_32_CF4698A94C2D3C2323C337B48A11C23E; // 0x64
+        struct TArray<struct FSplineOverwriteMesh> OverwriteMesh_37_CFC5ABAF49F3CCF5139A68AB6184261B; // 0x68
+        class UStaticMesh* EndMesh_41_FA92AFD642E57842A1358E81F7C5ABDA; // 0x78
 
     };
 
-    struct FStructure_TabsDataArray //UserDefinedStruct Structure_TabsDataArray.Structure_TabsDataArray
+    struct FSplineOverwriteMesh //UserDefinedStruct SplineOverwriteMesh.SplineOverwriteMesh
+    {
+    //Children Prop Count (Fields): 5
+    public:
+
+        int32_t IndexToOverwrite_3_09C216C14349C48EE563D59065769EB9; // 0x0
+        class UStaticMesh* Mesh_6_2619AD8643A018A4B02E80B1B645E2B2; // 0x8
+        struct FTransform MeshTransform_12_7AE7335949849EF7CA42469C30E6A38B; // 0x10
+        float DistanceLeft_14_5087517C455845BCFA66FDA64F8A1DC9; // 0x40
+        float DistanceRight_17_BC78F8B44684992F056FBCB0F8A4AB34; // 0x44
+
+    };
+
+    struct FSplineHierarchicalData //UserDefinedStruct SplineHierarchicalData.SplineHierarchicalData
+    {
+    //Children Prop Count (Fields): 1
+    public:
+
+        struct TArray<class UHierarchicalInstancedStaticMeshComponent*> Meshes_3_02E79BBD473816B398679987541E5A86; // 0x0
+
+    };
+
+    struct FLootSpawnVolume_Struct //UserDefinedStruct LootSpawnVolume_Struct.LootSpawnVolume_Struct
     {
     //Children Prop Count (Fields): 2
     public:
 
-        struct TArray<struct FStucture_TabData> Tabs_22_08D2C6984F40B5E55A7DCC8149351C35; // 0x0
-        struct FStucture_TabBIData BIDataSettings_25_A01F1FE44F31114D7184BA8BDE5DBA69; // 0x10
+        struct FDataTableRowHandle LootItem_6_A19338914E4C3CB9AF91639FE74C0AF1; // 0x0
+        float SpawnWeight_5_3FB5E80140161AA700469E99EEE3E709; // 0x10
+
+    };
+
+    struct FAMB_Spawn_Cues_Data_Struct //UserDefinedStruct AMB_Spawn_Cues_Data_Struct.AMB_Spawn_Cues_Data_Struct
+    {
+    //Children Prop Count (Fields): 11
+    public:
+
+        struct FDataTableRowHandle Sound_2_11CC8B0D4E2DDC47875919AA2DD4579C; // 0x0
+        float MinSpawnTime_5_B4107DD04913B0509CF5DBA081BECF18; // 0x10
+        float MaxSpawnTime_7_98911C664C8D939837B5E99924EB7D8B; // 0x14
+        float MinDistance_12_658E32E04E41214A494767AB25D55300; // 0x18
+        float MaxDistance_11_0D69489440EFFB01B9C17DAFA1FDE148; // 0x1c
+        float Volume_15_7D81496D4D9A5FB5D6BBBF85F46CEA95; // 0x20
+        bool Day_20_16342EB540FDD2B4B262519D8A327BA7; // 0x24
+        bool Dusk_25_FDDBD18B408DAC125807DDADC6453C44; // 0x25
+        bool Storm_26_238F068540BE9E95D16FA2B6D9B6A954; // 0x26
+        bool Peak_27_3B37D5F1421AB7E278BDFC9AA68F6F25; // 0x27
+        bool Dawn_28_E7703CA94019E6A1BD6F10ABCCC9B87A; // 0x28
 
     };
 

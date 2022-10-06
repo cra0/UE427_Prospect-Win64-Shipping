@@ -5804,38 +5804,6 @@ namespace SDK
         ECollectionScriptingShareType_MAX = 3
     };
 
-    enum class EQuatSwizzleAxisB : uint8_t //Enum OpenXRHandTracking.EQuatSwizzleAxisB
-    {
-        X = 0,
-        Y = 1,
-        Z = 2,
-        W = 3,
-        MinusX = 4,
-        MinusY = 5,
-        MinusZ = 6,
-        MinusW = 7,
-        EQuatSwizzleAxisB_MAX = 8
-    };
-
-    enum class ELiveLinkAxis : uint8_t //Enum LiveLink.ELiveLinkAxis
-    {
-        X = 0,
-        Y = 1,
-        Z = 2,
-        XNeg = 3,
-        YNeg = 4,
-        ZNeg = 5,
-        ELiveLinkAxis_MAX = 6
-    };
-
-    enum class ELiveLinkTimecodeProviderEvaluationType : uint8_t //Enum LiveLink.ELiveLinkTimecodeProviderEvaluationType
-    {
-        Lerp = 0,
-        Nearest = 1,
-        Latest = 2,
-        ELiveLinkTimecodeProviderEvaluationType_MAX = 3
-    };
-
     enum class EWheelSweepType : uint8_t //Enum PhysXVehicles.EWheelSweepType
     {
         SimpleAndComplex = 0,
@@ -16336,54 +16304,29 @@ namespace SDK
         ESceneSnapQueryType_MAX = 3
     };
 
-    enum class ELiveLinkCameraProjectionMode : uint8_t //Enum LiveLinkInterface.ELiveLinkCameraProjectionMode
-    {
-        Perspective = 0,
-        Orthographic = 1,
-        ELiveLinkCameraProjectionMode_MAX = 2
-    };
-
-    enum class ELiveLinkSourceMode : uint8_t //Enum LiveLinkInterface.ELiveLinkSourceMode
-    {
-        Latest = 0,
-        EngineTime = 1,
-        Timecode = 2,
-        ELiveLinkSourceMode_MAX = 3
-    };
-
     enum class Default__UserDefinedEnum : uint8_t //UserDefinedEnum Engine.Default__UserDefinedEnum
     {
     };
 
-    enum class ENUM_CharacterAimState : uint8_t //UserDefinedEnum ENUM_CharacterAimState.ENUM_CharacterAimState
+    enum class EN_EffortTypes : uint8_t //UserDefinedEnum EN_EffortTypes.EN_EffortTypes
     {
-        NewEnumerator0 = 0,
-        NewEnumerator1 = 1,
-        ENUM_MAX = 2
-    };
-
-    enum class AutomationResultCode : uint8_t //UserDefinedEnum AutomationResultCode.AutomationResultCode
-    {
-        NewEnumerator0 = 0,
-        NewEnumerator1 = 1,
-        NewEnumerator2 = 2,
-        AutomationResultCode_MAX = 3
-    };
-
-    enum class LightType : uint8_t //UserDefinedEnum LightType.LightType
-    {
-        NewEnumerator0 = 0,
-        NewEnumerator1 = 1,
-        NewEnumerator2 = 2,
-        LightType_MAX = 3
-    };
-
-    enum class NPC_States : uint8_t //UserDefinedEnum NPC_States.NPC_States
-    {
-        NewEnumerator0 = 0,
-        NewEnumerator3 = 1,
-        NewEnumerator4 = 2,
-        NPC_MAX = 3
+        NewEnumerator11 = 0,
+        NewEnumerator0 = 1,
+        NewEnumerator1 = 2,
+        NewEnumerator2 = 3,
+        NewEnumerator3 = 4,
+        NewEnumerator4 = 5,
+        NewEnumerator5 = 6,
+        NewEnumerator12 = 7,
+        NewEnumerator6 = 8,
+        NewEnumerator7 = 9,
+        NewEnumerator8 = 10,
+        NewEnumerator9 = 11,
+        NewEnumerator10 = 12,
+        NewEnumerator13 = 13,
+        NewEnumerator14 = 14,
+        NewEnumerator15 = 15,
+        EN_MAX = 16
     };
 
     enum class AnimArchetypeEnum : uint8_t //UserDefinedEnum AnimArchetypeEnum.AnimArchetypeEnum
@@ -16415,6 +16358,27 @@ namespace SDK
         AnimArchetypeEnum_MAX = 24
     };
 
+    enum class AC_EscapeShip_State : uint8_t //UserDefinedEnum AC_EscapeShip_State.AC_EscapeShip_State
+    {
+        NewEnumerator4 = 0,
+        NewEnumerator5 = 1,
+        NewEnumerator0 = 2,
+        NewEnumerator7 = 3,
+        NewEnumerator1 = 4,
+        NewEnumerator2 = 5,
+        NewEnumerator3 = 6,
+        NewEnumerator6 = 7,
+        AC_EscapeShip_MAX = 8
+    };
+
+    enum class AutomationResultCode : uint8_t //UserDefinedEnum AutomationResultCode.AutomationResultCode
+    {
+        NewEnumerator0 = 0,
+        NewEnumerator1 = 1,
+        NewEnumerator2 = 2,
+        AutomationResultCode_MAX = 3
+    };
+
     enum class MapAreaDifficulty_ENUM : uint8_t //UserDefinedEnum MapAreaDifficulty_ENUM.MapAreaDifficulty_ENUM
     {
         NewEnumerator5 = 0,
@@ -16426,25 +16390,12 @@ namespace SDK
         MapAreaDifficulty_MAX = 6
     };
 
-    enum class EN_EffortTypes : uint8_t //UserDefinedEnum EN_EffortTypes.EN_EffortTypes
+    enum class NPC_States : uint8_t //UserDefinedEnum NPC_States.NPC_States
     {
-        NewEnumerator11 = 0,
-        NewEnumerator0 = 1,
-        NewEnumerator1 = 2,
-        NewEnumerator2 = 3,
-        NewEnumerator3 = 4,
-        NewEnumerator4 = 5,
-        NewEnumerator5 = 6,
-        NewEnumerator12 = 7,
-        NewEnumerator6 = 8,
-        NewEnumerator7 = 9,
-        NewEnumerator8 = 10,
-        NewEnumerator9 = 11,
-        NewEnumerator10 = 12,
-        NewEnumerator13 = 13,
-        NewEnumerator14 = 14,
-        NewEnumerator15 = 15,
-        EN_MAX = 16
+        NewEnumerator0 = 0,
+        NewEnumerator3 = 1,
+        NewEnumerator4 = 2,
+        NPC_MAX = 3
     };
 
     enum class AC_EscapeShipTerminal_Actor_ENUM : uint8_t //UserDefinedEnum AC_EscapeShipTerminal_Actor_ENUM.AC_EscapeShipTerminal_Actor_ENUM
@@ -16455,20 +16406,28 @@ namespace SDK
         AC_EscapeShipTerminal_Actor_MAX = 3
     };
 
-    enum class En_ItemBtnLockedState : uint8_t //UserDefinedEnum En_ItemBtnLockedState.En_ItemBtnLockedState
+    enum class ENUM_CharacterAimState : uint8_t //UserDefinedEnum ENUM_CharacterAimState.ENUM_CharacterAimState
     {
         NewEnumerator0 = 0,
         NewEnumerator1 = 1,
-        NewEnumerator2 = 2,
-        En_MAX = 3
+        ENUM_MAX = 2
     };
 
-    enum class EY_AttachmentItemState : uint8_t //UserDefinedEnum EY_AttachmentItemState.EY_AttachmentItemState
+    enum class LightType : uint8_t //UserDefinedEnum LightType.LightType
     {
         NewEnumerator0 = 0,
         NewEnumerator1 = 1,
         NewEnumerator2 = 2,
-        EY_MAX = 3
+        LightType_MAX = 3
+    };
+
+    enum class ScannerInterfaceStates : uint8_t //UserDefinedEnum ScannerInterfaceStates.ScannerInterfaceStates
+    {
+        NewEnumerator0 = 0,
+        NewEnumerator1 = 1,
+        NewEnumerator2 = 2,
+        NewEnumerator3 = 3,
+        ScannerInterfaceStates_MAX = 4
     };
 
     enum class En_FilterCategoryCollection : uint8_t //UserDefinedEnum En_FilterCategoryCollection.En_FilterCategoryCollection
@@ -16516,26 +16475,20 @@ namespace SDK
         En_MAX = 40
     };
 
-    enum class AC_EscapeShip_State : uint8_t //UserDefinedEnum AC_EscapeShip_State.AC_EscapeShip_State
-    {
-        NewEnumerator4 = 0,
-        NewEnumerator5 = 1,
-        NewEnumerator0 = 2,
-        NewEnumerator7 = 3,
-        NewEnumerator1 = 4,
-        NewEnumerator2 = 5,
-        NewEnumerator3 = 6,
-        NewEnumerator6 = 7,
-        AC_EscapeShip_MAX = 8
-    };
-
-    enum class ScannerInterfaceStates : uint8_t //UserDefinedEnum ScannerInterfaceStates.ScannerInterfaceStates
+    enum class En_ItemBtnLockedState : uint8_t //UserDefinedEnum En_ItemBtnLockedState.En_ItemBtnLockedState
     {
         NewEnumerator0 = 0,
         NewEnumerator1 = 1,
         NewEnumerator2 = 2,
-        NewEnumerator3 = 3,
-        ScannerInterfaceStates_MAX = 4
+        En_MAX = 3
+    };
+
+    enum class EY_AttachmentItemState : uint8_t //UserDefinedEnum EY_AttachmentItemState.EY_AttachmentItemState
+    {
+        NewEnumerator0 = 0,
+        NewEnumerator1 = 1,
+        NewEnumerator2 = 2,
+        EY_MAX = 3
     };
 
     enum class SplineBranching : uint8_t //UserDefinedEnum SplineBranching.SplineBranching
@@ -16547,6 +16500,53 @@ namespace SDK
         SplineBranching_MAX = 4
     };
 
+    enum class BIEventDataUplink_Enum : uint8_t //UserDefinedEnum BIEventDataUplink_Enum.BIEventDataUplink_Enum
+    {
+        NewEnumerator3 = 0,
+        NewEnumerator0 = 1,
+        NewEnumerator1 = 2,
+        NewEnumerator2 = 3,
+        BIEventDataUplink_MAX = 4
+    };
+
+    enum class UplinkState_Enum : uint8_t //UserDefinedEnum UplinkState_Enum.UplinkState_Enum
+    {
+        NewEnumerator0 = 0,
+        NewEnumerator5 = 1,
+        NewEnumerator1 = 2,
+        NewEnumerator6 = 3,
+        UplinkState_MAX = 4
+    };
+
+    enum class AI_Friendly_States : uint8_t //UserDefinedEnum AI_Friendly_States.AI_Friendly_States
+    {
+        NewEnumerator0 = 0,
+        NewEnumerator1 = 1,
+        NewEnumerator2 = 2,
+        NewEnumerator3 = 3,
+        NewEnumerator4 = 4,
+        NewEnumerator5 = 5,
+        NewEnumerator6 = 6,
+        AI_Friendly_MAX = 7
+    };
+
+    enum class YBIHookPowerUpStep : uint8_t //UserDefinedEnum YBIHookPowerUpStep.YBIHookPowerUpStep
+    {
+        NewEnumerator0 = 0,
+        NewEnumerator1 = 1,
+        NewEnumerator2 = 2,
+        NewEnumerator3 = 3,
+        YBIHookPowerUpStep_MAX = 4
+    };
+
+    enum class InteractableDoor_BehavEnum : uint8_t //UserDefinedEnum InteractableDoor_BehavEnum.InteractableDoor_BehavEnum
+    {
+        NewEnumerator2 = 0,
+        NewEnumerator1 = 1,
+        NewEnumerator0 = 2,
+        InteractableDoor_MAX = 3
+    };
+
     enum class DiggerVariations : uint8_t //UserDefinedEnum DiggerVariations.DiggerVariations
     {
         NewEnumerator0 = 0,
@@ -16556,28 +16556,47 @@ namespace SDK
         DiggerVariations_MAX = 4
     };
 
-    enum class En_VanityMenuStates : uint8_t //UserDefinedEnum En_VanityMenuStates.En_VanityMenuStates
+    enum class InteriorProps_ServerRacks : uint8_t //UserDefinedEnum InteriorProps_ServerRacks.InteriorProps_ServerRacks
     {
-        NewEnumerator6 = 0,
-        NewEnumerator0 = 1,
-        NewEnumerator1 = 2,
-        NewEnumerator2 = 3,
-        NewEnumerator3 = 4,
-        NewEnumerator4 = 5,
-        NewEnumerator5 = 6,
-        NewEnumerator7 = 7,
-        En_MAX = 8
+        NewEnumerator0 = 0,
+        NewEnumerator1 = 1,
+        NewEnumerator2 = 2,
+        NewEnumerator3 = 3,
+        InteriorProps_MAX = 4
     };
 
-    enum class En_BI_PurchaseFlow_Action : uint8_t //UserDefinedEnum En_BI_PurchaseFlow_Action.En_BI_PurchaseFlow_Action
+    enum class InteriorProps_CommsDesk_Details : uint8_t //UserDefinedEnum InteriorProps_CommsDesk_Details.InteriorProps_CommsDesk_Details
     {
-        NewEnumerator5 = 0,
+        NewEnumerator2 = 0,
         NewEnumerator0 = 1,
         NewEnumerator1 = 2,
-        NewEnumerator2 = 3,
-        NewEnumerator3 = 4,
-        NewEnumerator4 = 5,
-        En_BI_PurchaseFlow_MAX = 6
+        InteriorProps_CommsDesk_MAX = 3
+    };
+
+    enum class InteriorProps_PowerUpScreens : uint8_t //UserDefinedEnum InteriorProps_PowerUpScreens.InteriorProps_PowerUpScreens
+    {
+        NewEnumerator0 = 0,
+        NewEnumerator1 = 1,
+        NewEnumerator2 = 2,
+        InteriorProps_MAX = 3
+    };
+
+    enum class LargeSign_BackDetail : uint8_t //UserDefinedEnum LargeSign_BackDetail.LargeSign_BackDetail
+    {
+        NewEnumerator0 = 0,
+        NewEnumerator1 = 1,
+        NewEnumerator2 = 2,
+        LargeSign_MAX = 3
+    };
+
+    enum class BatteryStatus : uint8_t //UserDefinedEnum BatteryStatus.BatteryStatus
+    {
+        NewEnumerator3 = 0,
+        NewEnumerator2 = 1,
+        NewEnumerator1 = 2,
+        NewEnumerator4 = 3,
+        NewEnumerator5 = 4,
+        BatteryStatus_MAX = 5
     };
 
 
